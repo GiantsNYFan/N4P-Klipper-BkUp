@@ -1,1 +1,0 @@
-rm ~/gcode_files/plr -rf
