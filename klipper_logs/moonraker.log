@@ -1,0 +1,1101 @@
+--------------------Moonraker Log Start--------------------
+config_file: /home/mks/klipper_config/moonraker.conf
+log_file: /home/mks/klipper_logs/moonraker.log
+software_version: ?
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+#################### Moonraker Configuration ####################
+
+[server]
+host = localhost
+port = 7125
+enable_debug_logging = False
+klippy_uds_address = /tmp/klippy_uds
+
+[authorization]
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	http://*.lan
+	http://*.local
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	https://app.fluidd.xyz
+	http://app.fluidd.xyz
+
+[database]
+database_path = /home/mks/.moonraker_database
+
+[file_manager]
+config_path = /home/mks/klipper_config
+log_path = /home/mks/klipper_logs
+
+[octoprint_compat]
+
+[history]
+
+#################################################################
+All Configuration Files:
+/home/mks/klipper_config/moonraker.conf
+#################################################################
+Unsafe Shutdown Count: 0
+
+System Info:
+
+***python***
+  version: sys.version_info(major=3, minor=7, micro=3, releaselevel='final', serial=0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: 
+  hardware_desc: 
+  model: 
+  total_memory: 999784
+  memory_units: kB
+
+***sd_info***
+
+***distribution***
+  name: Debian GNU/Linux 10 (buster)
+  id: debian
+  version: 10
+  version_parts: {'major': '10', 'minor': '', 'build_number': ''}
+  like: 
+  codename: buster
+  release_info: {}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+Klipper Version: ?
+2025-03-18 00:50:01,014 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
+2025-03-18 01:26:34,246 [websockets.py:on_close()] - Websocket Closed: ID: 281473641623336 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 8.69
+2025-03-18 01:26:34,381 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-03-18 01:26:34,552 [app.py:log_request()] - 101 GET /websocket?token=7IH57LEOT4HHMX5JWCQQOBUGOI2YOWJN (10.10.100.21) [_TRUSTED_USER_] 6.09ms
+2025-03-18 01:26:34,553 [websockets.py:open()] - Websocket Opened: ID: 281473642612048, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 01:26:34,558 [websockets.py:_handle_identify()] - Websocket 281473642612048 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 01:28:01,246 [websockets.py:on_close()] - Websocket Closed: ID: 281473642612048 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 6.67
+2025-03-18 01:28:01,674 [app.py:log_request()] - 101 GET /websocket?token=5WS3S5QWZLWJPUH3GWOVB2U2UDUH2MMV (10.10.100.21) [_TRUSTED_USER_] 5.32ms
+2025-03-18 01:28:01,675 [websockets.py:open()] - Websocket Opened: ID: 281473642850568, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 01:28:01,681 [websockets.py:_handle_identify()] - Websocket 281473642850568 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 01:29:49,251 [websockets.py:on_close()] - Websocket Closed: ID: 281473642850568 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 7.57
+2025-03-18 01:29:49,480 [app.py:log_request()] - 101 GET /websocket?token=SFA6JACVSDDLDYQUKUYDJI35QUS7UBGG (10.10.100.21) [_TRUSTED_USER_] 4.99ms
+2025-03-18 01:29:49,481 [websockets.py:open()] - Websocket Opened: ID: 281473641743360, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 01:29:49,488 [websockets.py:_handle_identify()] - Websocket 281473641743360 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 01:30:12,623 [websockets.py:on_close()] - Websocket Closed: ID: 281473641743360 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 3.13
+2025-03-18 01:30:12,838 [app.py:log_request()] - 101 GET /websocket?token=WOWN55MWZSPMV7O3VD573VL34GCAHBQY (10.10.100.21) [_TRUSTED_USER_] 4.65ms
+2025-03-18 01:30:12,839 [websockets.py:open()] - Websocket Opened: ID: 281473641742968, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 01:30:12,845 [websockets.py:_handle_identify()] - Websocket 281473641742968 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 01:31:38,225 [websockets.py:on_close()] - Websocket Closed: ID: 281473641742968 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 5.38
+2025-03-18 01:31:38,430 [app.py:log_request()] - 101 GET /websocket?token=CNTP7SRJBQTWP3FUDODDRP6AR2Z3OJLX (10.10.100.21) [_TRUSTED_USER_] 4.60ms
+2025-03-18 01:31:38,431 [websockets.py:open()] - Websocket Opened: ID: 281473641694824, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 01:31:38,441 [websockets.py:_handle_identify()] - Websocket 281473641694824 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 01:31:54,217 [websockets.py:on_close()] - Websocket Closed: ID: 281473641694824 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 5.77
+2025-03-18 01:31:54,446 [app.py:log_request()] - 101 GET /websocket?token=Y7MLEP3PUR6URCZZVO4FG5R2L5RPSV3U (10.10.100.21) [_TRUSTED_USER_] 6.60ms
+2025-03-18 01:31:54,448 [websockets.py:open()] - Websocket Opened: ID: 281473642029912, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 01:31:54,453 [websockets.py:_handle_identify()] - Websocket 281473642029912 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 01:32:05,550 [websockets.py:on_close()] - Websocket Closed: ID: 281473642029912 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 1.09
+2025-03-18 01:32:05,742 [app.py:log_request()] - 101 GET /websocket?token=F6LR2H2U6R2TROHE7Y76SFGHG7XEJGAT (10.10.100.21) [_TRUSTED_USER_] 5.10ms
+2025-03-18 01:32:05,743 [websockets.py:open()] - Websocket Opened: ID: 281473642748224, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 01:32:05,748 [websockets.py:_handle_identify()] - Websocket 281473642748224 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 01:34:09,949 [websockets.py:on_close()] - Websocket Closed: ID: 281473642748224 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 4.20
+2025-03-18 01:34:10,361 [app.py:log_request()] - 101 GET /websocket?token=T4LH2IRFXC5MXYBW5DVC3GJBT2PE3JV4 (10.10.100.21) [_TRUSTED_USER_] 5.25ms
+2025-03-18 01:34:10,362 [websockets.py:open()] - Websocket Opened: ID: 281473641744144, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 01:34:10,368 [websockets.py:_handle_identify()] - Websocket 281473641744144 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 01:36:32,928 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-03-18 01:36:33,651 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-03-18 01:36:33,651 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda/Tuning/Elegoo/PLA/EN4Plus_0.4_temperature_tower_PLA0.2_1h8m.gcode") successfully finished
+2025-03-18 01:36:33,652 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-03-18 01:36:33,667 [app.py:log_request()] - 201 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 1653.72ms
+2025-03-18 01:36:59,531 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-18 01:37:29,593 [job_state.py:_status_update()] - Job Started: sda/Tuning/Elegoo/PLA/EN4Plus_0.4_temperature_tower_PLA0.2_1h8m.gcode
+2025-03-18 02:40:01,047 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
+2025-03-18 03:12:04,591 [websockets.py:on_close()] - Websocket Closed: ID: 281473641744144 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 4.22
+2025-03-18 03:12:04,657 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-03-18 03:12:04,905 [app.py:log_request()] - 101 GET /websocket?token=QVMELJPRRFWGZJYTHCQBFVOEJQOCROMK (10.10.100.21) [_TRUSTED_USER_] 5.61ms
+2025-03-18 03:12:04,906 [websockets.py:open()] - Websocket Opened: ID: 281473641745544, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 03:12:04,919 [websockets.py:_handle_identify()] - Websocket 281473641745544 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 03:13:28,417 [websockets.py:on_close()] - Websocket Closed: ID: 281473641745544 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 3.49
+2025-03-18 03:13:28,766 [app.py:log_request()] - 101 GET /websocket?token=YWVTUI5P4B5AQ2CVMM4FSPAO6NMYJDP5 (10.10.100.21) [_TRUSTED_USER_] 5.28ms
+2025-03-18 03:13:28,767 [websockets.py:open()] - Websocket Opened: ID: 281473641742520, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 03:13:28,774 [websockets.py:_handle_identify()] - Websocket 281473641742520 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 03:14:01,251 [websockets.py:on_close()] - Websocket Closed: ID: 281473641742520 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 2.46
+2025-03-18 03:14:01,509 [app.py:log_request()] - 101 GET /websocket?token=2N3AZMBRXRTX53WNSEVK6DNBFLIN4SWT (10.10.100.21) [_TRUSTED_USER_] 5.30ms
+2025-03-18 03:14:01,510 [websockets.py:open()] - Websocket Opened: ID: 281473639407120, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 03:14:01,515 [websockets.py:_handle_identify()] - Websocket 281473639407120 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 03:15:18,918 [websockets.py:on_close()] - Websocket Closed: ID: 281473639407120 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 7.40
+2025-03-18 03:15:19,135 [app.py:log_request()] - 101 GET /websocket?token=CM777MVO36RZ7SHGGMQKHHFPFBRCJC2D (10.10.100.21) [_TRUSTED_USER_] 5.30ms
+2025-03-18 03:15:19,137 [websockets.py:open()] - Websocket Opened: ID: 281473641883352, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 03:15:19,142 [websockets.py:_handle_identify()] - Websocket 281473641883352 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 03:18:54,673 [websockets.py:on_close()] - Websocket Closed: ID: 281473641883352 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 5.53
+2025-03-18 03:18:55,011 [app.py:log_request()] - 101 GET /websocket?token=2WBMSKZM2QTEDGQOIAZPZSLY7YOFKK3B (10.10.100.21) [_TRUSTED_USER_] 5.30ms
+2025-03-18 03:18:55,012 [websockets.py:open()] - Websocket Opened: ID: 281473642571368, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 03:18:55,023 [websockets.py:_handle_identify()] - Websocket 281473642571368 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 03:20:09,717 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-03-18 03:20:10,428 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-03-18 03:20:10,429 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda/Tuning/Elegoo/PLA/flowrate_0_EN4Plus_0.4_PLA0.2_30m2s.gcode") successfully finished
+2025-03-18 03:20:10,430 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-03-18 03:20:10,449 [app.py:log_request()] - 201 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 1325.38ms
+2025-03-18 03:20:42,794 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-18 03:20:56,336 [job_state.py:_status_update()] - Job Started: sda/Tuning/Elegoo/PLA/flowrate_0_EN4Plus_0.4_PLA0.2_30m2s.gcode
+2025-03-18 03:58:35,917 [websockets.py:on_close()] - Websocket Closed: ID: 281473642571368 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 0.89
+2025-03-18 03:58:36,185 [app.py:log_request()] - 101 GET /websocket?token=YEKI5ZJK6IPRSFH5SL3I3EI4XEPBVVJH (10.10.100.21) [_TRUSTED_USER_] 6.97ms
+2025-03-18 03:58:36,186 [websockets.py:open()] - Websocket Opened: ID: 281473642176408, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 03:58:36,206 [websockets.py:_handle_identify()] - Websocket 281473642176408 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 03:59:29,188 [websockets.py:on_close()] - Websocket Closed: ID: 281473642176408 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 2.99
+2025-03-18 03:59:29,637 [app.py:log_request()] - 101 GET /websocket?token=YCZLKOP24I557VIABZNSH7KH4BY6UTO5 (10.10.100.21) [_TRUSTED_USER_] 5.33ms
+2025-03-18 03:59:29,638 [websockets.py:open()] - Websocket Opened: ID: 281473641742856, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 03:59:29,644 [websockets.py:_handle_identify()] - Websocket 281473641742856 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 03:59:52,837 [websockets.py:on_close()] - Websocket Closed: ID: 281473641742856 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 3.19
+2025-03-18 03:59:53,154 [app.py:log_request()] - 101 GET /websocket?token=R2B5SFR3BEZCB42RYMQLTTWUIW3KRLUI (10.10.100.21) [_TRUSTED_USER_] 4.59ms
+2025-03-18 03:59:53,155 [websockets.py:open()] - Websocket Opened: ID: 281473642175344, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 03:59:53,164 [websockets.py:_handle_identify()] - Websocket 281473642175344 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 04:00:15,265 [websockets.py:on_close()] - Websocket Closed: ID: 281473642175344 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 2.10
+2025-03-18 04:00:15,479 [app.py:log_request()] - 101 GET /websocket?token=E4DBWGIP75XLCV75L4ZPAD6ZTEE5ZJ2J (10.10.100.21) [_TRUSTED_USER_] 5.56ms
+2025-03-18 04:00:15,480 [websockets.py:open()] - Websocket Opened: ID: 281473639406616, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 04:00:15,492 [websockets.py:_handle_identify()] - Websocket 281473639406616 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 04:00:54,875 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-03-18 04:00:55,515 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-03-18 04:00:55,516 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda/Tuning/Elegoo/PLA/PressureAdvance_EN4Plus_0.4_PLA0.2_7m32s.gcode") successfully finished
+2025-03-18 04:00:55,517 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-03-18 04:00:55,536 [app.py:log_request()] - 201 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 797.55ms
+2025-03-18 04:01:10,931 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-18 04:01:36,240 [job_state.py:_status_update()] - Job Started: sda/Tuning/Elegoo/PLA/PressureAdvance_EN4Plus_0.4_PLA0.2_7m32s.gcode
+2025-03-18 04:14:48,930 [websockets.py:on_close()] - Websocket Closed: ID: 281473639406616 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 3.43
+2025-03-18 04:14:49,198 [app.py:log_request()] - 101 GET /websocket?token=3HBL6S2SWICEAXW5S3K2I3LC4OTKIPUM (10.10.100.21) [_TRUSTED_USER_] 5.28ms
+2025-03-18 04:14:49,199 [websockets.py:open()] - Websocket Opened: ID: 281473642570864, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 04:14:49,207 [websockets.py:_handle_identify()] - Websocket 281473642570864 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 04:16:23,126 [websockets.py:on_close()] - Websocket Closed: ID: 281473642570864 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 3.92
+2025-03-18 04:16:23,455 [app.py:log_request()] - 101 GET /websocket?token=BT2H75M6AUA77PLUBR4IPZ5GDZWK5DJH (10.10.100.21) [_TRUSTED_USER_] 5.29ms
+2025-03-18 04:16:23,456 [websockets.py:open()] - Websocket Opened: ID: 281473642850736, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 04:16:23,464 [websockets.py:_handle_identify()] - Websocket 281473642850736 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 04:22:36,716 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-03-18 04:22:37,418 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-03-18 04:22:37,418 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda/Tuning/Elegoo/PLA/retraction_tower_EN4Plus_0.4_PLA0.2_8m29s.gcode") successfully finished
+2025-03-18 04:22:37,420 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-03-18 04:22:37,438 [app.py:log_request()] - 201 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 1160.62ms
+2025-03-18 04:22:50,508 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-18 04:23:14,312 [job_state.py:_status_update()] - Job Started: sda/Tuning/Elegoo/PLA/retraction_tower_EN4Plus_0.4_PLA0.2_8m29s.gcode
+2025-03-18 04:37:30,383 [websockets.py:on_close()] - Websocket Closed: ID: 281473642850736 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 6.91
+2025-03-18 04:37:30,660 [app.py:log_request()] - 101 GET /websocket?token=52M5YDEMUFT4U5K7WFM7OQFKJKH5VWFZ (10.10.100.21) [_TRUSTED_USER_] 5.67ms
+2025-03-18 04:37:30,662 [websockets.py:open()] - Websocket Opened: ID: 281473641993440, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 04:37:30,672 [websockets.py:_handle_identify()] - Websocket 281473641993440 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 04:37:38,587 [websockets.py:on_close()] - Websocket Closed: ID: 281473641993440 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 7.93
+2025-03-18 04:37:38,825 [app.py:log_request()] - 101 GET /websocket?token=DQ3P7H2MVTAA6YL54Z3H3LAUF56MFRUQ (10.10.100.21) [_TRUSTED_USER_] 4.57ms
+2025-03-18 04:37:38,826 [websockets.py:open()] - Websocket Opened: ID: 281473642748056, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 04:37:38,835 [websockets.py:_handle_identify()] - Websocket 281473642748056 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 04:38:08,079 [websockets.py:on_close()] - Websocket Closed: ID: 281473642748056 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 9.23
+2025-03-18 04:38:08,391 [app.py:log_request()] - 101 GET /websocket?token=RWOPU7JTMBOWZNJT4KMW7K76HJBWS3QA (10.10.100.21) [_TRUSTED_USER_] 5.32ms
+2025-03-18 04:38:08,391 [websockets.py:open()] - Websocket Opened: ID: 281473642748672, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 04:38:08,398 [websockets.py:_handle_identify()] - Websocket 281473642748672 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 04:38:35,834 [websockets.py:on_close()] - Websocket Closed: ID: 281473642748672 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 7.44
+2025-03-18 04:38:36,231 [app.py:log_request()] - 101 GET /websocket?token=TV7TNQOYEHCGSDDNMENTRVLSC3ECRIVK (10.10.100.21) [_TRUSTED_USER_] 6.72ms
+2025-03-18 04:38:36,232 [websockets.py:open()] - Websocket Opened: ID: 281473642611264, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 04:38:36,240 [websockets.py:_handle_identify()] - Websocket 281473642611264 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 04:39:12,561 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-03-18 04:39:13,264 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-03-18 04:39:13,265 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda/Tuning/Elegoo/PLA/SpeedTestStructure_EN4Plus_0.4_PLA0.2_14m52s.gcode") successfully finished
+2025-03-18 04:39:13,266 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-03-18 04:39:13,815 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-18 04:39:37,486 [app.py:log_request()] - 201 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 25345.57ms
+2025-03-18 04:39:37,632 [job_state.py:_status_update()] - Job Started: sda/Tuning/Elegoo/PLA/SpeedTestStructure_EN4Plus_0.4_PLA0.2_14m52s.gcode
+2025-03-18 04:45:25,614 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-18 04:45:50,442 [job_state.py:_status_update()] - Job Started: sda/Tuning/Elegoo/PLA/SpeedTestStructure_EN4Plus_0.4_PLA0.2_14m52s.gcode
+2025-03-18 04:57:28,609 [websockets.py:on_close()] - Websocket Closed: ID: 281473642611264 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 2.36
+2025-03-18 04:57:28,822 [app.py:log_request()] - 101 GET /websocket?token=F5HV7QN4PCJDHGSQ5GZKUZLC4FWFWOC5 (10.10.100.21) [_TRUSTED_USER_] 6.68ms
+2025-03-18 04:57:28,823 [websockets.py:open()] - Websocket Opened: ID: 281473641946248, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 04:57:28,828 [websockets.py:_handle_identify()] - Websocket 281473641946248 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 04:57:55,842 [websockets.py:on_close()] - Websocket Closed: ID: 281473641946248 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 7.01
+2025-03-18 04:57:56,418 [app.py:log_request()] - 101 GET /websocket?token=TLC27EDMV3I3EPDAIRI3JCM4ISW5S7PH (10.10.100.21) [_TRUSTED_USER_] 5.24ms
+2025-03-18 04:57:56,420 [websockets.py:open()] - Websocket Opened: ID: 281473642748224, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 04:57:56,449 [websockets.py:_handle_identify()] - Websocket 281473642748224 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 04:58:09,210 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-03-18 04:58:09,915 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-03-18 04:58:09,916 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda/Tuning/Elegoo/PLA/SpeedTestStructure_EN4Plus_0.4_PLA0.2_14m52s.gcode") successfully finished
+2025-03-18 04:58:09,917 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-03-18 04:58:10,462 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-18 04:58:35,206 [app.py:log_request()] - 201 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 26476.15ms
+2025-03-18 04:58:35,300 [job_state.py:_status_update()] - Job Started: sda/Tuning/Elegoo/PLA/SpeedTestStructure_EN4Plus_0.4_PLA0.2_14m52s.gcode
+2025-03-18 05:12:18,991 [websockets.py:on_close()] - Websocket Closed: ID: 281473642748224 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 2.55
+2025-03-18 05:12:19,258 [app.py:log_request()] - 101 GET /websocket?token=X5HQXGQA5KHVEWO25X2I4QPANIWUBWDR (10.10.100.21) [_TRUSTED_USER_] 4.56ms
+2025-03-18 05:12:19,259 [websockets.py:open()] - Websocket Opened: ID: 281473642611096, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 05:12:19,265 [websockets.py:_handle_identify()] - Websocket 281473642611096 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 05:15:32,827 [websockets.py:on_close()] - Websocket Closed: ID: 281473642611096 Close Code: None, Close Reason: None, Pong Time Elapsed: 3.56
+2025-03-18 06:15:01,174 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
+2025-03-18 07:31:56,837 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.14
+2025-03-18 07:31:57,051 [app.py:log_request()] - 101 GET /websocket?token=EGZKYH3YOTCFCVKR4XNUI3WSIVB76P4Z (10.10.100.14) [_TRUSTED_USER_] 4.69ms
+2025-03-18 07:31:57,051 [websockets.py:open()] - Websocket Opened: ID: 281473642612664, Proxied: True, User Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1, Host Name: 10.10.100.201
+2025-03-18 07:31:57,065 [websockets.py:_handle_identify()] - Websocket 281473642612664 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 07:32:26,714 [websockets.py:on_close()] - Websocket Closed: ID: 281473642612664 Close Code: None, Close Reason: None, Pong Time Elapsed: 9.65
+2025-03-18 07:51:20,221 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-03-18 07:51:20,439 [app.py:log_request()] - 101 GET /websocket?token=6AKLEZC7ZHRSK2K7PXRTWDTE2Y6CETFV (10.10.100.21) [_TRUSTED_USER_] 5.31ms
+2025-03-18 07:51:20,440 [websockets.py:open()] - Websocket Opened: ID: 281473648440264, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 07:51:20,448 [websockets.py:_handle_identify()] - Websocket 281473648440264 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 07:53:13,054 [websockets.py:on_close()] - Websocket Closed: ID: 281473648440264 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 2.61
+2025-03-18 07:53:13,456 [app.py:log_request()] - 101 GET /websocket?token=IJIS4T32ZXBLVXRW7J2PQ64SKTQUZT4H (10.10.100.21) [_TRUSTED_USER_] 7.65ms
+2025-03-18 07:53:13,457 [websockets.py:open()] - Websocket Opened: ID: 281473641952704, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 07:53:13,464 [websockets.py:_handle_identify()] - Websocket 281473641952704 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 07:55:48,740 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-03-18 07:55:49,454 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-03-18 07:55:49,454 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda/Tuning/Elegoo/PLA/White/temperature_tower_EN4Plus_0.4_PLA0.2_1h9m.gcode") successfully finished
+2025-03-18 07:55:49,456 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-03-18 07:55:49,471 [app.py:log_request()] - 201 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 4337.87ms
+2025-03-18 07:56:47,928 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-03-18 07:56:48,636 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-03-18 07:56:48,636 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda/Tuning/Elegoo/PLA/White/temperature_tower_EN4Plus_0.4_PLA0.2_1h9m.gcode") successfully finished
+2025-03-18 07:56:48,638 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-03-18 07:56:48,657 [app.py:log_request()] - 201 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 3030.49ms
+2025-03-18 08:00:44,179 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-18 08:01:09,247 [job_state.py:_status_update()] - Job Started: sda/Tuning/Elegoo/PLA/White/temperature_tower_EN4Plus_0.4_PLA0.2_1h9m.gcode
+2025-03-18 08:02:37,315 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-18 08:03:02,125 [job_state.py:_status_update()] - Job Started: sda/Tuning/Elegoo/PLA/White/temperature_tower_EN4Plus_0.4_PLA0.2_1h9m.gcode
+2025-03-18 08:35:01,222 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.14
+2025-03-18 09:00:01,229 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
+2025-03-18 20:23:33,556 [websockets.py:_process_messages()] - Websocket closed while writing: 281473641952704
+2025-03-18 20:23:38,461 [websockets.py:on_close()] - Websocket Closed: ID: 281473641952704 Close Code: None, Close Reason: None, Pong Time Elapsed: 45.00
+2025-03-18 20:24:28,111 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-03-18 20:24:28,136 [app.py:log_request()] - 101 GET /websocket?token=AY7XLIYWACFWUZPZZODWORIAWTMY46AW (10.10.100.21) [_TRUSTED_USER_] 5.48ms
+2025-03-18 20:24:28,137 [websockets.py:open()] - Websocket Opened: ID: 281473641696504, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 20:24:28,144 [websockets.py:_handle_identify()] - Websocket 281473641696504 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 20:29:40,626 [websockets.py:on_close()] - Websocket Closed: ID: 281473641696504 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.48
+2025-03-18 20:29:51,298 [app.py:log_request()] - 101 GET /websocket?token=QGJ36WONPO5WXF54WWI6P7IU26FOJUJE (10.10.100.21) [_TRUSTED_USER_] 6.87ms
+2025-03-18 20:29:51,300 [websockets.py:open()] - Websocket Opened: ID: 281473642105712, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 20:29:51,305 [websockets.py:_handle_identify()] - Websocket 281473642105712 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 20:33:54,660 [websockets.py:on_close()] - Websocket Closed: ID: 281473642105712 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 3.35
+2025-03-18 20:33:54,975 [app.py:log_request()] - 101 GET /websocket?token=GGJTSOL7GVZEIHGR2QQWDDTCHB6PODH4 (10.10.100.21) [_TRUSTED_USER_] 5.59ms
+2025-03-18 20:33:54,976 [websockets.py:open()] - Websocket Opened: ID: 281473641954328, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 20:33:54,983 [websockets.py:_handle_identify()] - Websocket 281473641954328 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 20:43:35,345 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-79728.mru' -> '/home/mks/gcode_files/sda1/Tuning/Elegoo/White/flowrate_0_EN4Plus_0.4_PLA0.2_30m2s.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Tuning/Elegoo/White/flowrate_0_EN4Plus_0.4_PLA0.2_30m2s.gcode'
+2025-03-18 20:43:35,355 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-03-18 20:43:35,370 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 510.01ms
+2025-03-18 20:46:55,237 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-03-18 20:46:55,261 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-03-18 20:46:56,504 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-03-18 20:46:56,504 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x78020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-03-18 20:46:57,281 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-03-18 20:46:57,291 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-03-18 20:46:59,533 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-03-18 20:46:59,819 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-03-18 20:47:00,289 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-18 20:49:37,440 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-03-18 20:50:37,445 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2025-03-18 20:51:37,448 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2025-03-18 20:52:37,452 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.02 seconds
+2025-03-18 20:53:37,455 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.02 seconds
+2025-03-18 20:54:37,460 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.02 seconds
+2025-03-18 20:55:37,464 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.03 seconds
+2025-03-18 20:57:35,022 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-03-18 20:57:35,044 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-03-18 20:57:36,290 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-03-18 20:57:36,290 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x78020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-03-18 20:57:37,079 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-03-18 20:57:37,091 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-03-18 20:57:39,328 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-03-18 20:57:39,626 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-03-18 20:57:40,083 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-18 20:59:00,505 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-80653.mru' -> '/home/mks/gcode_files/sda1/Tuning/Elegoo/White/flowrate_0_EN4Plus_0.4_PLA0.2_30m21s.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Tuning/Elegoo/White/flowrate_0_EN4Plus_0.4_PLA0.2_30m21s.gcode'
+2025-03-18 20:59:00,513 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-03-18 20:59:00,519 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 463.19ms
+2025-03-18 21:00:59,782 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-18 21:01:18,081 [job_state.py:_status_update()] - Job Started: sda1/Tuning/Elegoo/White/flowrate_0_EN4Plus_0.4_PLA0.2_30m21s.gcode
+2025-03-18 21:01:18,373 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Metadata not available for <sda1/Tuning/Elegoo/White/flowrate_0_EN4Plus_0.4_PLA0.2_30m21s.gcode>
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 313, in _handle_metadata_request
+    f"Metadata not available for <{requested_file}>", 404)
+utils.ServerError: Metadata not available for <sda1/Tuning/Elegoo/White/flowrate_0_EN4Plus_0.4_PLA0.2_30m21s.gcode>
+2025-03-18 21:38:11,200 [websockets.py:on_close()] - Websocket Closed: ID: 281473641954328 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 6.21
+2025-03-18 21:38:11,430 [app.py:log_request()] - 101 GET /websocket?token=ESKROI2STHMS7JJKOYVZGFPKLJRCBRSG (10.10.100.21) [_TRUSTED_USER_] 4.65ms
+2025-03-18 21:38:11,431 [websockets.py:open()] - Websocket Opened: ID: 281473642154696, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 21:38:11,437 [websockets.py:_handle_identify()] - Websocket 281473642154696 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 21:55:48,997 [moonraker.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2025-03-18 21:55:49,108 [websockets.py:on_close()] - Websocket Closed: ID: 281473641646400 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 8.58
+2025-03-18 21:55:49,113 [websockets.py:on_close()] - Websocket Closed: ID: 281473642154696 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 7.67
+2025-03-18 21:55:49,116 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-03-18 21:55:49,119 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Disconnected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 468, in request
+    return await self._request_standard(web_request)
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 523, in _request_standard
+    return await base_request.wait()
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 595, in wait
+    raise self.response
+utils.ServerError: Klippy Disconnected
+2025-03-18 21:55:49,129 [database.py:close()] - Database statistics:
+
+announcements:
+psize: 4096
+depth: 0
+branch_pages: 0
+leaf_pages: 0
+overflow_pages: 0
+entries: 0
+authorized_users:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 2
+fluidd:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 6
+gcode_metadata:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 24
+entries: 7
+history:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 84
+overflow_pages: 77
+entries: 213
+mobileraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 2
+entries: 2
+moonraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 5
+2025-03-18 21:55:49,149 [moonraker.py:main()] - Server Shutdown
+--------------------Moonraker Log Start--------------------
+config_file: /home/mks/klipper_config/moonraker.conf
+log_file: /home/mks/klipper_logs/moonraker.log
+software_version: ?
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+2025-03-18 21:55:50,342 [utils.py:setup_logging()] - config_file: /home/mks/klipper_config/moonraker.conf
+2025-03-18 21:55:50,343 [utils.py:setup_logging()] - log_file: /home/mks/klipper_logs/moonraker.log
+2025-03-18 21:55:50,343 [utils.py:setup_logging()] - software_version: ?
+2025-03-18 21:55:50,343 [utils.py:setup_logging()] - python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+2025-03-18 21:55:50,358 [moonraker.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = localhost
+port = 7125
+enable_debug_logging = False
+klippy_uds_address = /tmp/klippy_uds
+
+[authorization]
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	http://*.lan
+	http://*.local
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	https://app.fluidd.xyz
+	http://app.fluidd.xyz
+
+[database]
+database_path = /home/mks/.moonraker_database
+
+[file_manager]
+config_path = /home/mks/klipper_config
+log_path = /home/mks/klipper_logs
+upload_path = /home/mks/gcode_files/sda1
+
+[octoprint_compat]
+
+[history]
+
+#################################################################
+All Configuration Files:
+/home/mks/klipper_config/moonraker.conf
+#################################################################
+2025-03-18 21:55:50,386 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/info
+2025-03-18 21:55:50,387 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.info
+2025-03-18 21:55:50,387 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/config
+2025-03-18 21:55:50,388 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.config
+2025-03-18 21:55:50,388 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/restart
+2025-03-18 21:55:50,390 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.restart
+2025-03-18 21:55:50,508 [moonraker.py:load_component()] - Component (dbus_manager) loaded
+2025-03-18 21:55:50,525 [moonraker.py:add_log_rollover_item()] - Unsafe Shutdown Count: 0
+2025-03-18 21:55:50,530 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/database/list
+2025-03-18 21:55:50,531 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.database.list
+2025-03-18 21:55:50,531 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/database/item
+2025-03-18 21:55:50,533 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.database.get_item, server.database.post_item, server.database.delete_item
+2025-03-18 21:55:50,533 [moonraker.py:load_component()] - Component (database) loaded
+2025-03-18 21:55:50,602 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/files/list
+2025-03-18 21:55:50,604 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.list
+2025-03-18 21:55:50,604 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/files/metadata
+2025-03-18 21:55:50,605 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.metadata
+2025-03-18 21:55:50,606 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/files/directory
+2025-03-18 21:55:50,607 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.get_directory, server.files.post_directory, server.files.delete_directory
+2025-03-18 21:55:50,608 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/files/move
+2025-03-18 21:55:50,609 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.move
+2025-03-18 21:55:50,609 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/files/copy
+2025-03-18 21:55:50,611 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.copy
+2025-03-18 21:55:50,611 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.delete_file
+2025-03-18 21:55:50,638 [moonraker.py:load_component()] - Component (file_manager) loaded
+2025-03-18 21:55:50,642 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/pause
+2025-03-18 21:55:50,643 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.pause
+2025-03-18 21:55:50,644 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/resume
+2025-03-18 21:55:50,645 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.resume
+2025-03-18 21:55:50,646 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/cancel
+2025-03-18 21:55:50,647 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.cancel
+2025-03-18 21:55:50,648 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/start
+2025-03-18 21:55:50,649 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.start
+2025-03-18 21:55:50,649 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/restart
+2025-03-18 21:55:50,650 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.restart
+2025-03-18 21:55:50,650 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/firmware_restart
+2025-03-18 21:55:50,652 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.firmware_restart
+2025-03-18 21:55:50,666 [klippy_apis.py:init_conf()] - load level mode conf
+2025-03-18 21:55:50,667 [moonraker.py:load_component()] - Component (klippy_apis) loaded
+2025-03-18 21:55:51,101 [moonraker.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: sys.version_info(major=3, minor=7, micro=3, releaselevel='final', serial=0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: 
+  hardware_desc: 
+  model: 
+  total_memory: 999784
+  memory_units: kB
+
+***sd_info***
+
+***distribution***
+  name: Debian GNU/Linux 10 (buster)
+  id: debian
+  version: 10
+  version_parts: {'major': '10', 'minor': '', 'build_number': ''}
+  like: 
+  codename: buster
+  release_info: {}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+2025-03-18 21:55:51,108 [moonraker.py:load_component()] - Component (shell_command) loaded
+2025-03-18 21:55:51,108 [machine.py:__init__()] - Using System Provider: systemd_dbus
+2025-03-18 21:55:51,109 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/reboot
+2025-03-18 21:55:51,110 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.reboot
+2025-03-18 21:55:51,110 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/shutdown
+2025-03-18 21:55:51,113 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.shutdown
+2025-03-18 21:55:51,113 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/restart
+2025-03-18 21:55:51,115 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.restart
+2025-03-18 21:55:51,115 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/stop
+2025-03-18 21:55:51,116 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.stop
+2025-03-18 21:55:51,116 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/start
+2025-03-18 21:55:51,118 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.start
+2025-03-18 21:55:51,118 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/system_info
+2025-03-18 21:55:51,119 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.system_info
+2025-03-18 21:55:51,121 [moonraker.py:load_component()] - Component (machine) loaded
+2025-03-18 21:55:51,125 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/temperature_store
+2025-03-18 21:55:51,126 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.temperature_store
+2025-03-18 21:55:51,127 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/gcode_store
+2025-03-18 21:55:51,128 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.gcode_store
+2025-03-18 21:55:51,128 [moonraker.py:load_component()] - Component (data_store) loaded
+2025-03-18 21:55:51,131 [proc_stats.py:__init__()] - Unable to find 'vcgencmd', throttle checking disabled
+2025-03-18 21:55:51,132 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/proc_stats
+2025-03-18 21:55:51,133 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.proc_stats
+2025-03-18 21:55:51,134 [moonraker.py:load_component()] - Component (proc_stats) loaded
+2025-03-18 21:55:51,136 [moonraker.py:load_component()] - Component (job_state) loaded
+2025-03-18 21:55:51,140 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST DELETE) /server/job_queue/job
+2025-03-18 21:55:51,142 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.post_job, server.job_queue.delete_job
+2025-03-18 21:55:51,142 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/job_queue/pause
+2025-03-18 21:55:51,144 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.pause
+2025-03-18 21:55:51,144 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/job_queue/start
+2025-03-18 21:55:51,145 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.start
+2025-03-18 21:55:51,146 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/job_queue/status
+2025-03-18 21:55:51,147 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.status
+2025-03-18 21:55:51,147 [moonraker.py:load_component()] - Component (job_queue) loaded
+2025-03-18 21:55:51,161 [moonraker.py:load_component()] - Component (http_client) loaded
+2025-03-18 21:55:51,166 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/announcements/list
+2025-03-18 21:55:51,167 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.list
+2025-03-18 21:55:51,167 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/announcements/dismiss
+2025-03-18 21:55:51,169 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.dismiss
+2025-03-18 21:55:51,169 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/announcements/update
+2025-03-18 21:55:51,171 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.update
+2025-03-18 21:55:51,171 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST DELETE) /server/announcements/feed
+2025-03-18 21:55:51,172 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.post_feed, server.announcements.delete_feed
+2025-03-18 21:55:51,172 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/announcements/feeds
+2025-03-18 21:55:51,174 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.feeds
+2025-03-18 21:55:51,175 [moonraker.py:load_component()] - Component (announcements) loaded
+2025-03-18 21:55:51,187 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/webcams/list
+2025-03-18 21:55:51,189 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.webcams.list
+2025-03-18 21:55:51,189 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/webcams/item
+2025-03-18 21:55:51,191 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.webcams.get_item, server.webcams.post_item, server.webcams.delete_item
+2025-03-18 21:55:51,191 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/webcams/test
+2025-03-18 21:55:51,193 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.webcams.test
+2025-03-18 21:55:51,193 [moonraker.py:load_component()] - Component (webcam) loaded
+2025-03-18 21:55:51,196 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: connection.send_event
+2025-03-18 21:55:51,196 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/extensions/list
+2025-03-18 21:55:51,197 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.extensions.list
+2025-03-18 21:55:51,197 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/extensions/request
+2025-03-18 21:55:51,199 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.extensions.request
+2025-03-18 21:55:51,199 [moonraker.py:load_component()] - Component (extensions) loaded
+2025-03-18 21:55:51,231 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+http://.*\.lan
+http://.*\.local
+https://my\.mainsail\.xyz
+http://my\.mainsail\.xyz
+https://app\.fluidd\.xyz
+http://app\.fluidd\.xyz
+2025-03-18 21:55:51,231 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/login
+2025-03-18 21:55:51,232 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/logout
+2025-03-18 21:55:51,234 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/refresh_jwt
+2025-03-18 21:55:51,235 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /access/user
+2025-03-18 21:55:51,236 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/users/list
+2025-03-18 21:55:51,237 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/user/password
+2025-03-18 21:55:51,238 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST) /access/api_key
+2025-03-18 21:55:51,239 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/oneshot_token
+2025-03-18 21:55:51,240 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/info
+2025-03-18 21:55:51,241 [moonraker.py:load_component()] - Component (authorization) loaded
+2025-03-18 21:55:51,245 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/version
+2025-03-18 21:55:51,246 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/server
+2025-03-18 21:55:51,247 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/login
+2025-03-18 21:55:51,247 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/currentuser
+2025-03-18 21:55:51,249 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/settings
+2025-03-18 21:55:51,249 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/job
+2025-03-18 21:55:51,250 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/printer
+2025-03-18 21:55:51,251 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/printer/command
+2025-03-18 21:55:51,253 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/printerprofiles
+2025-03-18 21:55:51,254 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/files/moonraker/(?P<relative_path>.+)
+2025-03-18 21:55:51,256 [moonraker.py:load_component()] - Component (octoprint_compat) loaded
+2025-03-18 21:55:51,259 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET DELETE) /server/history/job
+2025-03-18 21:55:51,260 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.get_job, server.history.delete_job
+2025-03-18 21:55:51,260 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/history/list
+2025-03-18 21:55:51,261 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.list
+2025-03-18 21:55:51,262 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/history/totals
+2025-03-18 21:55:51,263 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.totals
+2025-03-18 21:55:51,263 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/history/reset_totals
+2025-03-18 21:55:51,264 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.reset_totals
+2025-03-18 21:55:51,266 [moonraker.py:load_component()] - Component (history) loaded
+2025-03-18 21:55:51,266 [moonraker.py:add_warning()] - Unparsed config option 'upload_path: /home/mks/gcode_files/sda1' detected in section [file_manager].  This may be an option no longer available or could be the result of a module that failed to load.  In the future this will result in a startup error.
+2025-03-18 21:55:51,268 [moonraker.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+2025-03-18 21:55:51,300 [moonraker.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+2025-03-18 21:55:51,408 [moonraker.py:_initialize_component()] - Performing Component Post Init: [machine]
+2025-03-18 21:55:51,568 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-03-18 21:55:52,077 [machine.py:check_virt_status()] - No Virtualization Detected
+2025-03-18 21:55:52,110 [moonraker.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+2025-03-18 21:55:52,111 [moonraker.py:_initialize_component()] - Performing Component Post Init: [announcements]
+2025-03-18 21:55:52,117 [moonraker.py:_initialize_component()] - Performing Component Post Init: [webcam]
+2025-03-18 21:55:52,183 [moonraker.py:_initialize_component()] - Performing Component Post Init: [authorization]
+2025-03-18 21:55:52,185 [moonraker.py:start_server()] - Starting Moonraker on (localhost, 7125), Hostname: mkspi
+2025-03-18 21:55:52,188 [app.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+2025-03-18 21:55:52,444 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-03-18 21:55:52,445 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x78020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-03-18 21:55:52,545 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-03-18 21:55:52,546 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Tuning/Elegoo/White/flowrate_0_EN4Plus_0.4_PLA0.2_30m21s.gcode") successfully finished
+2025-03-18 21:55:52,548 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-03-18 21:55:52,705 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-03-18 21:55:52,710 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-03-18 21:55:52,716 [moonraker.py:add_log_rollover_item()] - Klipper Version: ?
+2025-03-18 21:55:52,721 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/info
+2025-03-18 21:55:52,722 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.info
+2025-03-18 21:55:52,723 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/query_endstops/status
+2025-03-18 21:55:52,725 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.query_endstops.status
+2025-03-18 21:55:52,725 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/emergency_stop
+2025-03-18 21:55:52,727 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.emergency_stop
+2025-03-18 21:55:52,727 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/pause_resume/pause
+2025-03-18 21:55:52,729 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.pause_resume.pause
+2025-03-18 21:55:52,729 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/query
+2025-03-18 21:55:52,731 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.query
+2025-03-18 21:55:52,731 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/list
+2025-03-18 21:55:52,733 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.list
+2025-03-18 21:55:52,734 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/adxl345/dump_adxl345
+2025-03-18 21:55:52,735 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.adxl345.dump_adxl345
+2025-03-18 21:55:52,735 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/motion_report/dump_stepper
+2025-03-18 21:55:52,737 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.motion_report.dump_stepper
+2025-03-18 21:55:52,737 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/firmware_restart
+2025-03-18 21:55:52,739 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.firmware_restart
+2025-03-18 21:55:52,739 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/subscribe
+2025-03-18 21:55:52,740 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.subscribe
+2025-03-18 21:55:52,741 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/script
+2025-03-18 21:55:52,742 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.script
+2025-03-18 21:55:52,742 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/help
+2025-03-18 21:55:52,743 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.help
+2025-03-18 21:55:52,743 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/pause_resume/resume
+2025-03-18 21:55:52,745 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.pause_resume.resume
+2025-03-18 21:55:52,745 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/motion_report/dump_trapq
+2025-03-18 21:55:52,747 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.motion_report.dump_trapq
+2025-03-18 21:55:52,747 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/pause_resume/cancel
+2025-03-18 21:55:52,748 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.pause_resume.cancel
+2025-03-18 21:55:52,749 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/restart
+2025-03-18 21:55:52,750 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.restart
+2025-03-18 21:55:52,956 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-03-18 21:55:53,242 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-03-18 21:55:53,710 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-18 21:56:03,095 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-03-18 21:56:03,279 [app.py:log_request()] - 101 GET /websocket?token=RNZOKPSVPLXD3JNYG5C74ZL4GLIFYUQ4 (10.10.100.21) [_TRUSTED_USER_] 5.35ms
+2025-03-18 21:56:03,282 [websockets.py:open()] - Websocket Opened: ID: 281473355387792, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 21:56:03,290 [websockets.py:_handle_identify()] - Websocket 281473355387792 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 21:56:37,288 [moonraker.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2025-03-18 21:56:37,409 [websockets.py:on_close()] - Websocket Closed: ID: 281473355387792 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 4.12
+2025-03-18 21:56:37,414 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-03-18 21:56:37,425 [database.py:close()] - Database statistics:
+
+announcements:
+psize: 4096
+depth: 0
+branch_pages: 0
+leaf_pages: 0
+overflow_pages: 0
+entries: 0
+authorized_users:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 2
+fluidd:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 6
+gcode_metadata:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 27
+entries: 8
+history:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 84
+overflow_pages: 77
+entries: 213
+mobileraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 2
+entries: 2
+moonraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 5
+2025-03-18 21:56:37,434 [moonraker.py:main()] - Server Shutdown
+--------------------Moonraker Log Start--------------------
+config_file: /home/mks/klipper_config/moonraker.conf
+log_file: /home/mks/klipper_logs/moonraker.log
+software_version: ?
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+2025-03-18 21:56:38,845 [utils.py:setup_logging()] - config_file: /home/mks/klipper_config/moonraker.conf
+2025-03-18 21:56:38,846 [utils.py:setup_logging()] - log_file: /home/mks/klipper_logs/moonraker.log
+2025-03-18 21:56:38,846 [utils.py:setup_logging()] - software_version: ?
+2025-03-18 21:56:38,846 [utils.py:setup_logging()] - python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+2025-03-18 21:56:38,863 [moonraker.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = localhost
+port = 7125
+enable_debug_logging = False
+klippy_uds_address = /tmp/klippy_uds
+
+[authorization]
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	http://*.lan
+	http://*.local
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	https://app.fluidd.xyz
+	http://app.fluidd.xyz
+
+[database]
+database_path = /home/mks/.moonraker_database
+
+[file_manager]
+config_path = /home/mks/klipper_config
+log_path = /home/mks/klipper_logs
+upload_path = /home/mks/gcode_files/sda1
+
+[octoprint_compat]
+
+[history]
+
+#################################################################
+All Configuration Files:
+/home/mks/klipper_config/moonraker.conf
+#################################################################
+2025-03-18 21:56:38,891 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/info
+2025-03-18 21:56:38,893 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.info
+2025-03-18 21:56:38,893 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/config
+2025-03-18 21:56:38,894 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.config
+2025-03-18 21:56:38,894 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/restart
+2025-03-18 21:56:38,895 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.restart
+2025-03-18 21:56:39,016 [moonraker.py:load_component()] - Component (dbus_manager) loaded
+2025-03-18 21:56:39,033 [moonraker.py:add_log_rollover_item()] - Unsafe Shutdown Count: 0
+2025-03-18 21:56:39,273 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/database/list
+2025-03-18 21:56:39,276 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.database.list
+2025-03-18 21:56:39,277 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/database/item
+2025-03-18 21:56:39,280 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.database.get_item, server.database.post_item, server.database.delete_item
+2025-03-18 21:56:39,281 [moonraker.py:load_component()] - Component (database) loaded
+2025-03-18 21:56:39,360 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/files/list
+2025-03-18 21:56:39,362 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.list
+2025-03-18 21:56:39,362 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/files/metadata
+2025-03-18 21:56:39,364 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.metadata
+2025-03-18 21:56:39,364 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/files/directory
+2025-03-18 21:56:39,366 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.get_directory, server.files.post_directory, server.files.delete_directory
+2025-03-18 21:56:39,367 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/files/move
+2025-03-18 21:56:39,369 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.move
+2025-03-18 21:56:39,369 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/files/copy
+2025-03-18 21:56:39,371 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.copy
+2025-03-18 21:56:39,373 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.delete_file
+2025-03-18 21:56:40,064 [moonraker.py:load_component()] - Component (file_manager) loaded
+2025-03-18 21:56:40,068 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/pause
+2025-03-18 21:56:40,070 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.pause
+2025-03-18 21:56:40,071 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/resume
+2025-03-18 21:56:40,072 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.resume
+2025-03-18 21:56:40,073 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/cancel
+2025-03-18 21:56:40,080 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.cancel
+2025-03-18 21:56:40,080 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/start
+2025-03-18 21:56:40,082 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.start
+2025-03-18 21:56:40,082 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/restart
+2025-03-18 21:56:40,084 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.restart
+2025-03-18 21:56:40,084 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/firmware_restart
+2025-03-18 21:56:40,086 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.firmware_restart
+2025-03-18 21:56:40,107 [klippy_apis.py:init_conf()] - load level mode conf
+2025-03-18 21:56:40,108 [moonraker.py:load_component()] - Component (klippy_apis) loaded
+2025-03-18 21:56:41,003 [moonraker.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: sys.version_info(major=3, minor=7, micro=3, releaselevel='final', serial=0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: 
+  hardware_desc: 
+  model: 
+  total_memory: 999784
+  memory_units: kB
+
+***sd_info***
+
+***distribution***
+  name: Debian GNU/Linux 10 (buster)
+  id: debian
+  version: 10
+  version_parts: {'major': '10', 'minor': '', 'build_number': ''}
+  like: 
+  codename: buster
+  release_info: {}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+2025-03-18 21:56:41,010 [moonraker.py:load_component()] - Component (shell_command) loaded
+2025-03-18 21:56:41,011 [machine.py:__init__()] - Using System Provider: systemd_dbus
+2025-03-18 21:56:41,012 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/reboot
+2025-03-18 21:56:41,013 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.reboot
+2025-03-18 21:56:41,014 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/shutdown
+2025-03-18 21:56:41,015 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.shutdown
+2025-03-18 21:56:41,016 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/restart
+2025-03-18 21:56:41,018 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.restart
+2025-03-18 21:56:41,018 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/stop
+2025-03-18 21:56:41,020 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.stop
+2025-03-18 21:56:41,021 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/start
+2025-03-18 21:56:41,022 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.start
+2025-03-18 21:56:41,023 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/system_info
+2025-03-18 21:56:41,025 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.system_info
+2025-03-18 21:56:41,028 [moonraker.py:load_component()] - Component (machine) loaded
+2025-03-18 21:56:41,042 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/temperature_store
+2025-03-18 21:56:41,043 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.temperature_store
+2025-03-18 21:56:41,044 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/gcode_store
+2025-03-18 21:56:41,046 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.gcode_store
+2025-03-18 21:56:41,046 [moonraker.py:load_component()] - Component (data_store) loaded
+2025-03-18 21:56:41,058 [proc_stats.py:__init__()] - Unable to find 'vcgencmd', throttle checking disabled
+2025-03-18 21:56:41,059 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/proc_stats
+2025-03-18 21:56:41,060 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.proc_stats
+2025-03-18 21:56:41,061 [moonraker.py:load_component()] - Component (proc_stats) loaded
+2025-03-18 21:56:41,065 [moonraker.py:load_component()] - Component (job_state) loaded
+2025-03-18 21:56:41,071 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST DELETE) /server/job_queue/job
+2025-03-18 21:56:41,072 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.post_job, server.job_queue.delete_job
+2025-03-18 21:56:41,073 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/job_queue/pause
+2025-03-18 21:56:41,077 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.pause
+2025-03-18 21:56:41,077 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/job_queue/start
+2025-03-18 21:56:41,079 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.start
+2025-03-18 21:56:41,079 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/job_queue/status
+2025-03-18 21:56:41,081 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.status
+2025-03-18 21:56:41,082 [moonraker.py:load_component()] - Component (job_queue) loaded
+2025-03-18 21:56:41,110 [moonraker.py:load_component()] - Component (http_client) loaded
+2025-03-18 21:56:41,119 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/announcements/list
+2025-03-18 21:56:41,121 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.list
+2025-03-18 21:56:41,121 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/announcements/dismiss
+2025-03-18 21:56:41,123 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.dismiss
+2025-03-18 21:56:41,123 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/announcements/update
+2025-03-18 21:56:41,126 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.update
+2025-03-18 21:56:41,127 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST DELETE) /server/announcements/feed
+2025-03-18 21:56:41,129 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.post_feed, server.announcements.delete_feed
+2025-03-18 21:56:41,129 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/announcements/feeds
+2025-03-18 21:56:41,131 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.feeds
+2025-03-18 21:56:41,132 [moonraker.py:load_component()] - Component (announcements) loaded
+2025-03-18 21:56:41,145 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/webcams/list
+2025-03-18 21:56:41,148 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.webcams.list
+2025-03-18 21:56:41,149 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/webcams/item
+2025-03-18 21:56:41,150 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.webcams.get_item, server.webcams.post_item, server.webcams.delete_item
+2025-03-18 21:56:41,150 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/webcams/test
+2025-03-18 21:56:41,152 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.webcams.test
+2025-03-18 21:56:41,153 [moonraker.py:load_component()] - Component (webcam) loaded
+2025-03-18 21:56:41,169 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: connection.send_event
+2025-03-18 21:56:41,169 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/extensions/list
+2025-03-18 21:56:41,171 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.extensions.list
+2025-03-18 21:56:41,171 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/extensions/request
+2025-03-18 21:56:41,173 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.extensions.request
+2025-03-18 21:56:41,174 [moonraker.py:load_component()] - Component (extensions) loaded
+2025-03-18 21:56:41,210 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+http://.*\.lan
+http://.*\.local
+https://my\.mainsail\.xyz
+http://my\.mainsail\.xyz
+https://app\.fluidd\.xyz
+http://app\.fluidd\.xyz
+2025-03-18 21:56:41,210 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/login
+2025-03-18 21:56:41,211 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/logout
+2025-03-18 21:56:41,212 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/refresh_jwt
+2025-03-18 21:56:41,214 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /access/user
+2025-03-18 21:56:41,215 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/users/list
+2025-03-18 21:56:41,216 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/user/password
+2025-03-18 21:56:41,218 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST) /access/api_key
+2025-03-18 21:56:41,219 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/oneshot_token
+2025-03-18 21:56:41,220 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/info
+2025-03-18 21:56:41,221 [moonraker.py:load_component()] - Component (authorization) loaded
+2025-03-18 21:56:41,231 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/version
+2025-03-18 21:56:41,233 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/server
+2025-03-18 21:56:41,234 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/login
+2025-03-18 21:56:41,235 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/currentuser
+2025-03-18 21:56:41,237 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/settings
+2025-03-18 21:56:41,238 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/job
+2025-03-18 21:56:41,239 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/printer
+2025-03-18 21:56:41,240 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/printer/command
+2025-03-18 21:56:41,242 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/printerprofiles
+2025-03-18 21:56:41,244 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/files/moonraker/(?P<relative_path>.+)
+2025-03-18 21:56:41,246 [moonraker.py:load_component()] - Component (octoprint_compat) loaded
+2025-03-18 21:56:41,250 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET DELETE) /server/history/job
+2025-03-18 21:56:41,251 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.get_job, server.history.delete_job
+2025-03-18 21:56:41,251 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/history/list
+2025-03-18 21:56:41,252 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.list
+2025-03-18 21:56:41,253 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/history/totals
+2025-03-18 21:56:41,254 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.totals
+2025-03-18 21:56:41,254 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/history/reset_totals
+2025-03-18 21:56:41,256 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.reset_totals
+2025-03-18 21:56:41,257 [moonraker.py:load_component()] - Component (history) loaded
+2025-03-18 21:56:41,258 [moonraker.py:add_warning()] - Unparsed config option 'upload_path: /home/mks/gcode_files/sda1' detected in section [file_manager].  This may be an option no longer available or could be the result of a module that failed to load.  In the future this will result in a startup error.
+2025-03-18 21:56:41,260 [moonraker.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+2025-03-18 21:56:41,299 [moonraker.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+2025-03-18 21:56:41,607 [moonraker.py:_initialize_component()] - Performing Component Post Init: [machine]
+2025-03-18 21:56:42,401 [machine.py:check_virt_status()] - No Virtualization Detected
+2025-03-18 21:56:43,721 [moonraker.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+2025-03-18 21:56:43,722 [moonraker.py:_initialize_component()] - Performing Component Post Init: [announcements]
+2025-03-18 21:56:43,726 [moonraker.py:_initialize_component()] - Performing Component Post Init: [webcam]
+2025-03-18 21:56:43,898 [moonraker.py:_initialize_component()] - Performing Component Post Init: [authorization]
+2025-03-18 21:56:43,899 [moonraker.py:start_server()] - Starting Moonraker on (localhost, 7125), Hostname: mkspi
+2025-03-18 21:56:43,904 [app.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+2025-03-18 21:56:44,303 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-03-18 21:56:44,304 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x78020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-03-18 21:56:44,564 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-03-18 21:56:44,570 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-03-18 21:56:44,575 [moonraker.py:add_log_rollover_item()] - Klipper Version: ?
+2025-03-18 21:56:44,579 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/info
+2025-03-18 21:56:44,580 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.info
+2025-03-18 21:56:44,581 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/query_endstops/status
+2025-03-18 21:56:44,582 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.query_endstops.status
+2025-03-18 21:56:44,582 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/emergency_stop
+2025-03-18 21:56:44,584 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.emergency_stop
+2025-03-18 21:56:44,585 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/pause_resume/pause
+2025-03-18 21:56:44,586 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.pause_resume.pause
+2025-03-18 21:56:44,587 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/query
+2025-03-18 21:56:44,588 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.query
+2025-03-18 21:56:44,588 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/list
+2025-03-18 21:56:44,590 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.list
+2025-03-18 21:56:44,591 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/adxl345/dump_adxl345
+2025-03-18 21:56:44,593 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.adxl345.dump_adxl345
+2025-03-18 21:56:44,594 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/motion_report/dump_stepper
+2025-03-18 21:56:44,595 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.motion_report.dump_stepper
+2025-03-18 21:56:44,596 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/firmware_restart
+2025-03-18 21:56:44,598 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.firmware_restart
+2025-03-18 21:56:44,599 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/subscribe
+2025-03-18 21:56:44,601 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.subscribe
+2025-03-18 21:56:44,601 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/script
+2025-03-18 21:56:44,604 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.script
+2025-03-18 21:56:44,604 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/help
+2025-03-18 21:56:44,606 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.help
+2025-03-18 21:56:44,606 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/pause_resume/resume
+2025-03-18 21:56:44,607 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.pause_resume.resume
+2025-03-18 21:56:44,608 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/motion_report/dump_trapq
+2025-03-18 21:56:44,610 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.motion_report.dump_trapq
+2025-03-18 21:56:44,610 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/pause_resume/cancel
+2025-03-18 21:56:44,611 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.pause_resume.cancel
+2025-03-18 21:56:44,611 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/restart
+2025-03-18 21:56:44,613 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.restart
+2025-03-18 21:56:44,819 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-03-18 21:56:45,103 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-03-18 21:56:45,571 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-18 21:56:55,329 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-03-18 21:56:59,177 [proc_stats.py:_watchdog_callback()] - EVENT LOOP BLOCKED: 5.34 seconds, total blocked count: 1
+2025-03-18 21:56:59,345 [app.py:log_request()] - 101 GET /websocket?token=BQUI3EZD2RT3A45HXDGWSD2YDCXRJCJG (10.10.100.21) [_TRUSTED_USER_] 6.38ms
+2025-03-18 21:56:59,347 [websockets.py:open()] - Websocket Opened: ID: 281473148769168, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-03-18 21:56:59,357 [websockets.py:_handle_identify()] - Websocket 281473148769168 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-03-18 21:56:59,381 [proc_stats.py:log_last_stats()] - 
+System Time: 1742306212.839805, Usage: 2.49%, Memory: 30664 kB
+System Time: 1742306213.846021, Usage: 2.36%, Memory: 30712 kB
+System Time: 1742306214.845475, Usage: 4.35%, Memory: 30752 kB
+System Time: 1742306219.199066, Usage: 4.55%, Memory: 30868 kB
+System Time: 1742306219.217845, Usage: 2.2%, Memory: 30900 kB
