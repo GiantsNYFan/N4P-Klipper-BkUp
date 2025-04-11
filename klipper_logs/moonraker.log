@@ -193,3 +193,5 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-04-11 21:50:43,336 [job_state.py:_handle_started()] - Job state initialized: standby
 2025-04-11 21:50:43,623 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-04-11 21:50:44,103 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-11 21:53:30,908 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-11 21:53:49,385 [job_state.py:_status_update()] - Job Started: sda1/Fidgets/rocket-fidget-version_EN4Plus_0.4_PLA0.2_3h32m.gcode
