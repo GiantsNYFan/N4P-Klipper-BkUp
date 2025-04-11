@@ -136,3 +136,5 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 
 2025-04-12 02:58:08,097 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Fidgets/Fidget_Star_Green_EN4Plus_0.4_PLA0.2_2h30m.gcode") successfully finished
 2025-04-12 02:58:08,099 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-04-12 03:01:47,536 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-12 03:02:11,340 [job_state.py:_status_update()] - Job Started: sda1/Fidgets/Fidget_Star_Green_EN4Plus_0.4_PLA0.2_2h30m.gcode
