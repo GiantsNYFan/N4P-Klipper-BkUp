@@ -195,3 +195,4 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-04-11 21:50:44,103 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-04-11 21:53:30,908 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-04-11 21:53:49,385 [job_state.py:_status_update()] - Job Started: sda1/Fidgets/rocket-fidget-version_EN4Plus_0.4_PLA0.2_3h32m.gcode
+2025-04-11 23:28:13,787 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
