@@ -138,3 +138,4 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 2025-04-12 02:58:08,099 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
 2025-04-12 03:01:47,536 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-04-12 03:02:11,340 [job_state.py:_status_update()] - Job Started: sda1/Fidgets/Fidget_Star_Green_EN4Plus_0.4_PLA0.2_2h30m.gcode
+2025-04-12 04:53:13,875 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
