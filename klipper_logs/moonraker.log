@@ -137,3 +137,39 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-04-22 22:25:44,635 [job_state.py:_handle_started()] - Job state initialized: standby
 2025-04-22 22:25:44,922 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-04-22 22:25:45,402 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-22 22:28:42,980 [websockets.py:build_error()] - JSON-RPC Request Error: 400
+{'message': 'No trigger on probe after full movement', 'error': 'WebRequestError'}
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 468, in request
+    return await self._request_standard(web_request)
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 523, in _request_standard
+    return await base_request.wait()
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 595, in wait
+    raise self.response
+utils.ServerError: {'message': 'No trigger on probe after full movement', 'error': 'WebRequestError'}
+2025-04-22 22:32:04,192 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-04-22 22:32:04,217 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-04-22 22:32:05,460 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-04-22 22:32:05,461 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x80020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-04-22 22:32:06,218 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-04-22 22:32:06,229 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-04-22 22:32:08,730 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-04-22 22:32:09,110 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-04-22 22:32:09,497 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
