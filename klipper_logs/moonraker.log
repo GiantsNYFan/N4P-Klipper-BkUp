@@ -80,3 +80,11 @@ System Info:
 Klipper Version: ?
 2025-04-22 22:05:16,818 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-04-22 22:05:17,266 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-22 22:06:57,079 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-04-22 22:06:57,266 [app.py:log_request()] - 101 GET /websocket?token=GYIR7RZJNYLRZ542D2GWUQI5XJ26LZID (10.10.100.21) [_TRUSTED_USER_] 4.51ms
+2025-04-22 22:06:57,267 [websockets.py:open()] - Websocket Opened: ID: 281473664071832, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-22 22:06:57,274 [websockets.py:_handle_identify()] - Websocket 281473664071832 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-22 22:07:08,468 [websockets.py:on_close()] - Websocket Closed: ID: 281473664071832 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 1.19
+2025-04-22 22:07:08,750 [app.py:log_request()] - 101 GET /websocket?token=7IMRUX7LRW6ZXBTG3XL4HMDLA2YQGBV7 (10.10.100.21) [_TRUSTED_USER_] 5.45ms
+2025-04-22 22:07:08,752 [websockets.py:open()] - Websocket Opened: ID: 281473664071832, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-22 22:07:08,758 [websockets.py:_handle_identify()] - Websocket 281473664071832 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
