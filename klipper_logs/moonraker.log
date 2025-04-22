@@ -204,3 +204,4 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-04-22 22:42:42,803 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-04-22 22:45:26,635 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-04-22 22:45:44,924 [job_state.py:_status_update()] - Job Started: sda1/Organization/Multiboard/DoubleSidedSnapsX4_EN4Plus_0.4_PLA0.2_1h0m.gcode
+2025-04-22 23:45:06,930 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
