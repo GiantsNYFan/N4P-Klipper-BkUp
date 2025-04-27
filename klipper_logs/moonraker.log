@@ -257,3 +257,43 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 2025-04-28 02:16:33,661 [websockets.py:on_close()] - Websocket Closed: ID: 281473357346856 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.96
 2025-04-28 02:16:45,156 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-04-28 02:17:10,978 [job_state.py:_status_update()] - Job Started: sda1/Tuning/Elegoo/PETG/White/flowrate_0_EN4Plus_0.4_PETG0.2_30m43s.gcode
+2025-04-28 02:27:26,643 [app.py:log_request()] - 101 GET /websocket (10.10.100.14) [_TRUSTED_USER_] 5.79ms
+2025-04-28 02:27:26,644 [websockets.py:open()] - Websocket Opened: ID: 281473357324640, Proxied: True, User Agent: Dart/3.6 (dart:io), Host Name: 10.10.100.201
+2025-04-28 02:27:26,688 [websockets.py:_handle_identify()] - Websocket 281473357324640 Client Identified - Name: Mobileraker-ios, Version: 2.8.7-619, Type: mobile
+2025-04-28 02:27:26,692 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 02:27:26,815 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 02:27:32,847 [websockets.py:on_close()] - Websocket Closed: ID: 281473357324640 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.21
