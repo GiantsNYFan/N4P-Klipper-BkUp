@@ -78,4 +78,8 @@ System Info:
   virt_type: none
   virt_identifier: none
 Klipper Version: ?
-2025-04-28 00:06:08,359 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.15
+2025-04-27 23:46:00,296 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: ::1
+2025-04-27 23:58:14,651 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-04-27 23:58:14,855 [app.py:log_request()] - 101 GET /websocket?token=I3RMPEKYNDD6LGBN7DSHLEKVARDKLDZA (10.10.100.21) [_TRUSTED_USER_] 5.19ms
+2025-04-27 23:58:14,856 [websockets.py:open()] - Websocket Opened: ID: 281473357646144, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-27 23:58:14,864 [websockets.py:_handle_identify()] - Websocket 281473357646144 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
