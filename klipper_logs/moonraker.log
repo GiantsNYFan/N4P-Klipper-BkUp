@@ -82,3 +82,30 @@ Klipper Version: ?
 2025-04-28 00:06:31,532 [app.py:log_request()] - 101 GET /websocket?token=QQDNCMTMXPHJMKCK6FTTJZTCSSBWLDFP (10.10.100.15) [_TRUSTED_USER_] 4.68ms
 2025-04-28 00:06:31,533 [websockets.py:open()] - Websocket Opened: ID: 281473357317904, Proxied: True, User Agent: BBL-Slicer/v01.09.05.51 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
 2025-04-28 00:06:32,248 [websockets.py:_handle_identify()] - Websocket 281473357317904 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 00:09:01,501 [websockets.py:on_close()] - Websocket Closed: ID: 281473357646144 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 6.62
+2025-04-28 00:09:01,834 [app.py:log_request()] - 101 GET /websocket?token=VL23HGNAZE5LAP2YWIQRHCJMOVLL4AKM (10.10.100.21) [_TRUSTED_USER_] 7.57ms
+2025-04-28 00:09:01,835 [websockets.py:open()] - Websocket Opened: ID: 281473357346688, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 00:09:01,843 [websockets.py:_handle_identify()] - Websocket 281473357346688 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 00:12:07,965 [websockets.py:on_close()] - Websocket Closed: ID: 281473357317904 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.42
+2025-04-28 00:20:44,520 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-04-28 00:20:44,551 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-04-28 00:20:45,785 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-04-28 00:20:45,786 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x96020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-04-28 00:20:46,540 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-04-28 00:20:46,550 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-04-28 00:20:48,793 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-04-28 00:20:49,077 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-04-28 00:20:49,549 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
