@@ -216,3 +216,44 @@ Traceback (most recent call last):
     f"Key '{key}' in namespace '{namespace}' not found", 404)
 utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
 2025-04-28 02:04:10,769 [websockets.py:on_close()] - Websocket Closed: ID: 281473357921528 Close Code: None, Close Reason: None, Pong Time Elapsed: 7.45
+2025-04-28 02:14:40,133 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.15
+2025-04-28 02:14:40,682 [app.py:log_request()] - 101 GET /websocket?token=3JRF3LWFPTLOT7BW45QOP2TVKZTCERT3 (10.10.100.15) [_TRUSTED_USER_] 9.67ms
+2025-04-28 02:14:40,683 [websockets.py:open()] - Websocket Opened: ID: 281473357346856, Proxied: True, User Agent: BBL-Slicer/v01.09.05.51 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 02:14:40,705 [websockets.py:_handle_identify()] - Websocket 281473357346856 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 02:15:34,498 [websockets.py:on_close()] - Websocket Closed: ID: 281473357407456 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 6.40
+2025-04-28 02:15:34,645 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-04-28 02:15:34,856 [app.py:log_request()] - 101 GET /websocket?token=RN23JSMGNGX3T7A4NNGL7HZ2VIHR22DD (10.10.100.21) [_TRUSTED_USER_] 5.07ms
+2025-04-28 02:15:34,857 [websockets.py:open()] - Websocket Opened: ID: 281473357205288, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 02:15:34,881 [websockets.py:_handle_identify()] - Websocket 281473357205288 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 02:15:54,924 [websockets.py:on_close()] - Websocket Closed: ID: 281473357205288 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 0.04
+2025-04-28 02:15:55,392 [app.py:log_request()] - 101 GET /websocket?token=RRT6SGOWNXPQYG3FKG6DURRESPTHG2YU (10.10.100.21) [_TRUSTED_USER_] 4.43ms
+2025-04-28 02:15:55,393 [websockets.py:open()] - Websocket Opened: ID: 281473357299160, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 02:15:55,398 [websockets.py:_handle_identify()] - Websocket 281473357299160 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 02:16:18,020 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-9333.mru' -> '/home/mks/gcode_files/sda1/Tuning/Elegoo/PETG/White/flowrate_0_EN4Plus_0.4_PETG0.2_30m43s.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Tuning/Elegoo/PETG/White/flowrate_0_EN4Plus_0.4_PETG0.2_30m43s.gcode'
+2025-04-28 02:16:18,041 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-04-28 02:16:18,049 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 1010.93ms
+2025-04-28 02:16:18,066 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-04-28 02:16:19,072 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-04-28 02:16:19,072 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Tuning/Elegoo/PETG/White/flowrate_0_EN4Plus_0.4_PETG0.2_30m43s.gcode") successfully finished
+2025-04-28 02:16:19,074 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-04-28 02:16:33,661 [websockets.py:on_close()] - Websocket Closed: ID: 281473357346856 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.96
+2025-04-28 02:16:45,156 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-28 02:17:10,978 [job_state.py:_status_update()] - Job Started: sda1/Tuning/Elegoo/PETG/White/flowrate_0_EN4Plus_0.4_PETG0.2_30m43s.gcode
