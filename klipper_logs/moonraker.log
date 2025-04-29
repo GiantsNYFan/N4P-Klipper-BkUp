@@ -165,3 +165,54 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 2025-04-29 21:37:25,060 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
 2025-04-29 21:40:55,096 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-04-29 21:41:13,424 [job_state.py:_status_update()] - Job Started: sda1/Organization/TMNT_MonitorMount_EN4Plus_0.4_PLA0.2_4h22m.gcode
+2025-04-29 21:45:51,159 [websockets.py:on_close()] - Websocket Closed: ID: 281473851762000 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 8.04
+2025-04-29 21:45:51,528 [app.py:log_request()] - 101 GET /websocket?token=4UQMBXYA4OOIBU3ETB7FBEWBXRZTVUG6 (10.10.100.21) [_TRUSTED_USER_] 5.47ms
+2025-04-29 21:45:51,529 [websockets.py:open()] - Websocket Opened: ID: 281473851840608, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-29 21:45:51,537 [websockets.py:_handle_identify()] - Websocket 281473851840608 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-29 21:47:51,049 [websockets.py:on_close()] - Websocket Closed: ID: 281473851840608 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 9.46
+2025-04-29 21:47:51,556 [app.py:log_request()] - 101 GET /websocket?token=TNCX55BBKNETCJOWSWPUTQIITWYGBFE4 (10.10.100.21) [_TRUSTED_USER_] 6.68ms
+2025-04-29 21:47:51,558 [websockets.py:open()] - Websocket Opened: ID: 281473851414120, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-29 21:47:51,570 [websockets.py:_handle_identify()] - Websocket 281473851414120 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-29 21:48:50,728 [websockets.py:on_close()] - Websocket Closed: ID: 281473851414120 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 9.13
+2025-04-29 21:48:51,066 [app.py:log_request()] - 101 GET /websocket?token=OTYFQOT7JVEIWJZNQ6YYTCHDR67OPL7I (10.10.100.21) [_TRUSTED_USER_] 5.30ms
+2025-04-29 21:48:51,067 [websockets.py:open()] - Websocket Opened: ID: 281473851796224, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-29 21:48:51,130 [websockets.py:_handle_identify()] - Websocket 281473851796224 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-29 21:48:56,688 [websockets.py:on_close()] - Websocket Closed: ID: 281473851796224 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 5.63
+2025-04-29 21:48:57,107 [app.py:log_request()] - 101 GET /websocket?token=A2ADHXID36ZK6Q5OYO22KBX52BGIYUKC (10.10.100.21) [_TRUSTED_USER_] 4.65ms
+2025-04-29 21:48:57,108 [websockets.py:open()] - Websocket Opened: ID: 281473852018816, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-29 21:48:57,118 [websockets.py:_handle_identify()] - Websocket 281473852018816 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-29 21:50:07,756 [websockets.py:on_close()] - Websocket Closed: ID: 281473852018816 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 0.64
+2025-04-29 21:50:08,039 [app.py:log_request()] - 101 GET /websocket?token=4ZG6DUOL5WBWLZUUEGE5PA4VSOEF4IDW (10.10.100.21) [_TRUSTED_USER_] 4.87ms
+2025-04-29 21:50:08,040 [websockets.py:open()] - Websocket Opened: ID: 281473852383864, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-29 21:50:08,060 [websockets.py:_handle_identify()] - Websocket 281473852383864 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-29 21:51:40,961 [websockets.py:on_close()] - Websocket Closed: ID: 281473852383864 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 2.91
+2025-04-29 21:51:41,426 [app.py:log_request()] - 101 GET /websocket?token=VOD5QEA3ZQHKLGOUVFYOWTV66ZWGRLE4 (10.10.100.21) [_TRUSTED_USER_] 5.56ms
+2025-04-29 21:51:41,427 [websockets.py:open()] - Websocket Opened: ID: 281473851819176, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-29 21:51:41,433 [websockets.py:_handle_identify()] - Websocket 281473851819176 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-29 21:52:24,189 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-4915.mru' -> '/home/mks/gcode_files/sda1/Tuning/Creality/PLA/Grey/temperature_tower_EN4Plus_0.4_PLA0.2_38m34s.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Tuning/Creality/PLA/Grey/temperature_tower_EN4Plus_0.4_PLA0.2_38m34s.gcode'
+2025-04-29 21:52:24,198 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-04-29 21:52:24,205 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 2371.43ms
+2025-04-29 21:52:24,215 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-04-29 21:52:25,200 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-04-29 21:52:25,200 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Tuning/Creality/PLA/Grey/temperature_tower_EN4Plus_0.4_PLA0.2_38m34s.gcode") successfully finished
+2025-04-29 21:52:25,202 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-04-29 21:52:34,720 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-29 21:52:59,501 [job_state.py:_status_update()] - Job Started: sda1/Tuning/Creality/PLA/Grey/temperature_tower_EN4Plus_0.4_PLA0.2_38m34s.gcode
