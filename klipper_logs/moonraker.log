@@ -244,3 +244,19 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 2025-04-30 02:27:16,938 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
 2025-04-30 02:28:44,574 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-04-30 02:28:58,102 [job_state.py:_status_update()] - Job Started: sda1/Organization/ninja_turtle_action_figure_stand_EN4Plus_0.4_PLA0.2_37m51s.gcode
+2025-04-30 03:02:45,031 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffffbcf5cd68>()]>>
+2025-04-30 03:02:45,032 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffffbcf5cc78>()]>>
+2025-04-30 03:02:45,032 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffffbcf5cd98>()]>>
+2025-04-30 03:02:45,033 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffffbcf5cc18>()]>>
+2025-04-30 03:02:45,034 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffffbcf5cdc8>()]>>
+2025-04-30 03:02:45,035 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffffbcf5cc48>()]>>
+2025-04-30 03:02:45,035 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffffbcf5ccd8>()]>>
+2025-04-30 03:02:45,036 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffffbcf00cd8>()]>>
