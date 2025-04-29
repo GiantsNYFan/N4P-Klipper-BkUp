@@ -1,0 +1,1133 @@
+--------------------Moonraker Log Start--------------------
+config_file: /home/mks/klipper_config/moonraker.conf
+log_file: /home/mks/klipper_logs/moonraker.log
+software_version: ?
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+#################### Moonraker Configuration ####################
+
+[server]
+host = localhost
+port = 7125
+enable_debug_logging = False
+klippy_uds_address = /tmp/klippy_uds
+
+[authorization]
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	http://*.lan
+	http://*.local
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	https://app.fluidd.xyz
+	http://app.fluidd.xyz
+
+[database]
+database_path = /home/mks/.moonraker_database
+
+[file_manager]
+config_path = /home/mks/klipper_config
+log_path = /home/mks/klipper_logs
+
+[octoprint_compat]
+
+[history]
+
+#################################################################
+All Configuration Files:
+/home/mks/klipper_config/moonraker.conf
+#################################################################
+Unsafe Shutdown Count: 0
+
+System Info:
+
+***python***
+  version: sys.version_info(major=3, minor=7, micro=3, releaselevel='final', serial=0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: 
+  hardware_desc: 
+  model: 
+  total_memory: 999784
+  memory_units: kB
+
+***sd_info***
+
+***distribution***
+  name: Debian GNU/Linux 10 (buster)
+  id: debian
+  version: 10
+  version_parts: {'major': '10', 'minor': '', 'build_number': ''}
+  like: 
+  codename: buster
+  release_info: {}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+Klipper Version: ?
+2025-04-28 00:06:08,359 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.15
+2025-04-28 00:06:31,532 [app.py:log_request()] - 101 GET /websocket?token=QQDNCMTMXPHJMKCK6FTTJZTCSSBWLDFP (10.10.100.15) [_TRUSTED_USER_] 4.68ms
+2025-04-28 00:06:31,533 [websockets.py:open()] - Websocket Opened: ID: 281473357317904, Proxied: True, User Agent: BBL-Slicer/v01.09.05.51 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 00:06:32,248 [websockets.py:_handle_identify()] - Websocket 281473357317904 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 00:09:01,501 [websockets.py:on_close()] - Websocket Closed: ID: 281473357646144 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 6.62
+2025-04-28 00:09:01,834 [app.py:log_request()] - 101 GET /websocket?token=VL23HGNAZE5LAP2YWIQRHCJMOVLL4AKM (10.10.100.21) [_TRUSTED_USER_] 7.57ms
+2025-04-28 00:09:01,835 [websockets.py:open()] - Websocket Opened: ID: 281473357346688, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 00:09:01,843 [websockets.py:_handle_identify()] - Websocket 281473357346688 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 00:12:07,965 [websockets.py:on_close()] - Websocket Closed: ID: 281473357317904 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.42
+2025-04-28 00:20:44,520 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-04-28 00:20:44,551 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-04-28 00:20:45,785 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-04-28 00:20:45,786 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x96020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-04-28 00:20:46,540 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-04-28 00:20:46,550 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-04-28 00:20:48,793 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-04-28 00:20:49,077 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-04-28 00:20:49,549 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-28 00:25:17,667 [websockets.py:on_close()] - Websocket Closed: ID: 281473357346688 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 5.82
+2025-04-28 00:25:18,090 [app.py:log_request()] - 101 GET /websocket?token=M4QW5NOIUUHPOYPQI27A6KAPNYUTX2GI (10.10.100.21) [_TRUSTED_USER_] 5.12ms
+2025-04-28 00:25:18,091 [websockets.py:open()] - Websocket Opened: ID: 281473357407456, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 00:25:18,102 [websockets.py:_handle_identify()] - Websocket 281473357407456 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 00:31:11,970 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-04-28 00:31:12,006 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-04-28 00:31:13,237 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-04-28 00:31:13,238 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x96020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-04-28 00:31:13,989 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-04-28 00:31:13,999 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-04-28 00:31:16,241 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-04-28 00:31:16,533 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-04-28 00:31:17,026 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-28 00:34:13,457 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-04-28 00:35:13,460 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2025-04-28 00:36:13,462 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2025-04-28 00:37:13,464 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.01 seconds
+2025-04-28 00:38:13,468 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.01 seconds
+2025-04-28 00:39:13,472 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.02 seconds
+2025-04-28 00:40:13,475 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.02 seconds
+2025-04-28 00:42:23,011 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-04-28 00:42:23,037 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-04-28 00:42:24,277 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-04-28 00:42:24,278 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x96020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-04-28 00:42:25,033 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-04-28 00:42:25,042 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-04-28 00:42:27,540 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-04-28 00:42:27,879 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-04-28 00:42:28,308 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-28 00:44:50,925 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-3844.mru' -> '/home/mks/gcode_files/sda1/Tuning/Elegoo/PETG/White/temperature_tower_EN4Plus_0.4_PETG0.2_1h23m.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Tuning/Elegoo/PETG/White/temperature_tower_EN4Plus_0.4_PETG0.2_1h23m.gcode'
+2025-04-28 00:44:50,939 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-04-28 00:44:50,953 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 3451.23ms
+2025-04-28 00:44:51,111 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-04-28 00:44:52,163 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-04-28 00:44:52,164 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Tuning/Elegoo/PETG/White/temperature_tower_EN4Plus_0.4_PETG0.2_1h23m.gcode") successfully finished
+2025-04-28 00:44:52,165 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-04-28 00:45:08,110 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-28 00:45:23,389 [job_state.py:_status_update()] - Job Started: sda1/Tuning/Elegoo/PETG/White/temperature_tower_EN4Plus_0.4_PETG0.2_1h23m.gcode
+2025-04-28 01:11:00,321 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.15
+2025-04-28 01:46:00,331 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
+2025-04-28 02:03:53,299 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.14
+2025-04-28 02:03:53,302 [app.py:log_request()] - 101 GET /websocket (10.10.100.14) [_TRUSTED_USER_] 7.50ms
+2025-04-28 02:03:53,303 [websockets.py:open()] - Websocket Opened: ID: 281473357921528, Proxied: True, User Agent: Dart/3.6 (dart:io), Host Name: 10.10.100.201
+2025-04-28 02:03:53,320 [websockets.py:_handle_identify()] - Websocket 281473357921528 Client Identified - Name: Mobileraker-ios, Version: 2.8.7-619, Type: mobile
+2025-04-28 02:03:53,424 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 02:04:10,769 [websockets.py:on_close()] - Websocket Closed: ID: 281473357921528 Close Code: None, Close Reason: None, Pong Time Elapsed: 7.45
+2025-04-28 02:14:40,133 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.15
+2025-04-28 02:14:40,682 [app.py:log_request()] - 101 GET /websocket?token=3JRF3LWFPTLOT7BW45QOP2TVKZTCERT3 (10.10.100.15) [_TRUSTED_USER_] 9.67ms
+2025-04-28 02:14:40,683 [websockets.py:open()] - Websocket Opened: ID: 281473357346856, Proxied: True, User Agent: BBL-Slicer/v01.09.05.51 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 02:14:40,705 [websockets.py:_handle_identify()] - Websocket 281473357346856 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 02:15:34,498 [websockets.py:on_close()] - Websocket Closed: ID: 281473357407456 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 6.40
+2025-04-28 02:15:34,645 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-04-28 02:15:34,856 [app.py:log_request()] - 101 GET /websocket?token=RN23JSMGNGX3T7A4NNGL7HZ2VIHR22DD (10.10.100.21) [_TRUSTED_USER_] 5.07ms
+2025-04-28 02:15:34,857 [websockets.py:open()] - Websocket Opened: ID: 281473357205288, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 02:15:34,881 [websockets.py:_handle_identify()] - Websocket 281473357205288 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 02:15:54,924 [websockets.py:on_close()] - Websocket Closed: ID: 281473357205288 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 0.04
+2025-04-28 02:15:55,392 [app.py:log_request()] - 101 GET /websocket?token=RRT6SGOWNXPQYG3FKG6DURRESPTHG2YU (10.10.100.21) [_TRUSTED_USER_] 4.43ms
+2025-04-28 02:15:55,393 [websockets.py:open()] - Websocket Opened: ID: 281473357299160, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 02:15:55,398 [websockets.py:_handle_identify()] - Websocket 281473357299160 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 02:16:18,020 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-9333.mru' -> '/home/mks/gcode_files/sda1/Tuning/Elegoo/PETG/White/flowrate_0_EN4Plus_0.4_PETG0.2_30m43s.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Tuning/Elegoo/PETG/White/flowrate_0_EN4Plus_0.4_PETG0.2_30m43s.gcode'
+2025-04-28 02:16:18,041 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-04-28 02:16:18,049 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 1010.93ms
+2025-04-28 02:16:18,066 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-04-28 02:16:19,072 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-04-28 02:16:19,072 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Tuning/Elegoo/PETG/White/flowrate_0_EN4Plus_0.4_PETG0.2_30m43s.gcode") successfully finished
+2025-04-28 02:16:19,074 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-04-28 02:16:33,661 [websockets.py:on_close()] - Websocket Closed: ID: 281473357346856 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.96
+2025-04-28 02:16:45,156 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-28 02:17:10,978 [job_state.py:_status_update()] - Job Started: sda1/Tuning/Elegoo/PETG/White/flowrate_0_EN4Plus_0.4_PETG0.2_30m43s.gcode
+2025-04-28 02:27:26,643 [app.py:log_request()] - 101 GET /websocket (10.10.100.14) [_TRUSTED_USER_] 5.79ms
+2025-04-28 02:27:26,644 [websockets.py:open()] - Websocket Opened: ID: 281473357324640, Proxied: True, User Agent: Dart/3.6 (dart:io), Host Name: 10.10.100.201
+2025-04-28 02:27:26,688 [websockets.py:_handle_identify()] - Websocket 281473357324640 Client Identified - Name: Mobileraker-ios, Version: 2.8.7-619, Type: mobile
+2025-04-28 02:27:26,692 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 02:27:26,815 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 02:27:32,847 [websockets.py:on_close()] - Websocket Closed: ID: 281473357324640 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.21
+2025-04-28 02:51:51,403 [websockets.py:on_close()] - Websocket Closed: ID: 281473357299160 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 6.00
+2025-04-28 02:51:51,745 [app.py:log_request()] - 101 GET /websocket?token=HZBATUQHCGOWKXQDSUN57IVXHHEGIWK3 (10.10.100.21) [_TRUSTED_USER_] 4.62ms
+2025-04-28 02:51:51,746 [websockets.py:open()] - Websocket Opened: ID: 281473357345512, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 02:51:51,752 [websockets.py:_handle_identify()] - Websocket 281473357345512 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 02:52:19,657 [websockets.py:on_close()] - Websocket Closed: ID: 281473357345512 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 7.86
+2025-04-28 02:52:19,976 [app.py:log_request()] - 101 GET /websocket?token=UVZ6IRLZCIAZ4QM6WJ3SZXAOCJMFNWGX (10.10.100.21) [_TRUSTED_USER_] 5.02ms
+2025-04-28 02:52:19,977 [websockets.py:open()] - Websocket Opened: ID: 281473357878552, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 02:52:19,985 [websockets.py:_handle_identify()] - Websocket 281473357878552 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 02:54:40,448 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-11636.mru' -> '/home/mks/gcode_files/sda1/Tuning/Elegoo/PETG/White/PressureAdvance_EN4Plus_0.4_PETG0.2_7m32s.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Tuning/Elegoo/PETG/White/PressureAdvance_EN4Plus_0.4_PETG0.2_7m32s.gcode'
+2025-04-28 02:54:40,453 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-04-28 02:54:40,463 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 382.84ms
+2025-04-28 02:54:40,472 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-04-28 02:54:41,353 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-04-28 02:54:41,353 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Tuning/Elegoo/PETG/White/PressureAdvance_EN4Plus_0.4_PETG0.2_7m32s.gcode") successfully finished
+2025-04-28 02:54:41,355 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-04-28 02:55:02,916 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-28 02:55:28,247 [job_state.py:_status_update()] - Job Started: sda1/Tuning/Elegoo/PETG/White/PressureAdvance_EN4Plus_0.4_PETG0.2_7m32s.gcode
+2025-04-28 03:05:54,257 [websockets.py:on_close()] - Websocket Closed: ID: 281473357878552 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 4.27
+2025-04-28 03:05:54,584 [app.py:log_request()] - 101 GET /websocket?token=6FTZEN5EQODRE5ND3YQIPWGEUS2JHSFG (10.10.100.21) [_TRUSTED_USER_] 5.96ms
+2025-04-28 03:05:54,586 [websockets.py:open()] - Websocket Opened: ID: 281473357645584, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 03:05:54,593 [websockets.py:_handle_identify()] - Websocket 281473357645584 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 03:06:25,939 [websockets.py:on_close()] - Websocket Closed: ID: 281473357645584 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 1.34
+2025-04-28 03:06:26,338 [app.py:log_request()] - 101 GET /websocket?token=LOEMEKR7K7WJZB2TJO2XS2C7XA57TXM4 (10.10.100.21) [_TRUSTED_USER_] 5.90ms
+2025-04-28 03:06:26,339 [websockets.py:open()] - Websocket Opened: ID: 281473357393088, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 03:06:26,346 [websockets.py:_handle_identify()] - Websocket 281473357393088 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 03:06:43,281 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-12359.mru' -> '/home/mks/gcode_files/sda1/Tuning/Elegoo/PETG/White/retraction_tower_EN4Plus_0.4_PETG0.2_14m19s.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Tuning/Elegoo/PETG/White/retraction_tower_EN4Plus_0.4_PETG0.2_14m19s.gcode'
+2025-04-28 03:06:43,288 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-04-28 03:06:43,301 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 735.78ms
+2025-04-28 03:06:43,310 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-04-28 03:06:44,287 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-04-28 03:06:44,288 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Tuning/Elegoo/PETG/White/retraction_tower_EN4Plus_0.4_PETG0.2_14m19s.gcode") successfully finished
+2025-04-28 03:06:44,289 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-04-28 03:08:23,478 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-28 03:08:48,784 [job_state.py:_status_update()] - Job Started: sda1/Tuning/Elegoo/PETG/White/retraction_tower_EN4Plus_0.4_PETG0.2_14m19s.gcode
+2025-04-28 03:16:00,356 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.15
+2025-04-28 03:25:41,980 [websockets.py:on_close()] - Websocket Closed: ID: 281473357393088 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 5.63
+2025-04-28 03:25:42,300 [app.py:log_request()] - 101 GET /websocket?token=BWEMRR2R7A3X4MMJCJZF3YNUZQJSXVTD (10.10.100.21) [_TRUSTED_USER_] 5.89ms
+2025-04-28 03:25:42,301 [websockets.py:open()] - Websocket Opened: ID: 281473357860088, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 03:25:42,310 [websockets.py:_handle_identify()] - Websocket 281473357860088 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 03:25:59,719 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.15
+2025-04-28 03:26:00,012 [app.py:log_request()] - 101 GET /websocket?token=4F2F4ETFPCUWNAWHEZAYFMGGZM4MML74 (10.10.100.15) [_TRUSTED_USER_] 5.57ms
+2025-04-28 03:26:00,013 [websockets.py:open()] - Websocket Opened: ID: 281473357345008, Proxied: True, User Agent: BBL-Slicer/v01.09.05.51 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 03:26:00,026 [websockets.py:_handle_identify()] - Websocket 281473357345008 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 03:26:00,777 [websockets.py:on_close()] - Websocket Closed: ID: 281473357345008 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 0.77
+2025-04-28 03:26:01,168 [app.py:log_request()] - 101 GET /websocket?token=FJ6UAEFSGWO3AV6O4NIPBSOX2ZPA3QDH (10.10.100.15) [_TRUSTED_USER_] 4.82ms
+2025-04-28 03:26:01,169 [websockets.py:open()] - Websocket Opened: ID: 281473358367712, Proxied: True, User Agent: BBL-Slicer/v01.09.05.51 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 03:26:01,177 [websockets.py:_handle_identify()] - Websocket 281473358367712 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 03:26:24,414 [websockets.py:on_close()] - Websocket Closed: ID: 281473357860088 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 2.10
+2025-04-28 03:26:24,922 [app.py:log_request()] - 101 GET /websocket?token=AHOFVUOTEOCZJDCE4II7K2LHEZHZOUVB (10.10.100.21) [_TRUSTED_USER_] 4.83ms
+2025-04-28 03:26:24,923 [websockets.py:open()] - Websocket Opened: ID: 281473357644184, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 03:26:24,929 [websockets.py:_handle_identify()] - Websocket 281473357644184 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 03:26:42,692 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-13557.mru' -> '/home/mks/gcode_files/sda1/Tuning/Elegoo/PETG/White/SpeedTestStructure_EN4Plus_0.4_PETG0.2_14m52s.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Tuning/Elegoo/PETG/White/SpeedTestStructure_EN4Plus_0.4_PETG0.2_14m52s.gcode'
+2025-04-28 03:26:42,701 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-04-28 03:26:42,708 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 1823.91ms
+2025-04-28 03:26:42,716 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-04-28 03:26:43,660 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-04-28 03:26:43,660 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Tuning/Elegoo/PETG/White/SpeedTestStructure_EN4Plus_0.4_PETG0.2_14m52s.gcode") successfully finished
+2025-04-28 03:26:43,661 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-04-28 03:27:03,558 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-28 03:27:27,433 [job_state.py:_status_update()] - Job Started: sda1/Tuning/Elegoo/PETG/White/SpeedTestStructure_EN4Plus_0.4_PETG0.2_14m52s.gcode
+2025-04-28 03:31:00,361 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.14
+2025-04-28 03:32:07,729 [websockets.py:on_close()] - Websocket Closed: ID: 281473358367712 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.55
+2025-04-28 03:46:58,088 [websockets.py:on_close()] - Websocket Closed: ID: 281473357644184 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 3.16
+2025-04-28 03:46:58,495 [app.py:log_request()] - 101 GET /websocket?token=UBKPRYSWWO2LMZSMOCU5MNJOY43J57UG (10.10.100.21) [_TRUSTED_USER_] 6.80ms
+2025-04-28 03:46:58,497 [websockets.py:open()] - Websocket Opened: ID: 281473358310032, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 03:46:58,527 [websockets.py:_handle_identify()] - Websocket 281473358310032 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 03:47:23,055 [websockets.py:on_close()] - Websocket Closed: ID: 281473358310032 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 4.55
+2025-04-28 03:47:23,357 [app.py:log_request()] - 101 GET /websocket?token=BDPMTRRL6UOZOVZFHPJ7FC53W7ZA3RNQ (10.10.100.21) [_TRUSTED_USER_] 4.84ms
+2025-04-28 03:47:23,358 [websockets.py:open()] - Websocket Opened: ID: 281473357843648, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-04-28 03:47:23,388 [websockets.py:_handle_identify()] - Websocket 281473357843648 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-04-28 03:50:28,288 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-14962.mru' -> '/home/mks/gcode_files/sda1/Organization/LED_Mounts/LEDbrackets_EN4Plus_0.4_PETG0.2_4h27m.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Organization/LED_Mounts/LEDbrackets_EN4Plus_0.4_PETG0.2_4h27m.gcode'
+2025-04-28 03:50:28,314 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-04-28 03:50:28,319 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 22716.44ms
+2025-04-28 03:50:28,337 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-04-28 03:50:29,301 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-04-28 03:50:29,301 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Organization/LED_Mounts/LEDbrackets_EN4Plus_0.4_PETG0.2_4h27m.gcode") successfully finished
+2025-04-28 03:50:29,303 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-04-28 03:55:44,176 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-15280.mru' -> '/home/mks/gcode_files/sda1/Organization/LED_Mounts/LEDbrackets_EN4Plus_0.4_PETG0.2_4h6m.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Organization/LED_Mounts/LEDbrackets_EN4Plus_0.4_PETG0.2_4h6m.gcode'
+2025-04-28 03:55:44,200 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-04-28 03:55:44,206 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 20136.63ms
+2025-04-28 03:55:44,226 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-04-28 03:55:45,201 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-04-28 03:55:45,202 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Organization/LED_Mounts/LEDbrackets_EN4Plus_0.4_PETG0.2_4h6m.gcode") successfully finished
+2025-04-28 03:55:45,203 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-04-28 03:56:46,296 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-28 03:57:11,368 [job_state.py:_status_update()] - Job Started: sda1/Organization/LED_Mounts/LEDbrackets_EN4Plus_0.4_PETG0.2_4h6m.gcode
+2025-04-28 04:04:50,667 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff9f776378>()]>>
+2025-04-28 04:04:50,668 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff9f7765b8>()]>>
+2025-04-28 04:05:33,391 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.14
+2025-04-28 04:05:33,395 [app.py:log_request()] - 101 GET /websocket (10.10.100.14) [_TRUSTED_USER_] 8.16ms
+2025-04-28 04:05:33,397 [websockets.py:open()] - Websocket Opened: ID: 281473356908472, Proxied: True, User Agent: Dart/3.6 (dart:io), Host Name: 10.10.100.201
+2025-04-28 04:05:33,405 [websockets.py:_handle_identify()] - Websocket 281473356908472 Client Identified - Name: Mobileraker-ios, Version: 2.8.7-619, Type: mobile
+2025-04-28 04:05:33,575 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 04:05:51,287 [websockets.py:on_close()] - Websocket Closed: ID: 281473356908472 Close Code: None, Close Reason: None, Pong Time Elapsed: 7.84
+2025-04-28 04:15:49,852 [app.py:log_request()] - 101 GET /websocket (10.10.100.14) [_TRUSTED_USER_] 6.40ms
+2025-04-28 04:15:49,853 [websockets.py:open()] - Websocket Opened: ID: 281473357368120, Proxied: True, User Agent: Dart/3.6 (dart:io), Host Name: 10.10.100.201
+2025-04-28 04:15:49,892 [websockets.py:_handle_identify()] - Websocket 281473357368120 Client Identified - Name: Mobileraker-ios, Version: 2.8.7-619, Type: mobile
+2025-04-28 04:15:49,901 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 04:15:50,034 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 04:15:56,391 [websockets.py:on_close()] - Websocket Closed: ID: 281473357368120 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.54
+2025-04-28 04:31:00,387 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.15
+2025-04-28 04:56:00,397 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
+2025-04-28 05:08:16,246 [app.py:log_request()] - 101 GET /websocket (10.10.100.14) [_TRUSTED_USER_] 5.28ms
+2025-04-28 05:08:16,247 [websockets.py:open()] - Websocket Opened: ID: 281473303695312, Proxied: True, User Agent: Dart/3.6 (dart:io), Host Name: 10.10.100.201
+2025-04-28 05:08:16,260 [websockets.py:_handle_identify()] - Websocket 281473303695312 Client Identified - Name: Mobileraker-ios, Version: 2.8.7-619, Type: mobile
+2025-04-28 05:08:16,425 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 05:08:39,734 [websockets.py:on_close()] - Websocket Closed: ID: 281473303695312 Close Code: None, Close Reason: None, Pong Time Elapsed: 13.48
+2025-04-28 05:34:10,166 [app.py:log_request()] - 101 GET /websocket (10.10.100.14) [_TRUSTED_USER_] 7.20ms
+2025-04-28 05:34:10,167 [websockets.py:open()] - Websocket Opened: ID: 281473357860088, Proxied: True, User Agent: Dart/3.6 (dart:io), Host Name: 10.10.100.201
+2025-04-28 05:34:10,214 [websockets.py:_handle_identify()] - Websocket 281473357860088 Client Identified - Name: Mobileraker-ios, Version: 2.8.7-619, Type: mobile
+2025-04-28 05:34:10,219 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 05:34:10,376 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 05:34:13,985 [websockets.py:on_close()] - Websocket Closed: ID: 281473357860088 Close Code: None, Close Reason: None, Pong Time Elapsed: 3.82
+2025-04-28 06:34:10,002 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff9f7fa8e8>()]>>
+2025-04-28 06:34:10,002 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff9f7fa9d8>()]>>
+2025-04-28 06:34:10,003 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff9f7fa5b8>()]>>
+2025-04-28 06:34:10,004 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff9f7fa738>()]>>
+2025-04-28 06:34:10,004 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff9f7fa408>()]>>
+2025-04-28 06:36:00,432 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.14
+2025-04-28 06:46:48,868 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.14
+2025-04-28 06:46:48,872 [app.py:log_request()] - 101 GET /websocket (10.10.100.14) [_TRUSTED_USER_] 8.56ms
+2025-04-28 06:46:48,873 [websockets.py:open()] - Websocket Opened: ID: 281473357736984, Proxied: True, User Agent: Dart/3.6 (dart:io), Host Name: 10.10.100.201
+2025-04-28 06:46:48,962 [websockets.py:_handle_identify()] - Websocket 281473357736984 Client Identified - Name: Mobileraker-ios, Version: 2.8.7-619, Type: mobile
+2025-04-28 06:46:48,971 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 06:46:49,026 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 06:47:19,123 [websockets.py:_process_messages()] - Websocket closed while writing: 281473357736984
+2025-04-28 06:47:23,878 [websockets.py:on_close()] - Websocket Closed: ID: 281473357736984 Close Code: None, Close Reason: None, Pong Time Elapsed: 35.01
+2025-04-28 07:09:19,488 [app.py:log_request()] - 101 GET /websocket (10.10.100.14) [_TRUSTED_USER_] 7.50ms
+2025-04-28 07:09:19,489 [websockets.py:open()] - Websocket Opened: ID: 281473357298544, Proxied: True, User Agent: Dart/3.6 (dart:io), Host Name: 10.10.100.201
+2025-04-28 07:09:19,541 [websockets.py:_handle_identify()] - Websocket 281473357298544 Client Identified - Name: Mobileraker-ios, Version: 2.8.7-619, Type: mobile
+2025-04-28 07:09:19,545 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 07:09:19,680 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 07:09:49,728 [websockets.py:_process_messages()] - Websocket closed while writing: 281473357298544
+2025-04-28 07:09:54,496 [websockets.py:on_close()] - Websocket Closed: ID: 281473357298544 Close Code: None, Close Reason: None, Pong Time Elapsed: 35.01
+2025-04-28 07:09:56,348 [app.py:log_request()] - 101 GET /websocket (10.10.100.14) [_TRUSTED_USER_] 5.98ms
+2025-04-28 07:09:56,349 [websockets.py:open()] - Websocket Opened: ID: 281473357182960, Proxied: True, User Agent: Dart/3.6 (dart:io), Host Name: 10.10.100.201
+2025-04-28 07:09:56,411 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 07:10:00,300 [websockets.py:on_close()] - Websocket Closed: ID: 281473357182960 Close Code: None, Close Reason: None, Pong Time Elapsed: 3.96
+2025-04-28 07:35:01,699 [app.py:log_request()] - 101 GET /websocket (10.10.100.14) [_TRUSTED_USER_] 6.03ms
+2025-04-28 07:35:01,700 [websockets.py:open()] - Websocket Opened: ID: 281473357327552, Proxied: True, User Agent: Dart/3.6 (dart:io), Host Name: 10.10.100.201
+2025-04-28 07:35:01,745 [websockets.py:_handle_identify()] - Websocket 281473357327552 Client Identified - Name: Mobileraker-ios, Version: 2.8.7-619, Type: mobile
+2025-04-28 07:35:01,757 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 07:35:01,845 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-04-28 07:35:31,734 [websockets.py:_process_messages()] - Websocket closed while writing: 281473357327552
+2025-04-28 07:35:36,706 [websockets.py:on_close()] - Websocket Closed: ID: 281473357327552 Close Code: None, Close Reason: None, Pong Time Elapsed: 35.01
+2025-04-28 08:36:00,498 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.14
+2025-04-28 09:34:32,739 [moonraker.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2025-04-28 09:34:32,851 [websockets.py:on_close()] - Websocket Closed: ID: 281473357246136 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 1.17
+2025-04-28 09:34:32,854 [websockets.py:on_close()] - Websocket Closed: ID: 281473357843648 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 9.48
+2025-04-28 09:34:32,858 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-04-28 09:34:32,867 [database.py:close()] - Database statistics:
+
+announcements:
+psize: 4096
+depth: 0
+branch_pages: 0
+leaf_pages: 0
+overflow_pages: 0
+entries: 0
+authorized_users:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 2
+fluidd:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 6
+gcode_metadata:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 105
+entries: 31
+history:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 85
+overflow_pages: 174
+entries: 248
+mobileraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 2
+entries: 2
+moonraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 5
+2025-04-28 09:34:32,890 [moonraker.py:main()] - Server Shutdown
+--------------------Moonraker Log Start--------------------
+config_file: /home/mks/klipper_config/moonraker.conf
+log_file: /home/mks/klipper_logs/moonraker.log
+software_version: ?
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+2025-04-28 09:17:07,506 [utils.py:setup_logging()] - config_file: /home/mks/klipper_config/moonraker.conf
+2025-04-28 09:17:07,506 [utils.py:setup_logging()] - log_file: /home/mks/klipper_logs/moonraker.log
+2025-04-28 09:17:07,507 [utils.py:setup_logging()] - software_version: ?
+2025-04-28 09:17:07,507 [utils.py:setup_logging()] - python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+2025-04-28 09:17:07,532 [moonraker.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = localhost
+port = 7125
+enable_debug_logging = False
+klippy_uds_address = /tmp/klippy_uds
+
+[authorization]
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	http://*.lan
+	http://*.local
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	https://app.fluidd.xyz
+	http://app.fluidd.xyz
+
+[database]
+database_path = /home/mks/.moonraker_database
+
+[file_manager]
+config_path = /home/mks/klipper_config
+log_path = /home/mks/klipper_logs
+
+[octoprint_compat]
+
+[history]
+
+#################################################################
+All Configuration Files:
+/home/mks/klipper_config/moonraker.conf
+#################################################################
+2025-04-28 09:17:07,575 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/info
+2025-04-28 09:17:07,577 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.info
+2025-04-28 09:17:07,578 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/config
+2025-04-28 09:17:07,579 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.config
+2025-04-28 09:17:07,580 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/restart
+2025-04-28 09:17:07,583 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.restart
+2025-04-28 09:17:07,781 [moonraker.py:load_component()] - Component (dbus_manager) loaded
+2025-04-28 09:17:07,832 [moonraker.py:add_log_rollover_item()] - Unsafe Shutdown Count: 0
+2025-04-28 09:17:07,841 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/database/list
+2025-04-28 09:17:07,843 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.database.list
+2025-04-28 09:17:07,843 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/database/item
+2025-04-28 09:17:07,845 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.database.get_item, server.database.post_item, server.database.delete_item
+2025-04-28 09:17:07,845 [moonraker.py:load_component()] - Component (database) loaded
+2025-04-28 09:17:08,047 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/files/list
+2025-04-28 09:17:08,049 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.list
+2025-04-28 09:17:08,050 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/files/metadata
+2025-04-28 09:17:08,051 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.metadata
+2025-04-28 09:17:08,052 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/files/directory
+2025-04-28 09:17:08,055 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.get_directory, server.files.post_directory, server.files.delete_directory
+2025-04-28 09:17:08,055 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/files/move
+2025-04-28 09:17:08,057 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.move
+2025-04-28 09:17:08,057 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/files/copy
+2025-04-28 09:17:08,058 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.copy
+2025-04-28 09:17:08,059 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.delete_file
+2025-04-28 09:17:08,095 [moonraker.py:load_component()] - Component (file_manager) loaded
+2025-04-28 09:17:08,102 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/pause
+2025-04-28 09:17:08,104 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.pause
+2025-04-28 09:17:08,105 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/resume
+2025-04-28 09:17:08,107 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.resume
+2025-04-28 09:17:08,109 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/cancel
+2025-04-28 09:17:08,111 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.cancel
+2025-04-28 09:17:08,111 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/start
+2025-04-28 09:17:08,114 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.start
+2025-04-28 09:17:08,115 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/restart
+2025-04-28 09:17:08,117 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.restart
+2025-04-28 09:17:08,118 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/firmware_restart
+2025-04-28 09:17:08,120 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.firmware_restart
+2025-04-28 09:17:08,144 [klippy_apis.py:init_conf()] - load level mode conf
+2025-04-28 09:17:08,145 [moonraker.py:load_component()] - Component (klippy_apis) loaded
+2025-04-28 09:17:08,780 [moonraker.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: sys.version_info(major=3, minor=7, micro=3, releaselevel='final', serial=0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: 
+  hardware_desc: 
+  model: 
+  total_memory: 999784
+  memory_units: kB
+
+***sd_info***
+
+***distribution***
+  name: Debian GNU/Linux 10 (buster)
+  id: debian
+  version: 10
+  version_parts: {'major': '10', 'minor': '', 'build_number': ''}
+  like: 
+  codename: buster
+  release_info: {}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+2025-04-28 09:17:08,790 [moonraker.py:load_component()] - Component (shell_command) loaded
+2025-04-28 09:17:08,790 [machine.py:__init__()] - Using System Provider: systemd_dbus
+2025-04-28 09:17:08,791 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/reboot
+2025-04-28 09:17:08,794 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.reboot
+2025-04-28 09:17:08,794 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/shutdown
+2025-04-28 09:17:08,798 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.shutdown
+2025-04-28 09:17:08,798 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/restart
+2025-04-28 09:17:08,800 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.restart
+2025-04-28 09:17:08,801 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/stop
+2025-04-28 09:17:08,803 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.stop
+2025-04-28 09:17:08,803 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/start
+2025-04-28 09:17:08,805 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.start
+2025-04-28 09:17:08,807 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/system_info
+2025-04-28 09:17:08,810 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.system_info
+2025-04-28 09:17:08,813 [moonraker.py:load_component()] - Component (machine) loaded
+2025-04-28 09:17:08,821 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/temperature_store
+2025-04-28 09:17:08,823 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.temperature_store
+2025-04-28 09:17:08,823 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/gcode_store
+2025-04-28 09:17:08,825 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.gcode_store
+2025-04-28 09:17:08,826 [moonraker.py:load_component()] - Component (data_store) loaded
+2025-04-28 09:17:08,832 [proc_stats.py:__init__()] - Unable to find 'vcgencmd', throttle checking disabled
+2025-04-28 09:17:08,833 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/proc_stats
+2025-04-28 09:17:08,835 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.proc_stats
+2025-04-28 09:17:08,835 [moonraker.py:load_component()] - Component (proc_stats) loaded
+2025-04-28 09:17:08,843 [moonraker.py:load_component()] - Component (job_state) loaded
+2025-04-28 09:17:08,854 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST DELETE) /server/job_queue/job
+2025-04-28 09:17:08,856 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.post_job, server.job_queue.delete_job
+2025-04-28 09:17:08,857 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/job_queue/pause
+2025-04-28 09:17:08,859 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.pause
+2025-04-28 09:17:08,861 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/job_queue/start
+2025-04-28 09:17:08,863 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.start
+2025-04-28 09:17:08,864 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/job_queue/status
+2025-04-28 09:17:08,866 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.status
+2025-04-28 09:17:08,867 [moonraker.py:load_component()] - Component (job_queue) loaded
+2025-04-28 09:17:08,902 [moonraker.py:load_component()] - Component (http_client) loaded
+2025-04-28 09:17:08,920 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/announcements/list
+2025-04-28 09:17:08,922 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.list
+2025-04-28 09:17:08,922 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/announcements/dismiss
+2025-04-28 09:17:08,924 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.dismiss
+2025-04-28 09:17:08,925 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/announcements/update
+2025-04-28 09:17:08,927 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.update
+2025-04-28 09:17:08,928 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST DELETE) /server/announcements/feed
+2025-04-28 09:17:08,930 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.post_feed, server.announcements.delete_feed
+2025-04-28 09:17:08,930 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/announcements/feeds
+2025-04-28 09:17:08,932 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.feeds
+2025-04-28 09:17:08,933 [moonraker.py:load_component()] - Component (announcements) loaded
+2025-04-28 09:17:08,959 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/webcams/list
+2025-04-28 09:17:08,961 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.webcams.list
+2025-04-28 09:17:08,961 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/webcams/item
+2025-04-28 09:17:08,963 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.webcams.get_item, server.webcams.post_item, server.webcams.delete_item
+2025-04-28 09:17:08,963 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/webcams/test
+2025-04-28 09:17:08,965 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.webcams.test
+2025-04-28 09:17:08,965 [moonraker.py:load_component()] - Component (webcam) loaded
+2025-04-28 09:17:08,972 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: connection.send_event
+2025-04-28 09:17:08,972 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/extensions/list
+2025-04-28 09:17:08,974 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.extensions.list
+2025-04-28 09:17:08,974 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/extensions/request
+2025-04-28 09:17:08,976 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.extensions.request
+2025-04-28 09:17:08,976 [moonraker.py:load_component()] - Component (extensions) loaded
+2025-04-28 09:17:09,039 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+http://.*\.lan
+http://.*\.local
+https://my\.mainsail\.xyz
+http://my\.mainsail\.xyz
+https://app\.fluidd\.xyz
+http://app\.fluidd\.xyz
+2025-04-28 09:17:09,040 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/login
+2025-04-28 09:17:09,042 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/logout
+2025-04-28 09:17:09,044 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/refresh_jwt
+2025-04-28 09:17:09,047 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /access/user
+2025-04-28 09:17:09,048 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/users/list
+2025-04-28 09:17:09,049 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/user/password
+2025-04-28 09:17:09,051 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST) /access/api_key
+2025-04-28 09:17:09,053 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/oneshot_token
+2025-04-28 09:17:09,055 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/info
+2025-04-28 09:17:09,057 [moonraker.py:load_component()] - Component (authorization) loaded
+2025-04-28 09:17:09,069 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/version
+2025-04-28 09:17:09,071 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/server
+2025-04-28 09:17:09,073 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/login
+2025-04-28 09:17:09,075 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/currentuser
+2025-04-28 09:17:09,077 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/settings
+2025-04-28 09:17:09,079 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/job
+2025-04-28 09:17:09,081 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/printer
+2025-04-28 09:17:09,083 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/printer/command
+2025-04-28 09:17:09,085 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/printerprofiles
+2025-04-28 09:17:09,088 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/files/moonraker/(?P<relative_path>.+)
+2025-04-28 09:17:09,091 [moonraker.py:load_component()] - Component (octoprint_compat) loaded
+2025-04-28 09:17:09,099 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET DELETE) /server/history/job
+2025-04-28 09:17:09,101 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.get_job, server.history.delete_job
+2025-04-28 09:17:09,101 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/history/list
+2025-04-28 09:17:09,103 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.list
+2025-04-28 09:17:09,103 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/history/totals
+2025-04-28 09:17:09,105 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.totals
+2025-04-28 09:17:09,106 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/history/reset_totals
+2025-04-28 09:17:09,107 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.reset_totals
+2025-04-28 09:17:09,126 [moonraker.py:load_component()] - Component (history) loaded
+2025-04-28 09:17:09,128 [moonraker.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+2025-04-28 09:17:09,174 [moonraker.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+2025-04-28 09:17:09,449 [moonraker.py:_initialize_component()] - Performing Component Post Init: [machine]
+2025-04-28 09:17:10,070 [machine.py:check_virt_status()] - No Virtualization Detected
+2025-04-28 09:17:10,103 [moonraker.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+2025-04-28 09:17:10,104 [moonraker.py:_initialize_component()] - Performing Component Post Init: [announcements]
+2025-04-28 09:17:10,109 [moonraker.py:_initialize_component()] - Performing Component Post Init: [webcam]
+2025-04-28 09:17:10,660 [machine.py:_get_wifi_interfaces()] - Failed to run 'iwgetid' command
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/machine.py", line 457, in _get_wifi_interfaces
+    resp = await self.iwgetid_cmd.run_with_response(log_complete=False)
+  File "/home/mks/moonraker/moonraker/components/shell_command.py", line 269, in run_with_response
+    self.return_code, stdout, stderr)
+components.shell_command.ShellCommandError: Error running shell command: '['/sbin/iwgetid']'
+2025-04-28 09:17:10,674 [moonraker.py:_initialize_component()] - Performing Component Post Init: [authorization]
+2025-04-28 09:17:10,690 [moonraker.py:start_server()] - Starting Moonraker on (localhost, 7125), Hostname: mkspi
+2025-04-28 09:17:10,694 [app.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+2025-04-28 09:17:10,948 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-04-28 09:17:10,949 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0xb0020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-04-28 09:17:11,206 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-04-28 09:17:11,211 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-04-28 09:17:11,219 [moonraker.py:add_log_rollover_item()] - Klipper Version: ?
+2025-04-28 09:17:11,224 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/info
+2025-04-28 09:17:11,226 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.info
+2025-04-28 09:17:11,227 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/query_endstops/status
+2025-04-28 09:17:11,228 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.query_endstops.status
+2025-04-28 09:17:11,228 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/emergency_stop
+2025-04-28 09:17:11,231 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.emergency_stop
+2025-04-28 09:17:11,231 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/pause_resume/pause
+2025-04-28 09:17:11,233 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.pause_resume.pause
+2025-04-28 09:17:11,233 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/query
+2025-04-28 09:17:11,235 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.query
+2025-04-28 09:17:11,235 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/list
+2025-04-28 09:17:11,237 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.list
+2025-04-28 09:17:11,238 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/adxl345/dump_adxl345
+2025-04-28 09:17:11,239 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.adxl345.dump_adxl345
+2025-04-28 09:17:11,240 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/motion_report/dump_stepper
+2025-04-28 09:17:11,242 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.motion_report.dump_stepper
+2025-04-28 09:17:11,242 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/firmware_restart
+2025-04-28 09:17:11,244 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.firmware_restart
+2025-04-28 09:17:11,244 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/subscribe
+2025-04-28 09:17:11,246 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.subscribe
+2025-04-28 09:17:11,246 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/script
+2025-04-28 09:17:11,248 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.script
+2025-04-28 09:17:11,249 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/help
+2025-04-28 09:17:11,250 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.help
+2025-04-28 09:17:11,250 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/pause_resume/resume
+2025-04-28 09:17:11,252 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.pause_resume.resume
+2025-04-28 09:17:11,253 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/motion_report/dump_trapq
+2025-04-28 09:17:11,255 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.motion_report.dump_trapq
+2025-04-28 09:17:11,255 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/pause_resume/cancel
+2025-04-28 09:17:11,257 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.pause_resume.cancel
+2025-04-28 09:17:11,257 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/restart
+2025-04-28 09:17:11,259 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.restart
+2025-04-28 09:17:11,427 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: ::1
+2025-04-28 09:17:11,431 [app.py:log_request()] - 101 GET /websocket? (::1) [_TRUSTED_USER_] 8.03ms
+2025-04-28 09:17:11,432 [websockets.py:open()] - Websocket Opened: ID: 281473851445768, Proxied: False, User Agent: WebSocket++/0.8.1, Host Name: localhost
+2025-04-28 09:17:11,458 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-04-28 09:17:11,750 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-04-28 09:17:12,207 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [Errno -2] Name or service not known
+2025-04-28 09:17:12,217 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-04-28 09:17:14,248 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [Errno -2] Name or service not known
+2025-04-28 09:17:14,663 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-04-28 09:17:15,184 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-04-28 09:17:15,929 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-04-28 09:17:15,930 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0xb0020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-04-28 09:17:16,662 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-04-28 09:17:16,677 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-04-28 09:17:18,917 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-04-28 09:17:19,199 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-04-28 09:17:19,672 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
