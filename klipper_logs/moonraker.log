@@ -82,3 +82,8 @@ Klipper Version: ?
 2025-05-04 00:02:26,357 [app.py:log_request()] - 101 GET /websocket?token=DVYVYIOO24YAS3EELKNKMU3C7UHFLMGM (10.10.100.21) [_TRUSTED_USER_] 5.59ms
 2025-05-04 00:02:26,358 [websockets.py:open()] - Websocket Opened: ID: 281472928645640, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
 2025-05-04 00:02:26,367 [websockets.py:_handle_identify()] - Websocket 281472928645640 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-05-04 00:02:53,644 [websockets.py:on_close()] - Websocket Closed: ID: 281472928645640 Close Code: None, Close Reason: None, Pong Time Elapsed: 7.28
+2025-05-04 00:02:53,997 [app.py:log_request()] - 101 GET /websocket?token=V4L7DD4HXDYNOT24VIXBGH3E55WM6OSW (10.10.100.21) [_TRUSTED_USER_] 5.41ms
+2025-05-04 00:02:53,998 [websockets.py:open()] - Websocket Opened: ID: 281472928991888, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-05-04 00:02:54,004 [websockets.py:_handle_identify()] - Websocket 281472928991888 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-05-04 00:08:09,544 [websockets.py:on_close()] - Websocket Closed: ID: 281472928991888 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.54
