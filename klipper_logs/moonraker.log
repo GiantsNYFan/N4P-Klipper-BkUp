@@ -171,3 +171,7 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-05-03 21:56:29,871 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-05-03 21:59:22,939 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-05-03 21:59:41,234 [job_state.py:_status_update()] - Job Started: sda1/Organization/TMNT_Display_Stand_EN4Plus_0.4_PLA0.2_36m29s.gcode
+2025-05-03 22:13:29,126 [websockets.py:on_close()] - Websocket Closed: ID: 281472929086040 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 6.91
+2025-05-03 22:13:29,473 [app.py:log_request()] - 101 GET /websocket?token=HZ27YFJYABILYE2W3ND43WMSERYESZH2 (10.10.100.21) [_TRUSTED_USER_] 5.25ms
+2025-05-03 22:13:29,474 [websockets.py:open()] - Websocket Opened: ID: 281472929233608, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-05-03 22:13:29,483 [websockets.py:_handle_identify()] - Websocket 281472929233608 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
