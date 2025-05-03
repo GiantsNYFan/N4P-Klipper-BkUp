@@ -228,3 +228,7 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 2025-05-03 23:15:03,809 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-05-03 23:15:26,366 [job_state.py:_status_update()] - Job Started: sda1/Organization/TMNT_Display_Stand_EN4Plus_0.4_PLA0.2_31m56s.gcode
 2025-05-03 23:15:26,413 [app.py:log_request()] - 404 GET /server/files/gcodes/sda1/Organization/.thumbs/TMNT_Display_Stand_EN4Plus_0.4_PLA0.2_36m29s-32x32.png?cachebust=1746280304 (10.10.100.21) [No User] 6.86ms
+2025-05-03 23:21:55,468 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff85fa5708>()]>>
+2025-05-03 23:21:55,470 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff85f1fa68>()]>>
