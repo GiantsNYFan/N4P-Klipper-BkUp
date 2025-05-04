@@ -78,25 +78,7 @@ System Info:
   virt_type: none
   virt_identifier: none
 Klipper Version: ?
-2025-05-04 00:02:17,649 [websockets.py:on_close()] - Websocket Closed: ID: 281472929233608 Close Code: None, Close Reason: None, Pong Time Elapsed: 8.17
-2025-05-04 00:02:26,357 [app.py:log_request()] - 101 GET /websocket?token=DVYVYIOO24YAS3EELKNKMU3C7UHFLMGM (10.10.100.21) [_TRUSTED_USER_] 5.59ms
-2025-05-04 00:02:26,358 [websockets.py:open()] - Websocket Opened: ID: 281472928645640, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
-2025-05-04 00:02:26,367 [websockets.py:_handle_identify()] - Websocket 281472928645640 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
-2025-05-04 00:02:53,644 [websockets.py:on_close()] - Websocket Closed: ID: 281472928645640 Close Code: None, Close Reason: None, Pong Time Elapsed: 7.28
-2025-05-04 00:02:53,997 [app.py:log_request()] - 101 GET /websocket?token=V4L7DD4HXDYNOT24VIXBGH3E55WM6OSW (10.10.100.21) [_TRUSTED_USER_] 5.41ms
-2025-05-04 00:02:53,998 [websockets.py:open()] - Websocket Opened: ID: 281472928991888, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
-2025-05-04 00:02:54,004 [websockets.py:_handle_identify()] - Websocket 281472928991888 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
-2025-05-04 00:08:09,544 [websockets.py:on_close()] - Websocket Closed: ID: 281472928991888 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.54
-2025-05-04 01:04:41,051 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
-2025-05-04 06:54:24,766 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
-task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff85f1f138>()]>>
-2025-05-04 06:54:24,767 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
-task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff85f1f708>()]>>
-2025-05-04 23:35:28,258 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
-2025-05-04 23:35:28,459 [app.py:log_request()] - 101 GET /websocket?token=YTS4R5K6JTD6S2FTWGVYYIK5BFRRGT62 (10.10.100.21) [_TRUSTED_USER_] 6.70ms
-2025-05-04 23:35:28,461 [websockets.py:open()] - Websocket Opened: ID: 281472928618312, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
-2025-05-04 23:35:28,468 [websockets.py:_handle_identify()] - Websocket 281472928618312 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
-2025-05-04 23:58:35,864 [websockets.py:on_close()] - Websocket Closed: ID: 281472928618312 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 7.37
-2025-05-04 23:58:36,348 [app.py:log_request()] - 101 GET /websocket?token=2IE7OGZL3PTBTCE3AQW2FXXRMNZRVZIH (10.10.100.21) [_TRUSTED_USER_] 5.33ms
-2025-05-04 23:58:36,349 [websockets.py:open()] - Websocket Opened: ID: 281472929066848, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
-2025-05-04 23:58:36,436 [websockets.py:_handle_identify()] - Websocket 281472929066848 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-05-05 00:02:11,524 [websockets.py:on_close()] - Websocket Closed: ID: 281472929066848 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 5.17
+2025-05-05 00:02:12,045 [app.py:log_request()] - 101 GET /websocket?token=MI46PFONPFPIHZJISNVWHXGJSYDTYGQ2 (10.10.100.21) [_TRUSTED_USER_] 6.14ms
+2025-05-05 00:02:12,047 [websockets.py:open()] - Websocket Opened: ID: 281472929703696, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-05-05 00:02:12,055 [websockets.py:_handle_identify()] - Websocket 281472929703696 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
