@@ -170,3 +170,40 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-05-05 00:20:03,063 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-05-05 00:22:27,053 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-05-05 00:22:51,639 [job_state.py:_status_update()] - Job Started: sda1/Tuning/Elegoo/PLA/Black/temperature_tower_EN4Plus_0.4_PLA0.2_38m33s.gcode
+2025-05-05 01:24:41,607 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
+2025-05-05 01:29:02,846 [websockets.py:on_close()] - Websocket Closed: ID: 281472929703696 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 0.72
+2025-05-05 01:29:03,002 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-05-05 01:29:03,256 [app.py:log_request()] - 101 GET /websocket?token=FPTJJTLVYPFU36B25XZJ4KBOUT6HCPFL (10.10.100.21) [_TRUSTED_USER_] 5.21ms
+2025-05-05 01:29:03,257 [websockets.py:open()] - Websocket Opened: ID: 281472928658992, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-05-05 01:29:03,266 [websockets.py:_handle_identify()] - Websocket 281472928658992 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-05-05 01:29:39,985 [websockets.py:on_close()] - Websocket Closed: ID: 281472928658992 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 6.72
+2025-05-05 01:29:40,416 [app.py:log_request()] - 101 GET /websocket?token=KXG3Q3D732JAW7QMYPZRO7WILOZAK274 (10.10.100.21) [_TRUSTED_USER_] 4.49ms
+2025-05-05 01:29:40,417 [websockets.py:open()] - Websocket Opened: ID: 281472928689904, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-05-05 01:29:40,428 [websockets.py:_handle_identify()] - Websocket 281472928689904 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-05-05 01:30:08,685 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-103242.mru' -> '/home/mks/gcode_files/sda1/Tuning/Elegoo/PLA/Black/flowrate_0_EN4Plus_0.4_PLA0.2_30m21s.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Tuning/Elegoo/PLA/Black/flowrate_0_EN4Plus_0.4_PLA0.2_30m21s.gcode'
+2025-05-05 01:30:08,692 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-05-05 01:30:08,700 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 1214.73ms
+2025-05-05 01:30:08,729 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-05-05 01:30:09,700 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-05-05 01:30:09,701 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Tuning/Elegoo/PLA/Black/flowrate_0_EN4Plus_0.4_PLA0.2_30m21s.gcode") successfully finished
+2025-05-05 01:30:09,702 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-05-05 01:38:34,422 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-05-05 01:38:57,737 [job_state.py:_status_update()] - Job Started: sda1/Tuning/Elegoo/PLA/Black/flowrate_0_EN4Plus_0.4_PLA0.2_30m21s.gcode
