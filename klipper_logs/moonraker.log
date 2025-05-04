@@ -332,3 +332,4 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 2025-05-05 03:24:17,526 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
 2025-05-05 03:24:39,276 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-05-05 03:25:03,083 [job_state.py:_status_update()] - Job Started: sda1/Tools/LowVoltWallBracket_1GangwithMarkings_EN4Plus_0.4_PLA0.2_1h7m.gcode
+2025-05-05 04:24:41,664 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
