@@ -168,3 +168,5 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-05-05 00:20:02,309 [job_state.py:_handle_started()] - Job state initialized: standby
 2025-05-05 00:20:02,606 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-05-05 00:20:03,063 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-05-05 00:22:27,053 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-05-05 00:22:51,639 [job_state.py:_status_update()] - Job Started: sda1/Tuning/Elegoo/PLA/Black/temperature_tower_EN4Plus_0.4_PLA0.2_38m33s.gcode
