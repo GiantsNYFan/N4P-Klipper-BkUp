@@ -155,3 +155,57 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-05-06 03:47:40,752 [job_state.py:_handle_started()] - Job state initialized: standby
 2025-05-06 03:47:41,037 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-05-06 03:47:41,508 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-05-06 03:50:15,432 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-05-06 03:51:15,436 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2025-05-06 03:52:15,439 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2025-05-06 03:53:15,443 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.01 seconds
+2025-05-06 03:54:15,447 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.02 seconds
+2025-05-06 03:55:15,451 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.02 seconds
+2025-05-06 03:56:15,455 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.03 seconds
+2025-05-06 03:58:11,567 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-3691.mru' -> '/home/mks/gcode_files/sda1/Organization/Lepro_Smart_Controller_Mount_EN4Plus_0.4_PLA0.2_15m25s.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Organization/Lepro_Smart_Controller_Mount_EN4Plus_0.4_PLA0.2_15m25s.gcode'
+2025-05-06 03:58:11,573 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-05-06 03:58:11,581 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 849.13ms
+2025-05-06 03:58:11,596 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-05-06 03:58:12,543 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-05-06 03:58:12,543 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Organization/Lepro_Smart_Controller_Mount_EN4Plus_0.4_PLA0.2_15m25s.gcode") successfully finished
+2025-05-06 03:58:12,544 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-05-06 03:58:51,476 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-05-06 03:58:51,505 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-05-06 03:58:52,745 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-05-06 03:58:52,746 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x90020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-05-06 03:58:53,497 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-05-06 03:58:53,507 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-05-06 03:58:55,752 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-05-06 03:58:56,042 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-05-06 03:58:56,539 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
