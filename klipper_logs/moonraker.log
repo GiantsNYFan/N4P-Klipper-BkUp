@@ -133,3 +133,25 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 2025-05-06 03:11:26,201 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
 2025-05-06 03:13:50,509 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-05-06 03:14:10,306 [job_state.py:_status_update()] - Job Started: sda1/Organization/Lepro_Smart_Controller_Mount_EN4Plus_0.4_PLA0.2_15m48s.gcode
+2025-05-06 03:47:36,200 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-05-06 03:47:36,245 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-05-06 03:47:37,467 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-05-06 03:47:37,467 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x90020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-05-06 03:47:38,240 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-05-06 03:47:38,251 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-05-06 03:47:40,752 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-05-06 03:47:41,037 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-05-06 03:47:41,508 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
