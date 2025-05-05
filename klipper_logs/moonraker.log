@@ -210,3 +210,4 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-05-06 03:58:56,042 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-05-06 03:58:56,539 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-05-06 03:59:21,131 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-05-06 03:59:36,405 [job_state.py:_status_update()] - Job Started: sda1/Organization/Lepro_Smart_Controller_Mount_EN4Plus_0.4_PLA0.2_15m25s.gcode
