@@ -298,3 +298,5 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-05-08 21:21:37,382 [job_state.py:_handle_started()] - Job state initialized: standby
 2025-05-08 21:21:37,716 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-05-08 21:21:38,150 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-05-08 21:23:36,033 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-05-08 21:23:54,344 [job_state.py:_status_update()] - Job Started: sda1/Organization/TMNT_Monitor_Mount_2_EN4Plus_0.4_PLA0.2_2h28m.gcode
