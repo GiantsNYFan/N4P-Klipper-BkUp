@@ -567,3 +567,4 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-05-09 21:23:43,112 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-05-09 21:26:38,679 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-05-09 21:27:09,521 [job_state.py:_status_update()] - Job Started: sda1/Organization/TMNT_Monitor_Mount_3_EN4Plus_0.4_PLA0.2_2h40m.gcode
+2025-05-09 22:28:13,859 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
