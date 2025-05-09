@@ -424,3 +424,59 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-05-09 08:17:13,977 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: ::1
 2025-05-09 08:17:13,982 [app.py:log_request()] - 101 GET /websocket? (::1) [_TRUSTED_USER_] 9.84ms
 2025-05-09 08:17:13,983 [websockets.py:open()] - Websocket Opened: ID: 281473405158120, Proxied: False, User Agent: WebSocket++/0.8.1, Host Name: localhost
+2025-05-09 08:17:17,206 [klippy_connection.py:close()] - Error closing Klippy Unix Socket
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 154, in _write_request
+    await self.writer.drain()
+  File "/usr/lib/python3.7/asyncio/streams.py", line 348, in drain
+    await self._protocol._drain_helper()
+  File "/usr/lib/python3.7/asyncio/streams.py", line 202, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 564, in close
+    await self.writer.wait_closed()
+  File "/usr/lib/python3.7/asyncio/streams.py", line 323, in wait_closed
+    await self._protocol._closed
+  File "/usr/lib/python3.7/asyncio/selector_events.py", line 857, in write
+    n = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-05-09 08:17:17,206 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-05-09 08:17:17,210 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Write Request Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 468, in request
+    return await self._request_standard(web_request)
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 523, in _request_standard
+    return await base_request.wait()
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 595, in wait
+    raise self.response
+utils.ServerError: Klippy Write Request Error
+2025-05-09 08:17:18,268 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-05-09 08:17:18,473 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-05-09 08:17:18,473 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x84020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-05-09 08:17:19,222 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-05-09 08:17:19,234 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-05-09 08:17:21,484 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-05-09 08:17:21,770 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-05-09 20:38:24,065 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
