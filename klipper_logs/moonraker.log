@@ -436,3 +436,14 @@ Traceback (most recent call last):
   File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
     raise ServerError("Klippy Host not connected", 503)
 utils.ServerError: Klippy Host not connected
+2025-05-11 21:17:16,358 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-05-11 21:17:16,359 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x7f020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-05-11 21:17:17,344 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-05-11 21:17:17,359 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-05-11 21:17:19,599 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-05-11 21:17:19,886 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-05-11 21:17:20,353 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
