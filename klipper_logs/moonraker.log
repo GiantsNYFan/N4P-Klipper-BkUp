@@ -100,3 +100,28 @@ Traceback (most recent call last):
   File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
     f"Key '{key}' in namespace '{namespace}' not found", 404)
 utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-05-15 00:06:40,146 [websockets.py:_process_messages()] - Websocket closed while writing: 281473419894456
+2025-05-15 00:06:44,986 [websockets.py:on_close()] - Websocket Closed: ID: 281473419894456 Close Code: None, Close Reason: None, Pong Time Elapsed: 45.00
+2025-05-15 00:06:45,507 [app.py:log_request()] - 101 GET /websocket (10.10.100.14) [_TRUSTED_USER_] 5.96ms
+2025-05-15 00:06:45,508 [websockets.py:open()] - Websocket Opened: ID: 281473419840144, Proxied: True, User Agent: Dart/3.6 (dart:io), Host Name: 10.10.100.201
+2025-05-15 00:06:45,562 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-05-15 00:07:07,649 [websockets.py:on_close()] - Websocket Closed: ID: 281473419840144 Close Code: None, Close Reason: None, Pong Time Elapsed: 12.10
+2025-05-15 01:11:10,181 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.14
+2025-05-15 03:34:22,313 [websockets.py:on_close()] - Websocket Closed: ID: 281473420521824 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.68
