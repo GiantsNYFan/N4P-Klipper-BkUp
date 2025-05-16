@@ -173,3 +173,5 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-05-16 22:37:11,098 [job_state.py:_handle_started()] - Job state initialized: standby
 2025-05-16 22:37:11,456 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-05-16 22:37:11,864 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-05-16 22:41:11,925 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-05-16 22:41:30,225 [job_state.py:_status_update()] - Job Started: sda1/Organization/PC_Fan_Mounts/Adjustable_Fan_Mount_EN4Plus_0.4_PLA0.2_2h30m.gcode
