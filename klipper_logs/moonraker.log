@@ -110,3 +110,4 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 2025-05-17 05:32:54,712 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
 2025-05-17 05:35:08,083 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-05-17 05:35:33,144 [job_state.py:_status_update()] - Job Started: sda1/Organization/PC_Fan_Mounts/hexagon_fan_grill_EN4Plus_0.4_PLA0.2_1h41m.gcode
+2025-05-17 06:57:25,425 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
