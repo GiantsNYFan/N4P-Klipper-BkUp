@@ -83,3 +83,30 @@ Klipper Version: ?
 2025-05-17 05:01:32,649 [app.py:log_request()] - 101 GET /websocket?token=O4GIK2TEDPCQ4J2OICLQVLBBKJIYHPPW (10.10.100.21) [_TRUSTED_USER_] 4.50ms
 2025-05-17 05:01:32,650 [websockets.py:open()] - Websocket Opened: ID: 281472902735016, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
 2025-05-17 05:01:32,657 [websockets.py:_handle_identify()] - Websocket 281472902735016 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-05-17 05:32:53,715 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-29432.mru' -> '/home/mks/gcode_files/sda1/Organization/PC_Fan_Mounts/hexagon_fan_grill_EN4Plus_0.4_PLA0.2_1h41m.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Organization/PC_Fan_Mounts/hexagon_fan_grill_EN4Plus_0.4_PLA0.2_1h41m.gcode'
+2025-05-17 05:32:53,728 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-05-17 05:32:53,734 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 12030.10ms
+2025-05-17 05:32:53,751 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-05-17 05:32:54,709 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-05-17 05:32:54,710 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Organization/PC_Fan_Mounts/hexagon_fan_grill_EN4Plus_0.4_PLA0.2_1h41m.gcode") successfully finished
+2025-05-17 05:32:54,712 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-05-17 05:35:08,083 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-05-17 05:35:33,144 [job_state.py:_status_update()] - Job Started: sda1/Organization/PC_Fan_Mounts/hexagon_fan_grill_EN4Plus_0.4_PLA0.2_1h41m.gcode
