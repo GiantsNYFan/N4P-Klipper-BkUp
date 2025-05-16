@@ -175,3 +175,4 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-05-16 22:37:11,864 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-05-16 22:41:11,925 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-05-16 22:41:30,225 [job_state.py:_status_update()] - Job Started: sda1/Organization/PC_Fan_Mounts/Adjustable_Fan_Mount_EN4Plus_0.4_PLA0.2_2h30m.gcode
+2025-05-16 23:52:25,295 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
