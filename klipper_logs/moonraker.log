@@ -171,3 +171,5 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-05-21 23:01:10,849 [job_state.py:_handle_started()] - Job state initialized: standby
 2025-05-21 23:01:11,193 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-05-21 23:01:11,618 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-05-21 23:03:57,660 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-05-21 23:04:15,960 [job_state.py:_status_update()] - Job Started: sda1/Organization/PC_Fan_Mounts/120mm_hexagon_fan_grill_x4_EN4Plus_0.4_PLA0.2_3h22m.gcode
