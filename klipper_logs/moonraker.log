@@ -79,3 +79,66 @@ System Info:
   virt_identifier: none
 Klipper Version: ?
 2025-05-21 22:06:17,932 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: ::1
+2025-05-21 22:23:23,716 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-05-21 22:23:24,007 [app.py:log_request()] - 101 GET /websocket?token=HO33R2ELPZOTRLBJT6JYORPEXY2H7OCS (10.10.100.21) [_TRUSTED_USER_] 6.08ms
+2025-05-21 22:23:24,008 [websockets.py:open()] - Websocket Opened: ID: 281472929085592, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-05-21 22:23:24,016 [websockets.py:_handle_identify()] - Websocket 281472929085592 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-05-21 22:23:25,942 [websockets.py:on_close()] - Websocket Closed: ID: 281472929085592 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 1.94
+2025-05-21 22:23:26,158 [app.py:log_request()] - 101 GET /websocket?token=MKBQ4R3NKOFDVJ5PLOF7RVOGBXWU3H3T (10.10.100.21) [_TRUSTED_USER_] 4.80ms
+2025-05-21 22:23:26,159 [websockets.py:open()] - Websocket Opened: ID: 281472929123520, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-05-21 22:23:26,166 [websockets.py:_handle_identify()] - Websocket 281472929123520 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-05-21 22:24:22,928 [websockets.py:on_close()] - Websocket Closed: ID: 281472929123520 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.76
+2025-05-21 22:27:00,491 [app.py:log_request()] - 101 GET /websocket?token=FJCRQRQ3EZ6LCD6UG4Y5YS5BWRPH35F3 (10.10.100.21) [_TRUSTED_USER_] 4.63ms
+2025-05-21 22:27:00,492 [websockets.py:open()] - Websocket Opened: ID: 281472928457392, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-05-21 22:27:00,500 [websockets.py:_handle_identify()] - Websocket 281472928457392 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-05-21 22:27:22,995 [websockets.py:on_close()] - Websocket Closed: ID: 281472928457392 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 2.49
+2025-05-21 22:27:23,247 [app.py:log_request()] - 101 GET /websocket?token=L353EEDUISWDVDITMWB743BP2Q75IGDG (10.10.100.21) [_TRUSTED_USER_] 4.90ms
+2025-05-21 22:27:23,248 [websockets.py:open()] - Websocket Opened: ID: 281472928915128, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-05-21 22:27:23,255 [websockets.py:_handle_identify()] - Websocket 281472928915128 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-05-21 22:38:38,324 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-2250.mru' -> '/home/mks/gcode_files/sda1/Organization/PC_Fan_Mounts/120mm_hexagon_fan_grill_x4_EN4Plus_0.4_PLA0.2_3h22m.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Organization/PC_Fan_Mounts/120mm_hexagon_fan_grill_x4_EN4Plus_0.4_PLA0.2_3h22m.gcode'
+2025-05-21 22:38:38,345 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-05-21 22:38:38,358 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 6128.01ms
+2025-05-21 22:38:38,525 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-05-21 22:38:39,621 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-05-21 22:38:39,621 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Organization/PC_Fan_Mounts/120mm_hexagon_fan_grill_x4_EN4Plus_0.4_PLA0.2_3h22m.gcode") successfully finished
+2025-05-21 22:38:39,623 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-05-21 22:50:31,715 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-05-21 22:50:31,746 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-05-21 22:50:32,981 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-05-21 22:50:32,981 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x80020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-05-21 22:50:33,731 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-05-21 22:50:33,741 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-05-21 22:50:36,247 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-05-21 22:50:36,584 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-05-21 22:50:37,031 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
