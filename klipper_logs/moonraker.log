@@ -477,3 +477,8 @@ Traceback (most recent call last):
   File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
     pid, uid, gid = struct.unpack("@LLL", data)
 struct.error: unpack requires a buffer of 24 bytes
+2025-05-17 10:17:16,639 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-05-17 10:17:16,654 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-05-17 10:17:18,893 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-05-17 10:17:19,188 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-05-17 10:17:19,647 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
