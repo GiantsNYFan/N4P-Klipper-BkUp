@@ -543,3 +543,18 @@ Traceback (most recent call last):
   File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
     raise ServerError("Klippy Host not connected", 503)
 utils.ServerError: Klippy Host not connected
+2025-05-22 07:17:16,058 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-05-22 07:17:16,058 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x84020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-05-22 07:17:16,767 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-05-22 07:17:16,780 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-05-22 07:17:19,024 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-05-22 07:17:19,306 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-05-22 07:17:19,469 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-05-22 07:17:19,674 [app.py:log_request()] - 101 GET /websocket?token=MKC6EFP5KAVOOCUY4YHNFSBJMUX7XP6R (10.10.100.21) [_TRUSTED_USER_] 5.47ms
+2025-05-22 07:17:19,676 [websockets.py:open()] - Websocket Opened: ID: 281472992132680, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-05-22 07:17:19,684 [websockets.py:_handle_identify()] - Websocket 281472992132680 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-05-22 07:17:19,776 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
