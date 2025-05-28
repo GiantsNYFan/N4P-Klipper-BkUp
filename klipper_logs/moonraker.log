@@ -82,3 +82,4 @@ Klipper Version: ?
 2025-05-29 00:19:54,882 [app.py:log_request()] - 101 GET /websocket?token=D2YOABLJKHGADIRZ7KCBU3SAHOMTAW7D (10.10.100.14) [_TRUSTED_USER_] 4.75ms
 2025-05-29 00:19:54,883 [websockets.py:open()] - Websocket Opened: ID: 281472992672400, Proxied: True, User Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1, Host Name: 10.10.100.201
 2025-05-29 00:19:54,895 [websockets.py:_handle_identify()] - Websocket 281472992672400 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-05-29 00:20:24,471 [websockets.py:on_close()] - Websocket Closed: ID: 281472992672400 Close Code: None, Close Reason: None, Pong Time Elapsed: 9.58
