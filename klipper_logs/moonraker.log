@@ -79,3 +79,4 @@ System Info:
   virt_identifier: none
 Klipper Version: ?
 2025-06-12 00:19:18,737 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-12 00:19:42,538 [job_state.py:_status_update()] - Job Started: sda1/Tools/EN4Plus_0.4_m6x020_hex_nut_PETG0.12_25m23s.gcode
