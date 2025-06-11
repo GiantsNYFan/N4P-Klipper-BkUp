@@ -689,3 +689,43 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-06-12 01:18:24,834 [job_state.py:_handle_started()] - Job state initialized: standby
 2025-06-12 01:18:25,134 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-06-12 01:18:25,609 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-12 01:20:59,171 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: ::1
+2025-06-12 01:21:17,442 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-06-12 01:22:17,445 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2025-06-12 01:23:17,448 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2025-06-12 01:24:17,455 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.02 seconds
+2025-06-12 01:25:17,459 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.02 seconds
+2025-06-12 01:26:17,463 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.02 seconds
+2025-06-12 01:27:17,467 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.03 seconds
+2025-06-12 01:34:04,300 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-06-12 01:34:04,325 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-06-12 01:34:05,028 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-06-12 01:34:05,567 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-06-12 01:34:05,567 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0xab020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-06-12 01:34:06,331 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-06-12 01:34:06,339 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-06-12 01:34:08,840 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-06-12 01:34:09,171 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-06-12 01:34:09,607 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
