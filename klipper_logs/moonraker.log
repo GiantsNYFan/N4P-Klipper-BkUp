@@ -729,3 +729,5 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-06-12 01:34:08,840 [job_state.py:_handle_started()] - Job state initialized: standby
 2025-06-12 01:34:09,171 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-06-12 01:34:09,607 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-12 01:36:25,337 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-12 01:36:55,928 [job_state.py:_status_update()] - Job Started: sda1/Tools/EN4Plus_0.4_m8_m10x015_hex_PETG0.12_52m18s.gcode
