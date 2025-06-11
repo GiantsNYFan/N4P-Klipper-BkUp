@@ -1,0 +1,460 @@
+--------------------Moonraker Log Start--------------------
+config_file: /home/mks/klipper_config/moonraker.conf
+log_file: /home/mks/klipper_logs/moonraker.log
+software_version: ?
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+#################### Moonraker Configuration ####################
+
+[server]
+host = localhost
+port = 7125
+enable_debug_logging = False
+klippy_uds_address = /tmp/klippy_uds
+
+[authorization]
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	http://*.lan
+	http://*.local
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	https://app.fluidd.xyz
+	http://app.fluidd.xyz
+
+[database]
+database_path = /home/mks/.moonraker_database
+
+[file_manager]
+config_path = /home/mks/klipper_config
+log_path = /home/mks/klipper_logs
+
+[octoprint_compat]
+
+[history]
+
+#################################################################
+All Configuration Files:
+/home/mks/klipper_config/moonraker.conf
+#################################################################
+Unsafe Shutdown Count: 0
+
+System Info:
+
+***python***
+  version: sys.version_info(major=3, minor=7, micro=3, releaselevel='final', serial=0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: 
+  hardware_desc: 
+  model: 
+  total_memory: 999784
+  memory_units: kB
+
+***sd_info***
+
+***distribution***
+  name: Debian GNU/Linux 10 (buster)
+  id: debian
+  version: 10
+  version_parts: {'major': '10', 'minor': '', 'build_number': ''}
+  like: 
+  codename: buster
+  release_info: {}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+Klipper Version: ?
+2025-05-29 00:19:54,664 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.14
+2025-05-29 00:19:54,882 [app.py:log_request()] - 101 GET /websocket?token=D2YOABLJKHGADIRZ7KCBU3SAHOMTAW7D (10.10.100.14) [_TRUSTED_USER_] 4.75ms
+2025-05-29 00:19:54,883 [websockets.py:open()] - Websocket Opened: ID: 281472992672400, Proxied: True, User Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1, Host Name: 10.10.100.201
+2025-05-29 00:19:54,895 [websockets.py:_handle_identify()] - Websocket 281472992672400 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-05-29 00:20:24,471 [websockets.py:on_close()] - Websocket Closed: ID: 281472992672400 Close Code: None, Close Reason: None, Pong Time Elapsed: 9.58
+2025-05-29 00:21:54,517 [app.py:log_request()] - 101 GET /websocket?token=RULRIFHSEY7FPROVZZSXGRRJAVFA3NT4 (10.10.100.14) [_TRUSTED_USER_] 7.81ms
+2025-05-29 00:21:54,518 [websockets.py:open()] - Websocket Opened: ID: 281472991579048, Proxied: True, User Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1, Host Name: 10.10.100.201
+2025-05-29 00:21:54,545 [websockets.py:_handle_identify()] - Websocket 281472991579048 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-05-29 00:21:58,786 [websockets.py:on_close()] - Websocket Closed: ID: 281472991579048 Close Code: None, Close Reason: None, Pong Time Elapsed: 4.27
+2025-05-29 00:28:33,342 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
+2025-05-29 01:23:33,356 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.14
+2025-05-29 09:40:11,512 [moonraker.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2025-05-29 09:40:11,629 [websockets.py:on_close()] - Websocket Closed: ID: 281472991619224 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 0.07
+2025-05-29 09:40:11,637 [websockets.py:on_close()] - Websocket Closed: ID: 281472992132680 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 1.95
+2025-05-29 09:40:11,641 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-05-29 09:40:11,651 [database.py:close()] - Database statistics:
+
+announcements:
+psize: 4096
+depth: 0
+branch_pages: 0
+leaf_pages: 0
+overflow_pages: 0
+entries: 0
+authorized_users:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 2
+fluidd:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 6
+gcode_metadata:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 2
+overflow_pages: 181
+entries: 51
+history:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 85
+overflow_pages: 274
+entries: 274
+mobileraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 2
+entries: 2
+moonraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 5
+2025-05-29 09:40:11,680 [moonraker.py:main()] - Server Shutdown
+--------------------Moonraker Log Start--------------------
+config_file: /home/mks/klipper_config/moonraker.conf
+log_file: /home/mks/klipper_logs/moonraker.log
+software_version: ?
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+2025-05-29 09:17:07,409 [utils.py:setup_logging()] - config_file: /home/mks/klipper_config/moonraker.conf
+2025-05-29 09:17:07,410 [utils.py:setup_logging()] - log_file: /home/mks/klipper_logs/moonraker.log
+2025-05-29 09:17:07,410 [utils.py:setup_logging()] - software_version: ?
+2025-05-29 09:17:07,410 [utils.py:setup_logging()] - python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+2025-05-29 09:17:07,431 [moonraker.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = localhost
+port = 7125
+enable_debug_logging = False
+klippy_uds_address = /tmp/klippy_uds
+
+[authorization]
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	http://*.lan
+	http://*.local
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	https://app.fluidd.xyz
+	http://app.fluidd.xyz
+
+[database]
+database_path = /home/mks/.moonraker_database
+
+[file_manager]
+config_path = /home/mks/klipper_config
+log_path = /home/mks/klipper_logs
+
+[octoprint_compat]
+
+[history]
+
+#################################################################
+All Configuration Files:
+/home/mks/klipper_config/moonraker.conf
+#################################################################
+2025-05-29 09:17:07,465 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/info
+2025-05-29 09:17:07,466 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.info
+2025-05-29 09:17:07,467 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/config
+2025-05-29 09:17:07,468 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.config
+2025-05-29 09:17:07,468 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/restart
+2025-05-29 09:17:07,470 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.restart
+2025-05-29 09:17:07,682 [moonraker.py:load_component()] - Component (dbus_manager) loaded
+2025-05-29 09:17:07,737 [moonraker.py:add_log_rollover_item()] - Unsafe Shutdown Count: 0
+2025-05-29 09:17:07,745 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/database/list
+2025-05-29 09:17:07,747 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.database.list
+2025-05-29 09:17:07,748 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/database/item
+2025-05-29 09:17:07,750 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.database.get_item, server.database.post_item, server.database.delete_item
+2025-05-29 09:17:07,751 [moonraker.py:load_component()] - Component (database) loaded
+2025-05-29 09:17:08,008 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/files/list
+2025-05-29 09:17:08,011 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.list
+2025-05-29 09:17:08,011 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/files/metadata
+2025-05-29 09:17:08,013 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.metadata
+2025-05-29 09:17:08,014 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/files/directory
+2025-05-29 09:17:08,017 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.get_directory, server.files.post_directory, server.files.delete_directory
+2025-05-29 09:17:08,017 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/files/move
+2025-05-29 09:17:08,022 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.move
+2025-05-29 09:17:08,022 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/files/copy
+2025-05-29 09:17:08,024 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.copy
+2025-05-29 09:17:08,025 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.delete_file
+2025-05-29 09:17:08,055 [moonraker.py:load_component()] - Component (file_manager) loaded
+2025-05-29 09:17:08,061 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/pause
+2025-05-29 09:17:08,063 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.pause
+2025-05-29 09:17:08,064 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/resume
+2025-05-29 09:17:08,065 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.resume
+2025-05-29 09:17:08,066 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/cancel
+2025-05-29 09:17:08,069 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.cancel
+2025-05-29 09:17:08,069 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/start
+2025-05-29 09:17:08,072 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.start
+2025-05-29 09:17:08,072 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/restart
+2025-05-29 09:17:08,075 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.restart
+2025-05-29 09:17:08,076 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/firmware_restart
+2025-05-29 09:17:08,078 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.firmware_restart
+2025-05-29 09:17:08,111 [klippy_apis.py:init_conf()] - load level mode conf
+2025-05-29 09:17:08,113 [moonraker.py:load_component()] - Component (klippy_apis) loaded
+2025-05-29 09:17:08,755 [moonraker.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: sys.version_info(major=3, minor=7, micro=3, releaselevel='final', serial=0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: 
+  hardware_desc: 
+  model: 
+  total_memory: 999784
+  memory_units: kB
+
+***sd_info***
+
+***distribution***
+  name: Debian GNU/Linux 10 (buster)
+  id: debian
+  version: 10
+  version_parts: {'major': '10', 'minor': '', 'build_number': ''}
+  like: 
+  codename: buster
+  release_info: {}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+2025-05-29 09:17:08,763 [moonraker.py:load_component()] - Component (shell_command) loaded
+2025-05-29 09:17:08,764 [machine.py:__init__()] - Using System Provider: systemd_dbus
+2025-05-29 09:17:08,765 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/reboot
+2025-05-29 09:17:08,767 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.reboot
+2025-05-29 09:17:08,768 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/shutdown
+2025-05-29 09:17:08,771 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.shutdown
+2025-05-29 09:17:08,772 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/restart
+2025-05-29 09:17:08,774 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.restart
+2025-05-29 09:17:08,775 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/stop
+2025-05-29 09:17:08,778 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.stop
+2025-05-29 09:17:08,779 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/start
+2025-05-29 09:17:08,781 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.start
+2025-05-29 09:17:08,782 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/system_info
+2025-05-29 09:17:08,785 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.system_info
+2025-05-29 09:17:08,791 [moonraker.py:load_component()] - Component (machine) loaded
+2025-05-29 09:17:08,799 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/temperature_store
+2025-05-29 09:17:08,801 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.temperature_store
+2025-05-29 09:17:08,801 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/gcode_store
+2025-05-29 09:17:08,804 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.gcode_store
+2025-05-29 09:17:08,804 [moonraker.py:load_component()] - Component (data_store) loaded
+2025-05-29 09:17:08,817 [proc_stats.py:__init__()] - Unable to find 'vcgencmd', throttle checking disabled
+2025-05-29 09:17:08,818 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/proc_stats
+2025-05-29 09:17:08,820 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.proc_stats
+2025-05-29 09:17:08,821 [moonraker.py:load_component()] - Component (proc_stats) loaded
+2025-05-29 09:17:08,829 [moonraker.py:load_component()] - Component (job_state) loaded
+2025-05-29 09:17:08,837 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST DELETE) /server/job_queue/job
+2025-05-29 09:17:08,840 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.post_job, server.job_queue.delete_job
+2025-05-29 09:17:08,841 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/job_queue/pause
+2025-05-29 09:17:08,843 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.pause
+2025-05-29 09:17:08,844 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/job_queue/start
+2025-05-29 09:17:08,847 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.start
+2025-05-29 09:17:08,847 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/job_queue/status
+2025-05-29 09:17:08,849 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.status
+2025-05-29 09:17:08,850 [moonraker.py:load_component()] - Component (job_queue) loaded
+2025-05-29 09:17:08,885 [moonraker.py:load_component()] - Component (http_client) loaded
+2025-05-29 09:17:08,894 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/announcements/list
+2025-05-29 09:17:08,896 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.list
+2025-05-29 09:17:08,896 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/announcements/dismiss
+2025-05-29 09:17:08,898 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.dismiss
+2025-05-29 09:17:08,899 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/announcements/update
+2025-05-29 09:17:08,901 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.update
+2025-05-29 09:17:08,902 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST DELETE) /server/announcements/feed
+2025-05-29 09:17:08,904 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.post_feed, server.announcements.delete_feed
+2025-05-29 09:17:08,904 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/announcements/feeds
+2025-05-29 09:17:08,907 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.feeds
+2025-05-29 09:17:08,908 [moonraker.py:load_component()] - Component (announcements) loaded
+2025-05-29 09:17:08,932 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/webcams/list
+2025-05-29 09:17:08,934 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.webcams.list
+2025-05-29 09:17:08,934 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/webcams/item
+2025-05-29 09:17:08,936 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.webcams.get_item, server.webcams.post_item, server.webcams.delete_item
+2025-05-29 09:17:08,936 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/webcams/test
+2025-05-29 09:17:08,945 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.webcams.test
+2025-05-29 09:17:08,945 [moonraker.py:load_component()] - Component (webcam) loaded
+2025-05-29 09:17:08,952 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: connection.send_event
+2025-05-29 09:17:08,953 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/extensions/list
+2025-05-29 09:17:08,955 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.extensions.list
+2025-05-29 09:17:08,956 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/extensions/request
+2025-05-29 09:17:08,958 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.extensions.request
+2025-05-29 09:17:08,962 [moonraker.py:load_component()] - Component (extensions) loaded
+2025-05-29 09:17:09,015 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+http://.*\.lan
+http://.*\.local
+https://my\.mainsail\.xyz
+http://my\.mainsail\.xyz
+https://app\.fluidd\.xyz
+http://app\.fluidd\.xyz
+2025-05-29 09:17:09,015 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/login
+2025-05-29 09:17:09,017 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/logout
+2025-05-29 09:17:09,018 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/refresh_jwt
+2025-05-29 09:17:09,020 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /access/user
+2025-05-29 09:17:09,022 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/users/list
+2025-05-29 09:17:09,024 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/user/password
+2025-05-29 09:17:09,025 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST) /access/api_key
+2025-05-29 09:17:09,028 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/oneshot_token
+2025-05-29 09:17:09,030 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/info
+2025-05-29 09:17:09,033 [moonraker.py:load_component()] - Component (authorization) loaded
+2025-05-29 09:17:09,042 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/version
+2025-05-29 09:17:09,044 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/server
+2025-05-29 09:17:09,046 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/login
+2025-05-29 09:17:09,047 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/currentuser
+2025-05-29 09:17:09,048 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/settings
+2025-05-29 09:17:09,049 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/job
+2025-05-29 09:17:09,051 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/printer
+2025-05-29 09:17:09,052 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/printer/command
+2025-05-29 09:17:09,054 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/printerprofiles
+2025-05-29 09:17:09,057 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/files/moonraker/(?P<relative_path>.+)
+2025-05-29 09:17:09,059 [moonraker.py:load_component()] - Component (octoprint_compat) loaded
+2025-05-29 09:17:09,066 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET DELETE) /server/history/job
+2025-05-29 09:17:09,068 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.get_job, server.history.delete_job
+2025-05-29 09:17:09,068 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/history/list
+2025-05-29 09:17:09,070 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.list
+2025-05-29 09:17:09,070 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/history/totals
+2025-05-29 09:17:09,073 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.totals
+2025-05-29 09:17:09,073 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/history/reset_totals
+2025-05-29 09:17:09,075 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.reset_totals
+2025-05-29 09:17:09,083 [moonraker.py:load_component()] - Component (history) loaded
+2025-05-29 09:17:09,085 [moonraker.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+2025-05-29 09:17:09,128 [moonraker.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+2025-05-29 09:17:09,564 [moonraker.py:_initialize_component()] - Performing Component Post Init: [machine]
+2025-05-29 09:17:10,167 [machine.py:check_virt_status()] - No Virtualization Detected
+2025-05-29 09:17:10,199 [moonraker.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+2025-05-29 09:17:10,200 [moonraker.py:_initialize_component()] - Performing Component Post Init: [announcements]
+2025-05-29 09:17:10,204 [moonraker.py:_initialize_component()] - Performing Component Post Init: [webcam]
+2025-05-29 09:17:10,753 [machine.py:_get_wifi_interfaces()] - Failed to run 'iwgetid' command
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/machine.py", line 457, in _get_wifi_interfaces
+    resp = await self.iwgetid_cmd.run_with_response(log_complete=False)
+  File "/home/mks/moonraker/moonraker/components/shell_command.py", line 269, in run_with_response
+    self.return_code, stdout, stderr)
+components.shell_command.ShellCommandError: Error running shell command: '['/sbin/iwgetid']'
+2025-05-29 09:17:10,765 [moonraker.py:_initialize_component()] - Performing Component Post Init: [authorization]
+2025-05-29 09:17:10,779 [moonraker.py:start_server()] - Starting Moonraker on (localhost, 7125), Hostname: mkspi
+2025-05-29 09:17:10,791 [app.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+2025-05-29 09:17:11,046 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-05-29 09:17:11,047 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0xbc020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-05-29 09:17:11,305 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-05-29 09:17:11,311 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-05-29 09:17:11,317 [moonraker.py:add_log_rollover_item()] - Klipper Version: ?
+2025-05-29 09:17:11,323 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/info
+2025-05-29 09:17:11,325 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.info
+2025-05-29 09:17:11,325 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/query_endstops/status
+2025-05-29 09:17:11,328 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.query_endstops.status
+2025-05-29 09:17:11,329 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/emergency_stop
+2025-05-29 09:17:11,333 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.emergency_stop
+2025-05-29 09:17:11,334 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/pause_resume/pause
+2025-05-29 09:17:11,336 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.pause_resume.pause
+2025-05-29 09:17:11,337 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/query
+2025-05-29 09:17:11,339 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.query
+2025-05-29 09:17:11,340 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/list
+2025-05-29 09:17:11,341 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.list
+2025-05-29 09:17:11,342 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/adxl345/dump_adxl345
+2025-05-29 09:17:11,344 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.adxl345.dump_adxl345
+2025-05-29 09:17:11,344 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/motion_report/dump_stepper
+2025-05-29 09:17:11,347 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.motion_report.dump_stepper
+2025-05-29 09:17:11,347 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/firmware_restart
+2025-05-29 09:17:11,349 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.firmware_restart
+2025-05-29 09:17:11,350 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/subscribe
+2025-05-29 09:17:11,352 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.subscribe
+2025-05-29 09:17:11,353 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/script
+2025-05-29 09:17:11,355 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.script
+2025-05-29 09:17:11,355 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/help
+2025-05-29 09:17:11,358 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.help
+2025-05-29 09:17:11,359 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/pause_resume/resume
+2025-05-29 09:17:11,360 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.pause_resume.resume
+2025-05-29 09:17:11,361 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/motion_report/dump_trapq
+2025-05-29 09:17:11,363 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.motion_report.dump_trapq
+2025-05-29 09:17:11,364 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/pause_resume/cancel
+2025-05-29 09:17:11,365 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.pause_resume.cancel
+2025-05-29 09:17:11,366 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/restart
+2025-05-29 09:17:11,368 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.restart
+2025-05-29 09:17:11,430 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: ::1
+2025-05-29 09:17:11,435 [app.py:log_request()] - 101 GET /websocket? (::1) [_TRUSTED_USER_] 10.41ms
+2025-05-29 09:17:11,436 [websockets.py:open()] - Websocket Opened: ID: 281473133216544, Proxied: False, User Agent: WebSocket++/0.8.1, Host Name: localhost
+2025-05-29 09:17:11,556 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-05-29 09:17:11,851 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-05-29 09:17:12,297 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [Errno -2] Name or service not known
+2025-05-29 09:17:12,309 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-05-29 09:17:14,649 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-05-29 09:17:15,162 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-05-29 09:17:15,916 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-05-29 09:17:15,917 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0xbc020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-05-29 09:17:16,608 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-05-29 09:17:16,624 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-05-29 09:17:19,133 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-05-29 09:17:19,423 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-05-29 09:17:19,884 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
