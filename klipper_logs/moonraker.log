@@ -187,3 +187,32 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-06-11 23:30:24,737 [job_state.py:_handle_started()] - Job state initialized: standby
 2025-06-11 23:30:25,026 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-06-11 23:30:25,505 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-11 23:33:08,461 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-06-11 23:34:08,465 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2025-06-11 23:35:08,469 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2025-06-11 23:36:08,472 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.01 seconds
+2025-06-11 23:37:08,475 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.02 seconds
+2025-06-11 23:38:08,479 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.02 seconds
+2025-06-11 23:39:08,483 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.02 seconds
+2025-06-11 23:41:18,463 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-06-11 23:41:18,492 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-06-11 23:41:19,728 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-06-11 23:41:19,728 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0xbc020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-06-11 23:41:20,502 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-06-11 23:41:20,513 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-06-11 23:41:23,014 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-06-11 23:41:23,354 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-06-11 23:41:23,781 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
