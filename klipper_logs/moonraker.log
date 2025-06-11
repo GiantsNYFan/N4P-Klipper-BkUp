@@ -543,3 +543,35 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-06-12 00:17:13,860 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: ::1
 2025-06-12 00:17:13,865 [app.py:log_request()] - 101 GET /websocket? (::1) [_TRUSTED_USER_] 9.45ms
 2025-06-12 00:17:13,867 [websockets.py:open()] - Websocket Opened: ID: 281473489070680, Proxied: False, User Agent: WebSocket++/0.8.1, Host Name: localhost
+2025-06-12 00:17:17,087 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-06-12 00:17:17,097 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-06-12 00:17:18,154 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-06-12 00:17:18,357 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-06-12 00:17:18,357 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0xab020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-06-12 00:17:19,152 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-06-12 00:17:19,163 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-06-12 00:51:08,817 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-06-12 00:51:09,115 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-06-12 00:51:09,573 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
