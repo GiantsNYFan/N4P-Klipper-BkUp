@@ -1226,3 +1226,4 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 2025-06-12 22:53:28,459 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
 2025-06-12 22:54:28,916 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-06-12 22:54:52,719 [job_state.py:_status_update()] - Job Started: sda1/Tools/EN4Plus_0.4_nut_m8_PETG0.12_32m41s.gcode
+2025-06-12 23:54:21,584 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
