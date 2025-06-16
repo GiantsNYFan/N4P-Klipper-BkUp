@@ -79,3 +79,7 @@ System Info:
   virt_identifier: none
 Klipper Version: ?
 2025-06-16 20:12:48,938 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-16 20:14:52,653 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-06-16 20:14:52,881 [app.py:log_request()] - 101 GET /websocket?token=ZDJ23LOIKXXSNQ3OFAWPPVBRAYG2GVU6 (10.10.100.21) [_TRUSTED_USER_] 5.68ms
+2025-06-16 20:14:52,882 [websockets.py:open()] - Websocket Opened: ID: 281473032571704, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-16 20:14:52,893 [websockets.py:_handle_identify()] - Websocket 281473032571704 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
