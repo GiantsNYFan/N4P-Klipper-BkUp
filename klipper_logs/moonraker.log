@@ -288,3 +288,30 @@ System Time: 1750088377.348351, Usage: 16.27%, Memory: 40072 kB
 2025-06-16 23:39:38,312 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
 2025-06-16 23:43:34,465 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-06-16 23:44:05,044 [job_state.py:_status_update()] - Job Started: sda1/Toys/bd1_v3_EN4Plus_0.4_PLA0.2_6h2m.gcode
+2025-06-16 23:52:33,619 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-13190.mru' -> '/home/mks/gcode_files/sda1/Toys/bd1_v3_EN4Plus_0.4_PLA0.2_6h0m.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Toys/bd1_v3_EN4Plus_0.4_PLA0.2_6h0m.gcode'
+2025-06-16 23:52:33,656 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-06-16 23:52:33,662 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 20772.26ms
+2025-06-16 23:52:33,684 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-06-16 23:52:34,658 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-06-16 23:52:34,659 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Toys/bd1_v3_EN4Plus_0.4_PLA0.2_6h0m.gcode") successfully finished
+2025-06-16 23:52:34,660 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-06-16 23:53:00,668 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-16 23:53:25,560 [job_state.py:_status_update()] - Job Started: sda1/Toys/bd1_v3_EN4Plus_0.4_PLA0.2_6h0m.gcode
