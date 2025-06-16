@@ -83,3 +83,60 @@ Klipper Version: ?
 2025-06-16 20:14:52,881 [app.py:log_request()] - 101 GET /websocket?token=ZDJ23LOIKXXSNQ3OFAWPPVBRAYG2GVU6 (10.10.100.21) [_TRUSTED_USER_] 5.68ms
 2025-06-16 20:14:52,882 [websockets.py:open()] - Websocket Opened: ID: 281473032571704, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
 2025-06-16 20:14:52,893 [websockets.py:_handle_identify()] - Websocket 281473032571704 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-16 20:17:38,772 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: ::1
+2025-06-16 20:41:44,271 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-1758.mru' -> '/home/mks/gcode_files/sda1/Fidgets/EN4Plus_0.4_FidgetRing_PLA0.2_1h17m.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Fidgets/EN4Plus_0.4_FidgetRing_PLA0.2_1h17m.gcode'
+2025-06-16 20:41:44,292 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-06-16 20:41:44,306 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 4071.55ms
+2025-06-16 20:41:44,468 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-06-16 20:41:45,537 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-06-16 20:41:45,537 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Fidgets/EN4Plus_0.4_FidgetRing_PLA0.2_1h17m.gcode") successfully finished
+2025-06-16 20:41:45,539 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-06-16 20:47:59,971 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-2124.mru' -> '/home/mks/gcode_files/sda1/Fidgets/FidgetRing_EN4Plus_0.4_PLA0.2_1h25m.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Fidgets/FidgetRing_EN4Plus_0.4_PLA0.2_1h25m.gcode'
+2025-06-16 20:47:59,991 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-06-16 20:47:59,997 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 13281.76ms
+2025-06-16 20:48:00,013 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-06-16 20:48:00,974 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-06-16 20:48:00,974 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Fidgets/FidgetRing_EN4Plus_0.4_PLA0.2_1h25m.gcode") successfully finished
+2025-06-16 20:48:00,976 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-06-16 20:51:44,926 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff8c15e798>()]>>
+2025-06-16 20:51:44,927 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff8c15ed38>()]>>
+2025-06-16 20:52:36,481 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-16 20:52:58,282 [job_state.py:_status_update()] - Job Started: sda1/Fidgets/FidgetRing_EN4Plus_0.4_PLA0.2_1h25m.gcode
