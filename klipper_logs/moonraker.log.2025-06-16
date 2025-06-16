@@ -1,0 +1,317 @@
+--------------------Moonraker Log Start--------------------
+config_file: /home/mks/klipper_config/moonraker.conf
+log_file: /home/mks/klipper_logs/moonraker.log
+software_version: ?
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+#################### Moonraker Configuration ####################
+
+[server]
+host = localhost
+port = 7125
+enable_debug_logging = False
+klippy_uds_address = /tmp/klippy_uds
+
+[authorization]
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	http://*.lan
+	http://*.local
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	https://app.fluidd.xyz
+	http://app.fluidd.xyz
+
+[database]
+database_path = /home/mks/.moonraker_database
+
+[file_manager]
+config_path = /home/mks/klipper_config
+log_path = /home/mks/klipper_logs
+
+[octoprint_compat]
+
+[history]
+
+#################################################################
+All Configuration Files:
+/home/mks/klipper_config/moonraker.conf
+#################################################################
+Unsafe Shutdown Count: 0
+
+System Info:
+
+***python***
+  version: sys.version_info(major=3, minor=7, micro=3, releaselevel='final', serial=0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: 
+  hardware_desc: 
+  model: 
+  total_memory: 999784
+  memory_units: kB
+
+***sd_info***
+
+***distribution***
+  name: Debian GNU/Linux 10 (buster)
+  id: debian
+  version: 10
+  version_parts: {'major': '10', 'minor': '', 'build_number': ''}
+  like: 
+  codename: buster
+  release_info: {}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+Klipper Version: ?
+2025-06-16 20:12:48,938 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-16 20:14:52,653 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-06-16 20:14:52,881 [app.py:log_request()] - 101 GET /websocket?token=ZDJ23LOIKXXSNQ3OFAWPPVBRAYG2GVU6 (10.10.100.21) [_TRUSTED_USER_] 5.68ms
+2025-06-16 20:14:52,882 [websockets.py:open()] - Websocket Opened: ID: 281473032571704, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-16 20:14:52,893 [websockets.py:_handle_identify()] - Websocket 281473032571704 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-16 20:17:38,772 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: ::1
+2025-06-16 20:41:44,271 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-1758.mru' -> '/home/mks/gcode_files/sda1/Fidgets/EN4Plus_0.4_FidgetRing_PLA0.2_1h17m.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Fidgets/EN4Plus_0.4_FidgetRing_PLA0.2_1h17m.gcode'
+2025-06-16 20:41:44,292 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-06-16 20:41:44,306 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 4071.55ms
+2025-06-16 20:41:44,468 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-06-16 20:41:45,537 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-06-16 20:41:45,537 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Fidgets/EN4Plus_0.4_FidgetRing_PLA0.2_1h17m.gcode") successfully finished
+2025-06-16 20:41:45,539 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-06-16 20:47:59,971 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-2124.mru' -> '/home/mks/gcode_files/sda1/Fidgets/FidgetRing_EN4Plus_0.4_PLA0.2_1h25m.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Fidgets/FidgetRing_EN4Plus_0.4_PLA0.2_1h25m.gcode'
+2025-06-16 20:47:59,991 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-06-16 20:47:59,997 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 13281.76ms
+2025-06-16 20:48:00,013 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-06-16 20:48:00,974 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-06-16 20:48:00,974 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Fidgets/FidgetRing_EN4Plus_0.4_PLA0.2_1h25m.gcode") successfully finished
+2025-06-16 20:48:00,976 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-06-16 20:51:44,926 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff8c15e798>()]>>
+2025-06-16 20:51:44,927 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff8c15ed38>()]>>
+2025-06-16 20:52:36,481 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-16 20:52:58,282 [job_state.py:_status_update()] - Job Started: sda1/Fidgets/FidgetRing_EN4Plus_0.4_PLA0.2_1h25m.gcode
+2025-06-16 21:52:38,805 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
+2025-06-16 22:24:10,842 [websockets.py:on_close()] - Websocket Closed: ID: 281473032571704 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 7.95
+2025-06-16 22:24:10,970 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-06-16 22:24:11,154 [app.py:log_request()] - 101 GET /websocket?token=KTEIVTIW6WAOUOCDVRSQVXHASSA6TX2L (10.10.100.21) [_TRUSTED_USER_] 6.22ms
+2025-06-16 22:24:11,155 [websockets.py:open()] - Websocket Opened: ID: 281473032668216, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-16 22:24:11,164 [websockets.py:_handle_identify()] - Websocket 281473032668216 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-16 22:43:48,375 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-06-16 22:43:48,398 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-06-16 22:43:49,642 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-06-16 22:43:49,643 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x91020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-06-16 22:43:50,406 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-06-16 22:43:50,416 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-06-16 22:43:52,657 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-06-16 22:43:52,944 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-06-16 22:43:53,428 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-16 22:48:51,443 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-06-16 22:48:59,226 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-06-16 22:49:51,446 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2025-06-16 22:49:59,229 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2025-06-16 22:50:51,450 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2025-06-16 22:50:59,233 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2025-06-16 22:51:51,455 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.01 seconds
+2025-06-16 22:51:59,240 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.02 seconds
+2025-06-16 22:52:51,459 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.02 seconds
+2025-06-16 22:52:59,243 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.02 seconds
+2025-06-16 22:53:51,463 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.02 seconds
+2025-06-16 22:53:59,246 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.02 seconds
+2025-06-16 22:54:51,466 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.03 seconds
+2025-06-16 22:54:59,250 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.03 seconds
+2025-06-16 22:56:53,328 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-06-16 22:56:53,369 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-06-16 22:56:54,595 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-06-16 22:56:54,596 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x91020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-06-16 22:56:55,202 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-06-16 22:56:55,211 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-06-16 22:56:57,709 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-06-16 22:56:57,995 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-06-16 22:56:58,474 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-16 22:58:16,436 [websockets.py:build_error()] - JSON-RPC Request Error: 400
+{'message': 'No trigger on probe after full movement', 'error': 'WebRequestError'}
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 468, in request
+    return await self._request_standard(web_request)
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 523, in _request_standard
+    return await base_request.wait()
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 595, in wait
+    raise self.response
+utils.ServerError: {'message': 'No trigger on probe after full movement', 'error': 'WebRequestError'}
+2025-06-16 23:17:19,448 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-06-16 23:18:19,451 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2025-06-16 23:19:19,455 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2025-06-16 23:20:19,459 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.02 seconds
+2025-06-16 23:21:19,463 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.02 seconds
+2025-06-16 23:22:19,466 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.02 seconds
+2025-06-16 23:23:19,469 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.03 seconds
+2025-06-16 23:28:05,461 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-06-16 23:29:05,467 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2025-06-16 23:30:05,471 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2025-06-16 23:31:05,474 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.02 seconds
+2025-06-16 23:32:05,478 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.02 seconds
+2025-06-16 23:33:05,481 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.02 seconds
+2025-06-16 23:34:05,485 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.03 seconds
+2025-06-16 23:35:55,907 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-06-16 23:35:55,944 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-06-16 23:35:57,172 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-06-16 23:35:57,173 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x91020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-06-16 23:35:57,927 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-06-16 23:35:57,938 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-06-16 23:36:00,178 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-06-16 23:36:00,476 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-06-16 23:36:00,935 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-16 23:39:37,247 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-12413.mru' -> '/home/mks/gcode_files/sda1/Toys/bd1_v3_EN4Plus_0.4_PLA0.2_6h2m.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Toys/bd1_v3_EN4Plus_0.4_PLA0.2_6h2m.gcode'
+2025-06-16 23:39:37,279 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-06-16 23:39:37,285 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 21202.90ms
+2025-06-16 23:39:37,295 [proc_stats.py:_watchdog_callback()] - EVENT LOOP BLOCKED: 4.81 seconds, total blocked count: 1
+2025-06-16 23:39:37,307 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-06-16 23:39:37,496 [proc_stats.py:log_last_stats()] - 
+System Time: 1750088370.818955, Usage: 75.5%, Memory: 40072 kB
+System Time: 1750088371.818999, Usage: 28.14%, Memory: 40072 kB
+System Time: 1750088372.820131, Usage: 69.7%, Memory: 40072 kB
+System Time: 1750088373.822994, Usage: 67.53%, Memory: 40072 kB
+System Time: 1750088377.348351, Usage: 16.27%, Memory: 40072 kB
+2025-06-16 23:39:38,311 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-06-16 23:39:38,311 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Toys/bd1_v3_EN4Plus_0.4_PLA0.2_6h2m.gcode") successfully finished
+2025-06-16 23:39:38,312 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-06-16 23:43:34,465 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-16 23:44:05,044 [job_state.py:_status_update()] - Job Started: sda1/Toys/bd1_v3_EN4Plus_0.4_PLA0.2_6h2m.gcode
+2025-06-16 23:52:33,619 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-13190.mru' -> '/home/mks/gcode_files/sda1/Toys/bd1_v3_EN4Plus_0.4_PLA0.2_6h0m.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Toys/bd1_v3_EN4Plus_0.4_PLA0.2_6h0m.gcode'
+2025-06-16 23:52:33,656 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-06-16 23:52:33,662 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 20772.26ms
+2025-06-16 23:52:33,684 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-06-16 23:52:34,658 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-06-16 23:52:34,659 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Toys/bd1_v3_EN4Plus_0.4_PLA0.2_6h0m.gcode") successfully finished
+2025-06-16 23:52:34,660 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-06-16 23:53:00,668 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-16 23:53:25,560 [job_state.py:_status_update()] - Job Started: sda1/Toys/bd1_v3_EN4Plus_0.4_PLA0.2_6h0m.gcode
