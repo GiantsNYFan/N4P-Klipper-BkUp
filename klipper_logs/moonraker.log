@@ -140,3 +140,4 @@ task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/m
 task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff8c15ed38>()]>>
 2025-06-16 20:52:36,481 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-06-16 20:52:58,282 [job_state.py:_status_update()] - Job Started: sda1/Fidgets/FidgetRing_EN4Plus_0.4_PLA0.2_1h25m.gcode
+2025-06-16 21:52:38,805 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
