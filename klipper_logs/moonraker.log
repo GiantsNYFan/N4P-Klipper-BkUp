@@ -464,3 +464,31 @@ Traceback (most recent call last):
 utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
 2025-06-17 04:28:03,831 [websockets.py:on_close()] - Websocket Closed: ID: 281473033246144 Close Code: None, Close Reason: None, Pong Time Elapsed: 1.39
 2025-06-17 05:27:38,948 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.14
+2025-06-17 08:08:28,112 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-06-17 08:08:30,426 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-42965.mru' -> '/home/mks/gcode_files/sda1/Toys/bd1_parts_v3_EN4Plus_0.4_PLA0.2_22m56s.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Toys/bd1_parts_v3_EN4Plus_0.4_PLA0.2_22m56s.gcode'
+2025-06-17 08:08:30,437 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-06-17 08:08:30,444 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 2270.20ms
+2025-06-17 08:08:30,460 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-06-17 08:08:31,417 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-06-17 08:08:31,418 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Toys/bd1_parts_v3_EN4Plus_0.4_PLA0.2_22m56s.gcode") successfully finished
+2025-06-17 08:08:31,419 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-06-17 08:08:53,436 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-17 08:09:06,966 [job_state.py:_status_update()] - Job Started: sda1/Toys/bd1_parts_v3_EN4Plus_0.4_PLA0.2_22m56s.gcode
