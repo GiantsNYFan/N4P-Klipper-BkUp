@@ -78,22 +78,6 @@ System Info:
   virt_type: none
   virt_identifier: none
 Klipper Version: ?
-2025-06-19 05:33:38,325 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0xffffb021a730>, <Task finished coro=<_HTTPConnection.run() done, defined at /home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py:293> exception=gaierror(-2, 'Name or service not known')>)
-Traceback (most recent call last):
-  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/ioloop.py", line 741, in _run_callback
-    ret = callback()
-  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 290, in <lambda>
-    gen.convert_yielded(self.run()), lambda f: f.result()
-  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
-    source_ip=source_ip,
-  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
-    addrinfo = await self.resolver.resolve(host, port, af)
-  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
-    None, _resolve_addr, host, port, family
-  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
-    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
-  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -2] Name or service not known
+2025-06-18 21:03:38,497 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-06-18 21:03:38,945 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-18 21:08:28,829 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: ::1
