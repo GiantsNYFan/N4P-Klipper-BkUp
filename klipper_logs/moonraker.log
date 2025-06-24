@@ -519,3 +519,5 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-06-24 21:33:48,662 [job_state.py:_handle_started()] - Job state initialized: standby
 2025-06-24 21:33:48,949 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-06-24 21:33:49,424 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-24 21:34:55,865 [websockets.py:_process_messages()] - Websocket closed while writing: 281473417474792
+2025-06-24 21:34:56,722 [websockets.py:on_close()] - Websocket Closed: ID: 281473417474792 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.31
