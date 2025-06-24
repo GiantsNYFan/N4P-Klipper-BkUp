@@ -1025,3 +1025,13 @@ utils.ServerError: {'message': 'Move out of range: 110.000 110.000 -10.000 [0.00
 2025-06-24 21:41:12,688 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-06-24 21:41:32,481 [job_state.py:_status_update()] - Job Started: sda1/Tech/firetv_airtag_clamp_PLA0.12_57m46s.gcode
 2025-06-24 22:36:21,165 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: ::1
+2025-06-24 22:46:21,167 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
+2025-06-24 23:04:50,844 [websockets.py:on_close()] - Websocket Closed: ID: 281473449675856 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 0.79
+2025-06-24 23:04:50,897 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-06-24 23:04:51,067 [app.py:log_request()] - 101 GET /websocket?token=LJVX6FSCP2A72UEWIGPO2HNE3M5SMMFB (10.10.100.21) [_TRUSTED_USER_] 4.87ms
+2025-06-24 23:04:51,069 [websockets.py:open()] - Websocket Opened: ID: 281473449284832, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-24 23:04:51,074 [websockets.py:_handle_identify()] - Websocket 281473449284832 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-24 23:56:31,371 [websockets.py:on_close()] - Websocket Closed: ID: 281473449284832 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 0.30
+2025-06-24 23:56:31,726 [app.py:log_request()] - 101 GET /websocket?token=2UYPHTCTBGPFIV72WZ4ZMOGSJ63ZMQD3 (10.10.100.21) [_TRUSTED_USER_] 5.24ms
+2025-06-24 23:56:31,727 [websockets.py:open()] - Websocket Opened: ID: 281473449226704, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-24 23:56:31,734 [websockets.py:_handle_identify()] - Websocket 281473449226704 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
