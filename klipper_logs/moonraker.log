@@ -944,3 +944,83 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-06-24 21:36:16,504 [job_state.py:_handle_started()] - Job state initialized: standby
 2025-06-24 21:36:16,791 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-06-24 21:36:17,257 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-24 21:37:05,642 [websockets.py:build_error()] - JSON-RPC Request Error: 400
+{'message': 'Move out of range: 110.000 110.000 -10.000 [0.000]', 'error': 'WebRequestError'}
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 468, in request
+    return await self._request_standard(web_request)
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 523, in _request_standard
+    return await base_request.wait()
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 595, in wait
+    raise self.response
+utils.ServerError: {'message': 'Move out of range: 110.000 110.000 -10.000 [0.000]', 'error': 'WebRequestError'}
+2025-06-24 21:37:05,898 [websockets.py:build_error()] - JSON-RPC Request Error: 400
+{'message': 'Move out of range: 110.000 110.000 -10.000 [0.000]', 'error': 'WebRequestError'}
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 468, in request
+    return await self._request_standard(web_request)
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 523, in _request_standard
+    return await base_request.wait()
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 595, in wait
+    raise self.response
+utils.ServerError: {'message': 'Move out of range: 110.000 110.000 -10.000 [0.000]', 'error': 'WebRequestError'}
+2025-06-24 21:37:06,122 [websockets.py:build_error()] - JSON-RPC Request Error: 400
+{'message': 'Move out of range: 110.000 110.000 -10.000 [0.000]', 'error': 'WebRequestError'}
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 468, in request
+    return await self._request_standard(web_request)
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 523, in _request_standard
+    return await base_request.wait()
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 595, in wait
+    raise self.response
+utils.ServerError: {'message': 'Move out of range: 110.000 110.000 -10.000 [0.000]', 'error': 'WebRequestError'}
+2025-06-24 21:37:06,409 [websockets.py:build_error()] - JSON-RPC Request Error: 400
+{'message': 'Move out of range: 110.000 110.000 -10.000 [0.000]', 'error': 'WebRequestError'}
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 468, in request
+    return await self._request_standard(web_request)
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 523, in _request_standard
+    return await base_request.wait()
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 595, in wait
+    raise self.response
+utils.ServerError: {'message': 'Move out of range: 110.000 110.000 -10.000 [0.000]', 'error': 'WebRequestError'}
+2025-06-24 21:37:06,701 [websockets.py:build_error()] - JSON-RPC Request Error: 400
+{'message': 'Move out of range: 110.000 110.000 -10.000 [0.000]', 'error': 'WebRequestError'}
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 468, in request
+    return await self._request_standard(web_request)
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 523, in _request_standard
+    return await base_request.wait()
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 595, in wait
+    raise self.response
+utils.ServerError: {'message': 'Move out of range: 110.000 110.000 -10.000 [0.000]', 'error': 'WebRequestError'}
+2025-06-24 21:37:56,915 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-06-24 21:37:57,108 [app.py:log_request()] - 101 GET /websocket?token=6IG5SIBDZTDQLQIDM7XFB24UYKD67BR2 (10.10.100.21) [_TRUSTED_USER_] 5.53ms
+2025-06-24 21:37:57,109 [websockets.py:open()] - Websocket Opened: ID: 281473449544392, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-24 21:37:57,116 [websockets.py:_handle_identify()] - Websocket 281473449544392 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-24 21:37:59,824 [websockets.py:on_close()] - Websocket Closed: ID: 281473449544392 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 2.72
+2025-06-24 21:38:00,041 [app.py:log_request()] - 101 GET /websocket?token=NRZPNUDEDDRKPXSEXMFO4TGDQLY6KAW3 (10.10.100.21) [_TRUSTED_USER_] 6.25ms
+2025-06-24 21:38:00,042 [websockets.py:open()] - Websocket Opened: ID: 281473449675856, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-24 21:38:00,049 [websockets.py:_handle_identify()] - Websocket 281473449675856 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-24 21:41:12,688 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-24 21:41:32,481 [job_state.py:_status_update()] - Job Started: sda1/Tech/firetv_airtag_clamp_PLA0.12_57m46s.gcode
