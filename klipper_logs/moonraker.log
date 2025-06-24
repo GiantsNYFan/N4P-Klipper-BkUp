@@ -190,3 +190,5 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 
 2025-06-25 02:11:21,334 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Plants/Mario_Pot_Base_EN4Plus_0.4_PLA0.2_1h12m.gcode") successfully finished
 2025-06-25 02:11:21,335 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-06-25 02:40:48,654 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-25 02:41:12,758 [job_state.py:_status_update()] - Job Started: sda1/Plants/Mario_Pot_Base_EN4Plus_0.4_PLA0.2_1h12m.gcode
