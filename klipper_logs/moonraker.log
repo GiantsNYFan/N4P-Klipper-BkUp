@@ -194,3 +194,34 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 2025-06-26 21:48:05,126 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
 2025-06-26 21:48:25,891 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-06-26 21:48:49,697 [job_state.py:_status_update()] - Job Started: sda1/Toys/Super_Mario_Life_Star_Upright_NoSupports_EN4Plus_0.4_PLA0.12_2m40s.gcode
+2025-06-26 21:55:19,918 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-6157.mru' -> '/home/mks/gcode_files/sda1/Toys/Super_Mario_Life_Star_Upright_x4_EN4Plus_0.4_PLA0.12_16m51s.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Toys/Super_Mario_Life_Star_Upright_x4_EN4Plus_0.4_PLA0.12_16m51s.gcode'
+2025-06-26 21:55:19,924 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-06-26 21:55:19,933 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 1041.06ms
+2025-06-26 21:55:19,948 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-06-26 21:55:20,902 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-06-26 21:55:20,903 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Toys/Super_Mario_Life_Star_Upright_x4_EN4Plus_0.4_PLA0.12_16m51s.gcode") successfully finished
+2025-06-26 21:55:20,904 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-06-26 21:55:24,973 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff988fba98>()]>>
+2025-06-26 21:55:24,974 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff988fb4c8>()]>>
+2025-06-26 21:55:35,230 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-26 21:55:59,037 [job_state.py:_status_update()] - Job Started: sda1/Toys/Super_Mario_Life_Star_Upright_x4_EN4Plus_0.4_PLA0.12_16m51s.gcode
