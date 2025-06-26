@@ -193,3 +193,61 @@ Traceback (most recent call last):
   File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
 socket.gaierror: [Errno -2] Name or service not known
+2025-06-27 00:13:46,093 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0xffff84602a60>, <Task finished coro=<_HTTPConnection.run() done, defined at /home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py:293> exception=gaierror(-2, 'Name or service not known')>)
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/ioloop.py", line 741, in _run_callback
+    ret = callback()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 290, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+2025-06-27 00:13:51,598 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0xffff84602d90>, <Task finished coro=<_HTTPConnection.run() done, defined at /home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py:293> exception=gaierror(-2, 'Name or service not known')>)
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/ioloop.py", line 741, in _run_callback
+    ret = callback()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 290, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+2025-06-27 00:13:52,090 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': Timeout while connecting
+2025-06-27 00:13:57,102 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0xffff84602e18>, <Task finished coro=<_HTTPConnection.run() done, defined at /home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py:293> exception=gaierror(-2, 'Name or service not known')>)
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/ioloop.py", line 741, in _run_callback
+    ret = callback()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 290, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
