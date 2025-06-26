@@ -138,3 +138,5 @@ struct.error: unpack requires a buffer of 24 bytes
 2025-06-26 20:55:31,161 [job_state.py:_handle_started()] - Job state initialized: standby
 2025-06-26 20:55:31,493 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-06-26 20:55:31,925 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-26 20:58:35,032 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-26 20:58:53,352 [job_state.py:_status_update()] - Job Started: sda1/Toys/Super_Mario_Life_Star_v3_EN4Plus_0.4_PLA0.12_2m45s.gcode
