@@ -1,0 +1,697 @@
+--------------------Moonraker Log Start--------------------
+config_file: /home/mks/klipper_config/moonraker.conf
+log_file: /home/mks/klipper_logs/moonraker.log
+software_version: ?
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+#################### Moonraker Configuration ####################
+
+[server]
+host = localhost
+port = 7125
+enable_debug_logging = False
+klippy_uds_address = /tmp/klippy_uds
+
+[authorization]
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	http://*.lan
+	http://*.local
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	https://app.fluidd.xyz
+	http://app.fluidd.xyz
+
+[database]
+database_path = /home/mks/.moonraker_database
+
+[file_manager]
+config_path = /home/mks/klipper_config
+log_path = /home/mks/klipper_logs
+
+[octoprint_compat]
+
+[history]
+
+#################################################################
+All Configuration Files:
+/home/mks/klipper_config/moonraker.conf
+#################################################################
+Unsafe Shutdown Count: 0
+
+System Info:
+
+***python***
+  version: sys.version_info(major=3, minor=7, micro=3, releaselevel='final', serial=0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: 
+  hardware_desc: 
+  model: 
+  total_memory: 999784
+  memory_units: kB
+
+***sd_info***
+
+***distribution***
+  name: Debian GNU/Linux 10 (buster)
+  id: debian
+  version: 10
+  version_parts: {'major': '10', 'minor': '', 'build_number': ''}
+  like: 
+  codename: buster
+  release_info: {}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+Klipper Version: ?
+2025-06-27 00:13:13,560 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0xffff84719840>, <Task finished coro=<_HTTPConnection.run() done, defined at /home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py:293> exception=gaierror(-2, 'Name or service not known')>)
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/ioloop.py", line 741, in _run_callback
+    ret = callback()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 290, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+2025-06-27 00:13:19,067 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0xffff84719ea0>, <Task finished coro=<_HTTPConnection.run() done, defined at /home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py:293> exception=gaierror(-2, 'Name or service not known')>)
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/ioloop.py", line 741, in _run_callback
+    ret = callback()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 290, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+2025-06-27 00:13:24,569 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0xffff846029d8>, <Task finished coro=<_HTTPConnection.run() done, defined at /home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py:293> exception=gaierror(-2, 'Name or service not known')>)
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/ioloop.py", line 741, in _run_callback
+    ret = callback()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 290, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+2025-06-27 00:13:25,060 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': Timeout while connecting
+2025-06-27 00:13:30,068 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0xffff847198c8>, <Task finished coro=<_HTTPConnection.run() done, defined at /home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py:293> exception=gaierror(-2, 'Name or service not known')>)
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/ioloop.py", line 741, in _run_callback
+    ret = callback()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 290, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+2025-06-27 00:13:35,079 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0xffff84602950>, <Task finished coro=<_HTTPConnection.run() done, defined at /home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py:293> exception=gaierror(-2, 'Name or service not known')>)
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/ioloop.py", line 741, in _run_callback
+    ret = callback()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 290, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+2025-06-27 00:13:40,587 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0xffff84719620>, <Task finished coro=<_HTTPConnection.run() done, defined at /home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py:293> exception=gaierror(-2, 'Name or service not known')>)
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/ioloop.py", line 741, in _run_callback
+    ret = callback()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 290, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+2025-06-27 00:13:46,093 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0xffff84602a60>, <Task finished coro=<_HTTPConnection.run() done, defined at /home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py:293> exception=gaierror(-2, 'Name or service not known')>)
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/ioloop.py", line 741, in _run_callback
+    ret = callback()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 290, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+2025-06-27 00:13:51,598 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0xffff84602d90>, <Task finished coro=<_HTTPConnection.run() done, defined at /home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py:293> exception=gaierror(-2, 'Name or service not known')>)
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/ioloop.py", line 741, in _run_callback
+    ret = callback()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 290, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+2025-06-27 00:13:52,090 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': Timeout while connecting
+2025-06-27 00:13:57,102 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0xffff84602e18>, <Task finished coro=<_HTTPConnection.run() done, defined at /home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py:293> exception=gaierror(-2, 'Name or service not known')>)
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/ioloop.py", line 741, in _run_callback
+    ret = callback()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 290, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+2025-06-27 00:41:59,959 [websockets.py:on_close()] - Websocket Closed: ID: 281473241781696 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.25
+2025-06-27 00:41:59,965 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-06-27 00:42:00,197 [moonraker.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2025-06-27 00:42:00,224 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-06-27 00:42:00,313 [websockets.py:_process_messages()] - Websocket closed while writing: 281473241550688
+2025-06-27 00:42:00,318 [websockets.py:on_close()] - Websocket Closed: ID: 281473241550688 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 1.27
+2025-06-27 00:42:00,328 [database.py:close()] - Database statistics:
+
+announcements:
+psize: 4096
+depth: 0
+branch_pages: 0
+leaf_pages: 0
+overflow_pages: 0
+entries: 0
+authorized_users:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 2
+fluidd:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 6
+gcode_metadata:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 2
+overflow_pages: 229
+entries: 67
+history:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 85
+overflow_pages: 339
+entries: 295
+mobileraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 2
+entries: 2
+moonraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 5
+2025-06-27 00:42:00,358 [moonraker.py:main()] - Server Shutdown
+--------------------Moonraker Log Start--------------------
+config_file: /home/mks/klipper_config/moonraker.conf
+log_file: /home/mks/klipper_logs/moonraker.log
+software_version: ?
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+2025-06-27 00:42:08,592 [utils.py:setup_logging()] - config_file: /home/mks/klipper_config/moonraker.conf
+2025-06-27 00:42:08,593 [utils.py:setup_logging()] - log_file: /home/mks/klipper_logs/moonraker.log
+2025-06-27 00:42:08,593 [utils.py:setup_logging()] - software_version: ?
+2025-06-27 00:42:08,593 [utils.py:setup_logging()] - python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+2025-06-27 00:42:08,615 [moonraker.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = localhost
+port = 7125
+enable_debug_logging = False
+klippy_uds_address = /tmp/klippy_uds
+
+[authorization]
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	http://*.lan
+	http://*.local
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	https://app.fluidd.xyz
+	http://app.fluidd.xyz
+
+[database]
+database_path = /home/mks/.moonraker_database
+
+[file_manager]
+config_path = /home/mks/klipper_config
+log_path = /home/mks/klipper_logs
+
+[octoprint_compat]
+
+[history]
+
+#################################################################
+All Configuration Files:
+/home/mks/klipper_config/moonraker.conf
+#################################################################
+2025-06-27 00:42:08,658 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/info
+2025-06-27 00:42:08,659 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.info
+2025-06-27 00:42:08,660 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/config
+2025-06-27 00:42:08,661 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.config
+2025-06-27 00:42:08,662 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/restart
+2025-06-27 00:42:08,664 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.restart
+2025-06-27 00:42:08,886 [moonraker.py:load_component()] - Component (dbus_manager) loaded
+2025-06-27 00:42:08,938 [moonraker.py:add_log_rollover_item()] - Unsafe Shutdown Count: 0
+2025-06-27 00:42:08,948 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/database/list
+2025-06-27 00:42:08,949 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.database.list
+2025-06-27 00:42:08,950 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/database/item
+2025-06-27 00:42:08,951 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.database.get_item, server.database.post_item, server.database.delete_item
+2025-06-27 00:42:08,952 [moonraker.py:load_component()] - Component (database) loaded
+2025-06-27 00:42:09,260 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/files/list
+2025-06-27 00:42:09,262 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.list
+2025-06-27 00:42:09,263 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/files/metadata
+2025-06-27 00:42:09,265 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.metadata
+2025-06-27 00:42:09,266 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/files/directory
+2025-06-27 00:42:09,269 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.get_directory, server.files.post_directory, server.files.delete_directory
+2025-06-27 00:42:09,270 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/files/move
+2025-06-27 00:42:09,272 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.move
+2025-06-27 00:42:09,273 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/files/copy
+2025-06-27 00:42:09,275 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.copy
+2025-06-27 00:42:09,276 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.delete_file
+2025-06-27 00:42:09,311 [moonraker.py:load_component()] - Component (file_manager) loaded
+2025-06-27 00:42:09,319 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/pause
+2025-06-27 00:42:09,321 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.pause
+2025-06-27 00:42:09,322 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/resume
+2025-06-27 00:42:09,324 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.resume
+2025-06-27 00:42:09,325 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/cancel
+2025-06-27 00:42:09,340 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.cancel
+2025-06-27 00:42:09,340 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/start
+2025-06-27 00:42:09,343 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.start
+2025-06-27 00:42:09,343 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/restart
+2025-06-27 00:42:09,345 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.restart
+2025-06-27 00:42:09,350 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/firmware_restart
+2025-06-27 00:42:09,352 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.firmware_restart
+2025-06-27 00:42:09,379 [klippy_apis.py:init_conf()] - load level mode conf
+2025-06-27 00:42:09,380 [moonraker.py:load_component()] - Component (klippy_apis) loaded
+2025-06-27 00:42:09,955 [moonraker.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: sys.version_info(major=3, minor=7, micro=3, releaselevel='final', serial=0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: 
+  hardware_desc: 
+  model: 
+  total_memory: 999784
+  memory_units: kB
+
+***sd_info***
+
+***distribution***
+  name: Debian GNU/Linux 10 (buster)
+  id: debian
+  version: 10
+  version_parts: {'major': '10', 'minor': '', 'build_number': ''}
+  like: 
+  codename: buster
+  release_info: {}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+2025-06-27 00:42:09,962 [moonraker.py:load_component()] - Component (shell_command) loaded
+2025-06-27 00:42:09,963 [machine.py:__init__()] - Using System Provider: systemd_dbus
+2025-06-27 00:42:09,963 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/reboot
+2025-06-27 00:42:09,965 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.reboot
+2025-06-27 00:42:09,966 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/shutdown
+2025-06-27 00:42:09,968 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.shutdown
+2025-06-27 00:42:09,969 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/restart
+2025-06-27 00:42:09,971 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.restart
+2025-06-27 00:42:09,972 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/stop
+2025-06-27 00:42:09,974 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.stop
+2025-06-27 00:42:09,975 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/start
+2025-06-27 00:42:09,977 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.start
+2025-06-27 00:42:09,977 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/system_info
+2025-06-27 00:42:09,980 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.system_info
+2025-06-27 00:42:09,982 [moonraker.py:load_component()] - Component (machine) loaded
+2025-06-27 00:42:09,989 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/temperature_store
+2025-06-27 00:42:09,991 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.temperature_store
+2025-06-27 00:42:09,991 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/gcode_store
+2025-06-27 00:42:09,993 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.gcode_store
+2025-06-27 00:42:09,994 [moonraker.py:load_component()] - Component (data_store) loaded
+2025-06-27 00:42:10,005 [proc_stats.py:__init__()] - Unable to find 'vcgencmd', throttle checking disabled
+2025-06-27 00:42:10,006 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/proc_stats
+2025-06-27 00:42:10,008 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.proc_stats
+2025-06-27 00:42:10,008 [moonraker.py:load_component()] - Component (proc_stats) loaded
+2025-06-27 00:42:10,014 [moonraker.py:load_component()] - Component (job_state) loaded
+2025-06-27 00:42:10,023 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST DELETE) /server/job_queue/job
+2025-06-27 00:42:10,025 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.post_job, server.job_queue.delete_job
+2025-06-27 00:42:10,026 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/job_queue/pause
+2025-06-27 00:42:10,028 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.pause
+2025-06-27 00:42:10,028 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/job_queue/start
+2025-06-27 00:42:10,030 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.start
+2025-06-27 00:42:10,030 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/job_queue/status
+2025-06-27 00:42:10,032 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.job_queue.status
+2025-06-27 00:42:10,033 [moonraker.py:load_component()] - Component (job_queue) loaded
+2025-06-27 00:42:10,065 [moonraker.py:load_component()] - Component (http_client) loaded
+2025-06-27 00:42:10,073 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/announcements/list
+2025-06-27 00:42:10,074 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.list
+2025-06-27 00:42:10,075 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/announcements/dismiss
+2025-06-27 00:42:10,076 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.dismiss
+2025-06-27 00:42:10,077 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/announcements/update
+2025-06-27 00:42:10,079 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.update
+2025-06-27 00:42:10,079 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST DELETE) /server/announcements/feed
+2025-06-27 00:42:10,081 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.post_feed, server.announcements.delete_feed
+2025-06-27 00:42:10,081 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/announcements/feeds
+2025-06-27 00:42:10,083 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.announcements.feeds
+2025-06-27 00:42:10,083 [moonraker.py:load_component()] - Component (announcements) loaded
+2025-06-27 00:42:10,111 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/webcams/list
+2025-06-27 00:42:10,113 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.webcams.list
+2025-06-27 00:42:10,114 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/webcams/item
+2025-06-27 00:42:10,116 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.webcams.get_item, server.webcams.post_item, server.webcams.delete_item
+2025-06-27 00:42:10,116 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/webcams/test
+2025-06-27 00:42:10,119 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.webcams.test
+2025-06-27 00:42:10,120 [moonraker.py:load_component()] - Component (webcam) loaded
+2025-06-27 00:42:10,125 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: connection.send_event
+2025-06-27 00:42:10,126 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/extensions/list
+2025-06-27 00:42:10,128 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.extensions.list
+2025-06-27 00:42:10,128 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/extensions/request
+2025-06-27 00:42:10,130 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.extensions.request
+2025-06-27 00:42:10,131 [moonraker.py:load_component()] - Component (extensions) loaded
+2025-06-27 00:42:10,193 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+http://.*\.lan
+http://.*\.local
+https://my\.mainsail\.xyz
+http://my\.mainsail\.xyz
+https://app\.fluidd\.xyz
+http://app\.fluidd\.xyz
+2025-06-27 00:42:10,194 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/login
+2025-06-27 00:42:10,196 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/logout
+2025-06-27 00:42:10,197 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/refresh_jwt
+2025-06-27 00:42:10,201 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /access/user
+2025-06-27 00:42:10,202 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/users/list
+2025-06-27 00:42:10,203 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/user/password
+2025-06-27 00:42:10,205 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST) /access/api_key
+2025-06-27 00:42:10,207 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/oneshot_token
+2025-06-27 00:42:10,209 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/info
+2025-06-27 00:42:10,210 [moonraker.py:load_component()] - Component (authorization) loaded
+2025-06-27 00:42:10,221 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/version
+2025-06-27 00:42:10,223 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/server
+2025-06-27 00:42:10,225 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/login
+2025-06-27 00:42:10,226 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/currentuser
+2025-06-27 00:42:10,227 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/settings
+2025-06-27 00:42:10,229 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/job
+2025-06-27 00:42:10,231 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/printer
+2025-06-27 00:42:10,232 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/printer/command
+2025-06-27 00:42:10,235 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/printerprofiles
+2025-06-27 00:42:10,238 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/files/moonraker/(?P<relative_path>.+)
+2025-06-27 00:42:10,241 [moonraker.py:load_component()] - Component (octoprint_compat) loaded
+2025-06-27 00:42:10,249 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET DELETE) /server/history/job
+2025-06-27 00:42:10,251 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.get_job, server.history.delete_job
+2025-06-27 00:42:10,252 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/history/list
+2025-06-27 00:42:10,255 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.list
+2025-06-27 00:42:10,255 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/history/totals
+2025-06-27 00:42:10,257 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.totals
+2025-06-27 00:42:10,257 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/history/reset_totals
+2025-06-27 00:42:10,259 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.reset_totals
+2025-06-27 00:42:10,273 [moonraker.py:load_component()] - Component (history) loaded
+2025-06-27 00:42:10,275 [moonraker.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+2025-06-27 00:42:10,328 [moonraker.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+2025-06-27 00:42:10,795 [moonraker.py:_initialize_component()] - Performing Component Post Init: [machine]
+2025-06-27 00:42:11,459 [machine.py:check_virt_status()] - No Virtualization Detected
+2025-06-27 00:42:11,485 [moonraker.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+2025-06-27 00:42:11,486 [moonraker.py:_initialize_component()] - Performing Component Post Init: [announcements]
+2025-06-27 00:42:11,491 [moonraker.py:_initialize_component()] - Performing Component Post Init: [webcam]
+2025-06-27 00:42:12,038 [machine.py:_get_wifi_interfaces()] - Failed to run 'iwgetid' command
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/machine.py", line 457, in _get_wifi_interfaces
+    resp = await self.iwgetid_cmd.run_with_response(log_complete=False)
+  File "/home/mks/moonraker/moonraker/components/shell_command.py", line 269, in run_with_response
+    self.return_code, stdout, stderr)
+components.shell_command.ShellCommandError: Error running shell command: '['/sbin/iwgetid']'
+2025-06-27 00:42:12,047 [moonraker.py:_initialize_component()] - Performing Component Post Init: [authorization]
+2025-06-27 00:42:12,060 [moonraker.py:start_server()] - Starting Moonraker on (localhost, 7125), Hostname: mkspi
+2025-06-27 00:42:12,070 [app.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+2025-06-27 00:42:12,325 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-06-27 00:42:12,326 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x9b020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-06-27 00:42:12,584 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-06-27 00:42:12,589 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-06-27 00:42:12,596 [moonraker.py:add_log_rollover_item()] - Klipper Version: ?
+2025-06-27 00:42:12,602 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/info
+2025-06-27 00:42:12,604 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.info
+2025-06-27 00:42:12,604 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/query_endstops/status
+2025-06-27 00:42:12,606 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.query_endstops.status
+2025-06-27 00:42:12,607 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/emergency_stop
+2025-06-27 00:42:12,609 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.emergency_stop
+2025-06-27 00:42:12,609 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/pause_resume/pause
+2025-06-27 00:42:12,611 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.pause_resume.pause
+2025-06-27 00:42:12,612 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/query
+2025-06-27 00:42:12,614 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.query
+2025-06-27 00:42:12,614 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/list
+2025-06-27 00:42:12,618 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.list
+2025-06-27 00:42:12,620 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/adxl345/dump_adxl345
+2025-06-27 00:42:12,622 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.adxl345.dump_adxl345
+2025-06-27 00:42:12,623 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/motion_report/dump_stepper
+2025-06-27 00:42:12,624 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.motion_report.dump_stepper
+2025-06-27 00:42:12,625 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/firmware_restart
+2025-06-27 00:42:12,627 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.firmware_restart
+2025-06-27 00:42:12,628 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/subscribe
+2025-06-27 00:42:12,629 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.subscribe
+2025-06-27 00:42:12,630 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/script
+2025-06-27 00:42:12,632 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.script
+2025-06-27 00:42:12,632 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/help
+2025-06-27 00:42:12,634 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.help
+2025-06-27 00:42:12,634 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/pause_resume/resume
+2025-06-27 00:42:12,636 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.pause_resume.resume
+2025-06-27 00:42:12,637 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/motion_report/dump_trapq
+2025-06-27 00:42:12,639 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.motion_report.dump_trapq
+2025-06-27 00:42:12,639 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/pause_resume/cancel
+2025-06-27 00:42:12,641 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.pause_resume.cancel
+2025-06-27 00:42:12,642 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/restart
+2025-06-27 00:42:12,644 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.restart
+2025-06-27 00:42:12,692 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: ::1
+2025-06-27 00:42:12,696 [app.py:log_request()] - 101 GET /websocket? (::1) [_TRUSTED_USER_] 8.19ms
+2025-06-27 00:42:12,697 [websockets.py:open()] - Websocket Opened: ID: 281472887668632, Proxied: False, User Agent: WebSocket++/0.8.1, Host Name: localhost
+2025-06-27 00:42:12,835 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-06-27 00:42:13,126 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-06-27 00:42:13,589 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-27 00:42:15,873 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-06-27 00:42:16,388 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-06-27 00:42:17,140 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-06-27 00:42:17,141 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x9b020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-06-27 00:42:18,037 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-06-27 00:42:18,051 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-06-27 00:42:20,301 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-06-27 00:42:20,586 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-06-27 00:42:21,056 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-27 20:26:37,874 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: ::1
+2025-06-27 22:38:32,253 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-06-27 22:38:32,453 [app.py:log_request()] - 101 GET /websocket?token=4LNC42VM3I5EDNHTAHS22T3SLQML7ICH (10.10.100.21) [_TRUSTED_USER_] 8.69ms
+2025-06-27 22:38:32,454 [websockets.py:open()] - Websocket Opened: ID: 281472887893632, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-27 22:38:32,461 [websockets.py:_handle_identify()] - Websocket 281472887893632 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-27 22:38:35,704 [websockets.py:on_close()] - Websocket Closed: ID: 281472887893632 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 3.25
+2025-06-27 22:38:35,980 [app.py:log_request()] - 101 GET /websocket?token=L4T2UZBPO53B5T4TUKLPMEFNOCHBO6UN (10.10.100.21) [_TRUSTED_USER_] 4.72ms
+2025-06-27 22:38:35,980 [websockets.py:open()] - Websocket Opened: ID: 281472887433424, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-27 22:38:35,987 [websockets.py:_handle_identify()] - Websocket 281472887433424 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-27 22:58:56,750 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-9448.mru' -> '/home/mks/gcode_files/sda1/Organization/USB_Storage/Small_Ring_Knurled_EN4Plus_0.4_PLA0.2_2h41m.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Organization/USB_Storage/Small_Ring_Knurled_EN4Plus_0.4_PLA0.2_2h41m.gcode'
+2025-06-27 22:58:56,777 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-06-27 22:58:56,790 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 6143.35ms
+2025-06-27 22:58:56,952 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-06-27 22:58:58,006 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-06-27 22:58:58,006 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Organization/USB_Storage/Small_Ring_Knurled_EN4Plus_0.4_PLA0.2_2h41m.gcode") successfully finished
+2025-06-27 22:58:58,008 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-06-27 23:16:57,448 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-06-27 23:17:57,451 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2025-06-27 23:18:57,455 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2025-06-27 23:19:57,458 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.01 seconds
+2025-06-27 23:20:57,462 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.02 seconds
+2025-06-27 23:21:57,466 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.02 seconds
+2025-06-27 23:22:57,470 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.02 seconds
+2025-06-27 23:24:34,258 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-06-27 23:24:34,287 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 351, in func
+    user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 458, in request
+    raise ServerError("Klippy Host not connected", 503)
+utils.ServerError: Klippy Host not connected
+2025-06-27 23:24:35,524 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-06-27 23:24:35,525 [klippy_connection.py:_get_peer_credentials()] - Failed to get Klippy Peer Credentials, raw: 0x9b020000e8030000e8030000
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/klippy_connection.py", line 239, in _get_peer_credentials
+    pid, uid, gid = struct.unpack("@LLL", data)
+struct.error: unpack requires a buffer of 24 bytes
+2025-06-27 23:24:36,307 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2025-06-27 23:24:36,318 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2025-06-27 23:24:38,815 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-06-27 23:24:39,165 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-06-27 23:24:39,625 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-27 23:27:13,594 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-27 23:27:31,908 [job_state.py:_status_update()] - Job Started: sda1/Organization/USB_Storage/Small_Ring_Knurled_EN4Plus_0.4_PLA0.2_2h41m.gcode
