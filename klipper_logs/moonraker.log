@@ -138,3 +138,19 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 2025-06-28 03:27:55,164 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
 2025-06-28 03:28:09,356 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-06-28 03:28:34,165 [job_state.py:_status_update()] - Job Started: sda1/Organization/USB_Storage/rueda_cable_roller_S_EN4Plus_0.4_PLA0.2_2h34m.gcode
+2025-06-28 03:34:23,789 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff8375b138>()]>>
+2025-06-28 03:34:23,790 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff8375bc18>()]>>
+2025-06-28 04:36:38,100 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
+2025-06-28 05:35:34,708 [websockets.py:on_close()] - Websocket Closed: ID: 281472887625040 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 5.99
+2025-06-28 05:35:34,901 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-06-28 05:35:35,093 [app.py:log_request()] - 101 GET /websocket?token=TMJPKBBSQW4F2QH3YVM52YZ3PV5WNMOG (10.10.100.21) [_TRUSTED_USER_] 5.27ms
+2025-06-28 05:35:35,094 [websockets.py:open()] - Websocket Opened: ID: 281472834329288, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-28 05:35:35,102 [websockets.py:_handle_identify()] - Websocket 281472834329288 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-28 05:48:38,635 [base_events.py:default_exception_handler()] - Task was destroyed but it is pending!
+task: <Task pending coro=<INotifyHandler._sync_with_request() running at /home/mks/moonraker/moonraker/components/file_manager/file_manager.py:1499> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0xffff837faf78>()]>>
+2025-06-28 05:49:12,736 [websockets.py:on_close()] - Websocket Closed: ID: 281472834329288 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 7.62
+2025-06-28 05:49:13,064 [app.py:log_request()] - 101 GET /websocket?token=PRKHTXSQE44QJSKJ2FNJTAKTSOPIYEAG (10.10.100.21) [_TRUSTED_USER_] 4.99ms
+2025-06-28 05:49:13,065 [websockets.py:open()] - Websocket Opened: ID: 281472834018664, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-28 05:49:13,072 [websockets.py:_handle_identify()] - Websocket 281472834018664 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
