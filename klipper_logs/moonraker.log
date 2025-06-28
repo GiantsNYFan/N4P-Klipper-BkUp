@@ -181,3 +181,104 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 2025-06-28 05:59:51,462 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
 2025-06-28 06:02:18,169 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-06-28 06:02:41,980 [job_state.py:_status_update()] - Job Started: sda1/Organization/USB_Storage/rueda_cable_roller_LargeX2_EN4Plus_0.4_PLA0.2_5h19m.gcode
+2025-06-28 06:16:59,012 [websockets.py:on_close()] - Websocket Closed: ID: 281472834018664 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.93
+2025-06-28 07:11:38,155 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
+2025-06-28 07:35:14,326 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.14
+2025-06-28 07:35:14,579 [app.py:log_request()] - 101 GET /websocket?token=FY4IVOJ7HXWNZWKR4Y5MA25PBNQD4RD4 (10.10.100.14) [_TRUSTED_USER_] 5.58ms
+2025-06-28 07:35:14,580 [websockets.py:open()] - Websocket Opened: ID: 281472887451888, Proxied: True, User Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1, Host Name: 10.10.100.201
+2025-06-28 07:35:14,591 [websockets.py:_handle_identify()] - Websocket 281472887451888 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-28 07:35:59,199 [websockets.py:on_close()] - Websocket Closed: ID: 281472887451888 Close Code: None, Close Reason: None, Pong Time Elapsed: 4.56
+2025-06-28 07:36:28,949 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.8
+2025-06-28 07:36:29,439 [app.py:log_request()] - 101 GET /websocket?token=LO6BPFX4ZFEUPTD5XVSANPGQA47ZLW7H (10.10.100.8) [_TRUSTED_USER_] 6.51ms
+2025-06-28 07:36:29,440 [websockets.py:open()] - Websocket Opened: ID: 281473165106984, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-28 07:36:29,450 [websockets.py:_handle_identify()] - Websocket 281473165106984 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-28 07:37:39,552 [websockets.py:_process_messages()] - Websocket closed while writing: 281473165106984
+2025-06-28 07:37:44,446 [websockets.py:on_close()] - Websocket Closed: ID: 281473165106984 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.94
+2025-06-28 08:30:57,924 [app.py:log_request()] - 101 GET /websocket?token=PFGOQ4FQ2K4VIJYABGQLXRFKTVU7T6XL (10.10.100.14) [_TRUSTED_USER_] 4.90ms
+2025-06-28 08:30:57,925 [websockets.py:open()] - Websocket Opened: ID: 281473164866952, Proxied: True, User Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1, Host Name: 10.10.100.201
+2025-06-28 08:30:57,945 [websockets.py:_handle_identify()] - Websocket 281473164866952 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-28 08:31:00,815 [websockets.py:on_close()] - Websocket Closed: ID: 281473164866952 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.89
+2025-06-28 08:31:02,796 [app.py:log_request()] - 101 GET /websocket (10.10.100.14) [_TRUSTED_USER_] 5.02ms
+2025-06-28 08:31:02,797 [websockets.py:open()] - Websocket Opened: ID: 281473165306120, Proxied: True, User Agent: Dart/3.6 (dart:io), Host Name: 10.10.100.201
+2025-06-28 08:31:02,807 [websockets.py:_handle_identify()] - Websocket 281473165306120 Client Identified - Name: Mobileraker-ios, Version: 2.9.0-641, Type: mobile
+2025-06-28 08:31:02,910 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-06-28 08:31:03,436 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-06-28 08:31:08,481 [websockets.py:on_close()] - Websocket Closed: ID: 281473165306120 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.69
+2025-06-28 08:36:38,181 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.8
+2025-06-28 09:12:08,833 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.8
+2025-06-28 09:12:09,037 [app.py:log_request()] - 101 GET /websocket?token=AL2XICF4ATCK4ULPIOVURTXHRVJDA3T7 (10.10.100.8) [_TRUSTED_USER_] 5.78ms
+2025-06-28 09:12:09,038 [websockets.py:open()] - Websocket Opened: ID: 281473165463904, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-28 09:12:09,056 [websockets.py:_handle_identify()] - Websocket 281473165463904 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-28 09:12:12,460 [websockets.py:on_close()] - Websocket Closed: ID: 281473165463904 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 3.43
+2025-06-28 09:12:12,911 [app.py:log_request()] - 101 GET /websocket?token=X5CKQZ45FRAP24SXGS5MGK7A2LNK3XZN (10.10.100.8) [_TRUSTED_USER_] 5.94ms
+2025-06-28 09:12:12,912 [websockets.py:open()] - Websocket Opened: ID: 281472887574144, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-28 09:12:12,921 [websockets.py:_handle_identify()] - Websocket 281472887574144 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-28 09:12:43,160 [websockets.py:_process_messages()] - Websocket closed while writing: 281472887574144
+2025-06-28 09:12:47,917 [websockets.py:on_close()] - Websocket Closed: ID: 281472887574144 Close Code: None, Close Reason: None, Pong Time Elapsed: 35.01
+2025-06-28 09:13:16,123 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.21
+2025-06-28 09:13:16,295 [app.py:log_request()] - 101 GET /websocket?token=UHXOMBDH5CIHHHHRRUEIARMR7CCXUVVN (10.10.100.21) [_TRUSTED_USER_] 6.62ms
+2025-06-28 09:13:16,296 [websockets.py:open()] - Websocket Opened: ID: 281473165036960, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-28 09:13:16,302 [websockets.py:_handle_identify()] - Websocket 281473165036960 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-28 09:13:29,458 [websockets.py:on_close()] - Websocket Closed: ID: 281473165036960 Close Code: 1001, Close Reason: WebSocket is closed due to suspension., Pong Time Elapsed: 3.15
+2025-06-28 09:13:29,733 [app.py:log_request()] - 101 GET /websocket?token=JPZWHQ5AG2B6QQQ6WX5DORGK5FIOATL2 (10.10.100.21) [_TRUSTED_USER_] 6.44ms
+2025-06-28 09:13:29,735 [websockets.py:open()] - Websocket Opened: ID: 281472834071240, Proxied: True, User Agent: BBL-Slicer/v1.1.8.2 (dark) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko), Host Name: 10.10.100.201
+2025-06-28 09:13:29,742 [websockets.py:_handle_identify()] - Websocket 281472834071240 Client Identified - Name: fluidd, Version: 1.19.0-6184c73, Type: web
+2025-06-28 09:15:41,541 [file_manager.py:_process_uploaded_file()] - Upload Write Error
+Traceback (most recent call last):
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 568, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/tmp/moonraker.upload-46445.mru' -> '/home/mks/gcode_files/sda1/Organization/USB_Storage/rueda_cable_roller_LargeX2_Blue_EN4Plus_0.4_PLA0.2_5h19m.gcode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/file_manager/file_manager.py", line 674, in _process_uploaded_file
+    upload_info['dest_path'])
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 582, in move
+    copy_function(src, real_dst)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 264, in copy2
+    copystat(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/mks/moonraker-env/lib/python3.7/shutil.py", line 207, in copystat
+    lookup("chmod")(dst, mode, follow_symlinks=follow)
+PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/Organization/USB_Storage/rueda_cable_roller_LargeX2_Blue_EN4Plus_0.4_PLA0.2_5h19m.gcode'
+2025-06-28 09:15:41,572 [web.py:log_exception()] - 500 POST /api/files/local (10.10.100.21): Unable to save file
+2025-06-28 09:15:41,578 [app.py:log_request()] - 500 POST /api/files/local (10.10.100.21) [_TRUSTED_USER_] 14330.70ms
+2025-06-28 09:15:41,600 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update called by _run[0m
+2025-06-28 09:15:42,676 [shell_command.py:run_with_response()] - /home/mks/moonraker-env/bin/python: Object Processing is disabled
+
+2025-06-28 09:15:42,677 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Organization/USB_Storage/rueda_cable_roller_LargeX2_Blue_EN4Plus_0.4_PLA0.2_5h19m.gcode") successfully finished
+2025-06-28 09:15:42,678 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
