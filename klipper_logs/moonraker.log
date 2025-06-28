@@ -284,3 +284,31 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 2025-06-28 09:15:42,678 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
 2025-06-28 09:27:03,818 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
 2025-06-28 09:27:27,623 [job_state.py:_status_update()] - Job Started: sda1/Organization/USB_Storage/rueda_cable_roller_LargeX2_Blue_EN4Plus_0.4_PLA0.2_5h19m.gcode
+2025-06-28 09:31:38,197 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.14
+2025-06-28 10:16:38,208 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.8
+2025-06-28 10:16:38,209 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.21
+2025-06-28 11:51:46,824 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 10.10.100.14
+2025-06-28 11:51:46,827 [app.py:log_request()] - 101 GET /websocket (10.10.100.14) [_TRUSTED_USER_] 8.10ms
+2025-06-28 11:51:46,829 [websockets.py:open()] - Websocket Opened: ID: 281472887679800, Proxied: True, User Agent: Dart/3.6 (dart:io), Host Name: 10.10.100.201
+2025-06-28 11:51:46,841 [websockets.py:_handle_identify()] - Websocket 281472887679800 Client Identified - Name: Mobileraker-ios, Version: 2.9.0-641, Type: mobile
+2025-06-28 11:51:46,933 [websockets.py:build_error()] - JSON-RPC Request Error: -32601
+Key 'webcams' in namespace 'mobileraker' not found
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/websockets.py", line 253, in execute_method
+    result = await callback(params)
+  File "/home/mks/moonraker/moonraker/websockets.py", line 364, in func
+    ip_addr=ws.ip_addr, user=ws.current_user))
+  File "/home/mks/moonraker/moonraker/components/database.py", line 732, in _handle_item_request
+    val = await self.get_item(namespace, key)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 170, in func_wrapper
+    return command_func(*args)
+  File "/home/mks/moonraker/moonraker/components/database.py", line 333, in _get_impl
+    ns = self._get_record(namespace, key_list[0])
+  File "/home/mks/moonraker/moonraker/components/database.py", line 649, in _get_record
+    f"Key '{key}' in namespace '{namespace}' not found", 404)
+utils.ServerError: Key 'webcams' in namespace 'mobileraker' not found
+2025-06-28 11:53:26,945 [websockets.py:_process_messages()] - Websocket closed while writing: 281472887679800
+2025-06-28 11:53:31,834 [websockets.py:on_close()] - Websocket Closed: ID: 281472887679800 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.99
+2025-06-28 12:56:38,258 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 10.10.100.14
