@@ -282,3 +282,5 @@ PermissionError: [Errno 1] Operation not permitted: '/home/mks/gcode_files/sda1/
 
 2025-06-28 09:15:42,677 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "sda1/Organization/USB_Storage/rueda_cable_roller_LargeX2_Blue_EN4Plus_0.4_PLA0.2_5h19m.gcode") successfully finished
 2025-06-28 09:15:42,678 [file_manager.py:_process_metadata_update()] - [7m[5m_process_metadata_update finish[0m
+2025-06-28 09:27:03,818 [klippy_apis.py:start_print()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-06-28 09:27:27,623 [job_state.py:_status_update()] - Job Started: sda1/Organization/USB_Storage/rueda_cable_roller_LargeX2_Blue_EN4Plus_0.4_PLA0.2_5h19m.gcode
